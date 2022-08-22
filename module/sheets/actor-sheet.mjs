@@ -4,22 +4,22 @@ import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/ef
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class BoilerplateActorSheet extends ActorSheet {
+export class LHTrpgActorSheet extends ActorSheet {
 
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["boilerplate", "sheet", "actor"],
-      template: "systems/boilerplate/templates/actor/actor-sheet.html",
-      width: 600,
-      height: 600,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
+      classes: ["lhtrpg", "sheet", "actor"],
+      template: "systems/lhtrpg/templates/actor/actor-sheet.html",
+      width: 700,
+      height: 700,
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" }]
     });
   }
 
   /** @override */
   get template() {
-    return `systems/boilerplate/templates/actor/actor-${this.actor.data.type}-sheet.html`;
+    return `systems/lhtrpg/templates/actor/actor-${this.actor.data.type}-sheet.html`;
   }
 
   /* -------------------------------------------- */
@@ -33,7 +33,7 @@ export class BoilerplateActorSheet extends ActorSheet {
     const context = super.getData();
 
     // Use a safe clone of the actor data for further operations.
-    const actorData = context.actor.data;
+    const actorData = this.actor.data.toObject(false);
 
     // Add the actor's data to context.data for easier access, as well as flags.
     context.data = actorData.data;
@@ -43,11 +43,6 @@ export class BoilerplateActorSheet extends ActorSheet {
     if (actorData.type == 'character') {
       this._prepareItems(context);
       this._prepareCharacterData(context);
-    }
-
-    // Prepare NPC data and items.
-    if (actorData.type == 'npc') {
-      this._prepareItems(context);
     }
 
     // Add roll data for TinyMCE editors.
@@ -67,10 +62,14 @@ export class BoilerplateActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterData(context) {
-    // Handle ability scores.
-    for (let [k, v] of Object.entries(context.data.abilities)) {
-      v.label = game.i18n.localize(CONFIG.BOILERPLATE.abilities[k]) ?? k;
-    }
+    
+    let data = context.data;
+
+    data.attributes.str.mod = Math.floor(data.attributes.str.value / 3);
+    data.attributes.dex.mod = Math.floor(data.attributes.dex.value / 3);
+    data.attributes.pow.mod = Math.floor(data.attributes.pow.value / 3);
+    data.attributes.int.mod = Math.floor(data.attributes.int.value / 3);
+
   }
 
   /**
@@ -84,18 +83,6 @@ export class BoilerplateActorSheet extends ActorSheet {
     // Initialize containers.
     const gear = [];
     const features = [];
-    const spells = {
-      0: [],
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
-      6: [],
-      7: [],
-      8: [],
-      9: []
-    };
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
@@ -108,19 +95,12 @@ export class BoilerplateActorSheet extends ActorSheet {
       else if (i.type === 'feature') {
         features.push(i);
       }
-      // Append to spells.
-      else if (i.type === 'spell') {
-        if (i.data.spellLevel != undefined) {
-          spells[i.data.spellLevel].push(i);
-        }
-      }
     }
 
     // Assign and return
     context.gear = gear;
     context.features = features;
-    context.spells = spells;
-   }
+  }
 
   /* -------------------------------------------- */
 
@@ -134,6 +114,22 @@ export class BoilerplateActorSheet extends ActorSheet {
       const item = this.actor.items.get(li.data("itemId"));
       item.sheet.render(true);
     });
+
+
+    html.find('#hate-button').click(ev => {
+      let content = ev.target.nextElementSibling;
+      ev.target.classList.toggle("active");
+
+      if (content.style.transform === "perspective(400px) rotateY(-30deg)"){
+        content.style.transform = "perspective(400px) rotateY(-90deg)";
+        // this._onOpeningInfoWindow(false, this.actor);
+      } else {
+        content.style.transform = "perspective(400px) rotateY(-30deg)";    
+        // this._onOpeningInfoWindow(true, this.actor);
+      }
+
+    });
+    
 
     // -------------------------------------------------------------
     // Everything below here is only needed if the sheet is editable
@@ -215,8 +211,8 @@ export class BoilerplateActorSheet extends ActorSheet {
 
     // Handle rolls that supply the formula directly.
     if (dataset.roll) {
-      let label = dataset.label ? `[ability] ${dataset.label}` : '';
-      let roll = new Roll(dataset.roll, this.actor.getRollData()).roll();
+      let label = dataset.label ? `[roll] ${dataset.label}` : '';
+      let roll = new Roll(dataset.roll, this.actor.getRollData());
       roll.toMessage({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         flavor: label,
@@ -225,5 +221,13 @@ export class BoilerplateActorSheet extends ActorSheet {
       return roll;
     }
   }
+
+  // async _onOpeningInfoWindow (state, actor) {
+  //   console.log(state);
+  //   console.log(actor);
+  //   setTimeout(() => {
+  //     actor.setFlag("lhtrpg", "hfWindowOpened", state); 
+  //   }, 2000);
+  // }
 
 }

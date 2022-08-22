@@ -2,7 +2,7 @@
  * Extend the basic Item with some very simple modifications.
  * @extends {Item}
  */
-export class BoilerplateItem extends Item {
+export class LHTrpgItem extends Item {
   /**
    * Augment the basic Item data model with additional dynamic data.
    */
@@ -53,7 +53,9 @@ export class BoilerplateItem extends Item {
       const rollData = this.getRollData();
 
       // Invoke the roll and submit it to chat.
-      const roll = new Roll(rollData.item.formula, rollData).roll();
+      const roll = new Roll(rollData.item.formula, rollData);
+      // If you need to store the value first, uncomment the next line.
+      // let result = await roll.roll({async: true});
       roll.toMessage({
         speaker: speaker,
         rollMode: rollMode,

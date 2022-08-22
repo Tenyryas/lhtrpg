@@ -1,12 +1,12 @@
 // Import document classes.
-import { BoilerplateActor } from "./documents/actor.mjs";
-import { BoilerplateItem } from "./documents/item.mjs";
+import { LHTrpgActor } from "./documents/actor.mjs";
+import { LHTrpgItem } from "./documents/item.mjs";
 // Import sheet classes.
-import { BoilerplateActorSheet } from "./sheets/actor-sheet.mjs";
-import { BoilerplateItemSheet } from "./sheets/item-sheet.mjs";
+import { LHTrpgActorSheet } from "./sheets/actor-sheet.mjs";
+import { LHTrpgItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
-import { BOILERPLATE } from "./helpers/config.mjs";
+import { LHTRPG } from "./helpers/config.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -16,33 +16,33 @@ Hooks.once('init', async function() {
 
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
-  game.boilerplate = {
-    BoilerplateActor,
-    BoilerplateItem,
+  game.lhtrpg = {
+    LHTrpgActor,
+    LHTrpgItem,
     rollItemMacro
   };
 
   // Add custom constants for configuration.
-  CONFIG.BOILERPLATE = BOILERPLATE;
+  CONFIG.LHTRPG = LHTRPG;
 
   /**
    * Set an initiative formula for the system
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: "1d20 + @abilities.dex.mod",
+    formula: "1d20",
     decimals: 2
   };
 
   // Define custom Document classes
-  CONFIG.Actor.documentClass = BoilerplateActor;
-  CONFIG.Item.documentClass = BoilerplateItem;
+  CONFIG.Actor.documentClass = LHTrpgActor;
+  CONFIG.Item.documentClass = LHTrpgItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("boilerplate", BoilerplateActorSheet, { makeDefault: true });
+  Actors.registerSheet("lhtrpg", LHTrpgActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("boilerplate", BoilerplateItemSheet, { makeDefault: true });
+  Items.registerSheet("lhtrpg", LHTrpgItemSheet, { makeDefault: true });
 
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
@@ -93,15 +93,15 @@ async function createItemMacro(data, slot) {
   const item = data.data;
 
   // Create the macro command
-  const command = `game.boilerplate.rollItemMacro("${item.name}");`;
-  let macro = game.macros.entities.find(m => (m.name === item.name) && (m.command === command));
+  const command = `game.lhtrpg.rollItemMacro("${item.name}");`;
+  let macro = game.macros.find(m => (m.name === item.name) && (m.command === command));
   if (!macro) {
     macro = await Macro.create({
       name: item.name,
       type: "script",
       img: item.img,
       command: command,
-      flags: { "boilerplate.itemMacro": true }
+      flags: { "lhtrpg.itemMacro": true }
     });
   }
   game.user.assignHotbarMacro(macro, slot);

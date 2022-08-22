@@ -1,0 +1,76 @@
+// Add custom fonts by visiting and search https://fonts.google.com
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&family=Noto+Serif+JP&display=swap');
+
+// Import utilities.
+@import 'utils/typography';
+@import 'utils/colors';
+@import 'utils/mixins';
+@import 'utils/variables';
+
+/* Global styles */
+@import 'global/window';
+@import 'global/grid';
+@import 'global/flex';
+
+/* Styles limited to lhtrpg sheets */
+div.app.lhtrpg.actor{
+  background: transparent;
+  box-shadow: none;
+  @import 'components/actor-forms';
+}
+
+div.app.lhtrpg.actor.minimized{
+
+  h4.window-title {
+    display: block !important;
+    text-align: center;
+    font-family: $lhtrpg-font-primary;
+    font-size: 24px;
+    max-width: 120px;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    height: auto;
+}
+
+  .window-header {
+    height: 78px;
+    width: 222px;
+    border: 0;
+    background-image: url("../assets/ui/info_window.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: none;
+    justify-content: center;
+
+    a.header-button.close {
+      position: absolute;
+      top: -10px;
+      left: 165px;
+      transition: none;
+    }
+  }
+}
+
+.lhtrpg {
+  @import 'components/forms';
+  @import 'components/resource';
+  @import 'components/items';
+  @import 'components/effects';
+
+  color: $lhtrpg-font-color-primary;
+  font-family: $lhtrpg-font-primary;
+
+  input {
+          background: transparent;
+          border: 0;
+          text-shadow: 0 0 2px $lhtrpg-font-color-primary;
+          color: $lhtrpg-font-color-primary;
+  }
+
+  input:focus {
+          box-shadow: none;
+          text-shadow: 0 0 5px $lhtrpg-font-focus-shadow;
+  }
+}

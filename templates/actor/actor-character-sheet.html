@@ -1,109 +1,73 @@
 <form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
 
-  {{!-- Sheet Header --}}
-  <header class="sheet-header">
-    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
-    <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
-      {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-      use both the "grid" and "grid-Ncol" class where "N" can be any number
-      from 1 to 12 and will create that number of columns.  --}}
-      <div class="resources grid grid-3col">
+	{{!-- Sheet Header --}}
+	<header class="sheet-header">
+		<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
 
-        {{!-- "flex-group-center" is also defined in the _grid.scss file
-        and it will add a small amount of padding, a border, and will
-        center all of its child elements content and text. --}}
-        <div class="resource flex-group-center">
-          <label for="data.health.value" class="resource-label">Health</label>
-          <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"/>
-          <span> / </span>
-          <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
-          </div>
-        </div>
+		<span class="collapsible" id="hate-button" title="Show/Hide Fatigue and Hate">
+		</span>
 
-        <div class="resource flex-group-center">
-          <label for="data.power.value" class="resource-label">Power</label>
-          <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number"/>
-          <span> / </span>
-          <input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number"/>
-          </div>
-        </div>
+		{{!-- Hate/Fatigue Fields --}}
+		<div class="info-windows content" id="hate">
+			<div class="hate-window">
+				<label class="hate-label" for="">HATE</label>
+				<input class="hate-input" type="text" name="data.attributes.hate" value="{{data.attributes.hate}}"
+					placeholder="0" data-dtype="Number" maxlength="3">
+			</div>
+			<div class="fatigue-window">
+				<label class="fatigue-label" for="">FATIGUE</label>
+				<input class="fatigue-input" type="text" name="data.attributes.fatigue" value="{{data.attributes.fatigue}}"
+					placeholder="0" data-dtype="Number" maxlength="3">
+			</div>
+		</div>
 
-        <div class="resource flex-group-center">
-          <label for="data.attributes.level.value" class="resource-label">Level</label>
-          <div class="resource-content flexrow flex-center flex-between">
-          <input type="text" name="data.attributes.level.value" value="{{data.attributes.level.value}}" data-dtype="Number"/>
-          </div>
-        </div>
+		{{!-- Header Fields --}}
+		<div class="header-fields">
+			<h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+			<div class="race">
+				<label for="data.race">Race</label>
+				<input type="text" name="data.race" value="{{data.race}}" placeholder="Race">
+			</div>
+			<img class="class-img" src="{{data.class.img}}" data-edit="data.class.img" title="{{data.class.name}}"
+				height="100" width="100" />
+			<div class="classes">
+				<input class="subclass" type="text" name="data.class.subclass" value="{{data.class.subclass}}"
+					placeholder="SubClass">
+				<input class="class" type="text" name="data.class.name" value="{{data.class.name}}" placeholder="Class">
+			</div>
+			<div class="levels">
+				<input class="crank" type="text" name="data.attributes.crank" value="{{data.attributes.crank}}" placeholder="0"
+					data-dtype="Number" maxlength="3">
+				<input class="level" type="text" name="data.attributes.level" value="{{data.attributes.level}}" placeholder="0"
+					data-dtype="Number" maxlength="3">
+			</div>
+		</div>
 
-      </div>
-    </div>
-  </header>
+	</header>
 
-  {{!-- Sheet Tab Navigation --}}
-  <nav class="sheet-tabs tabs" data-group="primary">
-    {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <a class="item" data-tab="features">Features</a>
-    <a class="item" data-tab="description">Description</a>
-    <a class="item" data-tab="items">Items</a>
-    <a class="item" data-tab="spells">Spells</a>
-    <a class="item" data-tab="effects">Effects</a>
-  </nav>
+	{{!-- Sheet Tab Navigation --}}
+	<nav class="sheet-tabs tabs" data-group="primary">
+		{{!-- Default tab is specified in actor-sheet.mjs --}}
+		<a class="item" data-tab="stats"><img src="{{data.class.img}}" alt=""></a>
+		<a class="item" data-tab="skills"><img src="/systems/lhtrpg/assets/ui/navigation/skills.webp" alt=""></a>
+		<a class="item" data-tab="items"><img src="/systems/lhtrpg/assets/ui/navigation/items.webp" alt=""></a>
+		<a class="item" data-tab="bio"><img src="/systems/lhtrpg/assets/ui/navigation/bio.webp" alt=""></a>
+	</nav>
 
-  {{!-- Sheet Body --}}
-  <section class="sheet-body">
+	{{!-- Sheet Body --}}
+	<section class="sheet-body grid grid-6col">
+		{{!-- <ol>
+      {{#each data.attributes.tags}}
+        <li class="item">
+          <h4>{{this}}</h4>
+        </li>
+      {{/each}}
+    </ol> --}}
 
-    {{!-- Owned Features Tab --}}
-    <div class="tab features" data-group="primary" data-tab="features">
-      <section class="grid grid-3col">
-        <aside class="sidebar">
+		{{!-- Stats Tab --}}
+		<div class="tab stats grid-span-6" data-group="primary" data-tab="stats">
+			{{> "systems/lhtrpg/templates/actor/parts/actor-stats.html"}}
+		</div>
 
-          {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-          use both the "grid" and "grid-Ncol" class where "N" can be any number
-          from 1 to 12 and will create that number of columns.  --}}
-          <div class="abilities flexcol">
-            {{#each data.abilities as |ability key|}}
-            <div class="ability flexrow flex-group-center">
-              <label for="data.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{ability.label}}</label>
-              <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-              <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
-            </div>
-            {{/each}}
-          </div>
-        </aside>
-
-        {{!-- For the main features list, span the right two columns --}}
-        <section class="main grid-span-2">
-          {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
-          {{> "systems/boilerplate/templates/actor/parts/actor-features.html"}}
-        </section>
-
-      </section>
-    </div>
-
-    {{!-- Biography Tab --}}
-    <div class="tab biography" data-group="primary" data-tab="description">
-      {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
-      {{editor content=data.biography target="data.biography" rollData=rollData button=true owner=owner editable=editable}}
-    </div>
-
-    {{!-- Owned Items Tab --}}
-    <div class="tab items" data-group="primary" data-tab="items">
-       {{> "systems/boilerplate/templates/actor/parts/actor-items.html"}}
-    </div>
-
-    {{!-- Owned Spells Tab --}}
-    <div class="tab spells" data-group="primary" data-tab="spells">
-      {{> "systems/boilerplate/templates/actor/parts/actor-spells.html"}}
-    </div>
-
-    {{!-- Active Effects Tab --}}
-    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
-      {{> "systems/boilerplate/templates/actor/parts/actor-effects.html"}}
-    </div>
-
-  </section>
+	</section>
 </form>
-

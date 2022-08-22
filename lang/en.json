@@ -1,22 +1,10 @@
 {
-  "BOILERPLATE.AbilityStr": "Strength",
-  "BOILERPLATE.AbilityCon": "Constitution",
-  "BOILERPLATE.AbilityDex": "Dexterity",
-  "BOILERPLATE.AbilityInt": "Intelligence",
-  "BOILERPLATE.AbilityWis": "Wisdom",
-  "BOILERPLATE.AbilityCha": "Charisma",
 
-  "BOILERPLATE.AbilityStrAbbr": "str",
-  "BOILERPLATE.AbilityConAbbr": "con",
-  "BOILERPLATE.AbilityDexAbbr": "dex",
-  "BOILERPLATE.AbilityIntAbbr": "int",
-  "BOILERPLATE.AbilityWisAbbr": "wis",
-  "BOILERPLATE.AbilityChaAbbr": "cha",
+  "ITEM.TypeItem": "Item",
+  "LHTRPG.EffectCreate": "Create Effect",
+  "LHTRPG.EffectToggle": "Toggle Effect",
+  "LHTRPG.EffectEdit": "Edit Effect",
+  "LHTRPG.EffectDelete": "Delete Effect",
 
-  "BOILERPLATE.EffectCreate": "Create Effect",
-  "BOILERPLATE.EffectToggle": "Toggle Effect",
-  "BOILERPLATE.EffectEdit": "Edit Effect",
-  "BOILERPLATE.EffectDelete": "Delete Effect",
-
-  "BOILERPLATE.Add": "Add"
+  "LHTRPG.Add": "Add"
 }

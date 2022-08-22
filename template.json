@@ -1,56 +1,147 @@
 {
   "Actor": {
-    "types": ["character", "npc"],
+    "types": ["character"],
     "templates": {
+
       "base": {
         "health": {
-          "value": 10,
-          "min": 0,
-          "max": 10
+          "value": 0,
+          "max": 0
         },
-        "power": {
-          "value": 5,
-          "min": 0,
-          "max": 5
+        "fate": {
+          "value": 0,
+          "max": 0
         },
-        "biography": ""
-      }
-    },
-    "character": {
-      "templates": ["base"],
-      "attributes": {
-        "level": {
-          "value": 1
-        }
+        "biography": "",
+        "race": ""
       },
-      "abilities": {
+
+      "attributes": {
+        "attributes": {
         "str": {
-          "value": 10
+          "value": 0,
+          "mod": 0
         },
         "dex": {
-          "value": 10
+          "value": 0,
+          "mod": 0
         },
-        "con": {
-          "value": 10
+        "pow": {
+          "value": 0,
+          "mod": 0
         },
         "int": {
-          "value": 10
+          "value": 0,
+          "mod": 0
+        }
+        }
+      },
+
+      "battle-status": {
+        "battle-status": {
+        "power": {
+          "attack": 0,
+          "restoration": 0,
+          "magic": 0
         },
-        "wis": {
-          "value": 10
+        "defense": {
+          "phys": 0,
+          "magic": 0
         },
-        "cha": {
-          "value": 10
+        "speed": 0,
+        "initiative": 0
+      }
+      },
+
+      "bad-status": {
+        "bad-status": {
+        "dazed": false,
+        "rigor": false,
+        "confused": false,
+        "staggered": false,
+        "afflicted": false,
+        "overconfident":false,
+        "decay": 0
+        }
+      },
+
+      "combat-status": {
+        "combat-status": {
+        "barrier": 0,
+        "regen": 0,
+        "cancel": 0
+        }
+      },
+
+      "checks": {
+        "checks": {
+          "athletics": {
+            "dice": 2,
+            "mod": 0
+          },
+          "endurance": {
+            "dice": 2,
+            "mod": 0
+          },
+          "disable": {
+            "dice": 2,
+            "mod": 0
+          },
+          "operation": {
+            "dice": 2,
+            "mod": 0
+          },
+          "perception": {
+            "dice": 2,
+            "mod": 0
+          },
+          "negotiation": {
+            "dice": 2,
+            "mod": 0
+          },
+          "knowledge": {
+            "dice": 2,
+            "mod": 0
+          },
+          "analysis": {
+            "dice": 2,
+            "mod": 0
+          },
+          "accuracy": {
+            "dice": 2,
+            "mod": 0
+          },
+          "evasion": {
+            "dice": 2,
+            "mod": 0
+          },
+          "resistance": {
+            "dice": 2,
+            "mod": 0
+          }
         }
       }
+
     },
-    "npc": {
-      "templates": ["base"],
-      "cr": 0
+
+    "character": {
+      "templates": ["base", "attributes","battle-status", "bad-status", "combat-status", "checks"],
+      "class": {
+        "img": "systems/lhtrpg/assets/ui/classes/Enchanter_Logo.png",
+        "name": "",
+        "subclass": ""
+      },
+      "tags": [],
+      "attributes": {
+        "crank": 1,
+        "hate": 0,
+        "fatigue": 0,
+        "level": 35
+      }
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell"],
+    "types": ["item", "feature"],
     "templates": {
       "base": {
         "description": ""
@@ -64,10 +155,6 @@
     },
     "feature": {
       "templates": ["base"]
-    },
-    "spell": {
-      "templates": ["base"],
-      "spellLevel": 1
     }
   }
 }

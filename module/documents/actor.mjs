@@ -2,7 +2,7 @@
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
-export class BoilerplateActor extends Actor {
+export class LHTrpgActor extends Actor {
 
   /** @override */
   prepareData() {
@@ -31,12 +31,12 @@ export class BoilerplateActor extends Actor {
   prepareDerivedData() {
     const actorData = this.data;
     const data = actorData.data;
-    const flags = actorData.flags.boilerplate || {};
+    const flags = actorData.flags.lhtrpg || {};
+
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     this._prepareCharacterData(actorData);
-    this._prepareNpcData(actorData);
   }
 
   /**
@@ -47,23 +47,6 @@ export class BoilerplateActor extends Actor {
 
     // Make modifications to data here. For example:
     const data = actorData.data;
-
-    // Loop through ability scores, and add their modifiers to our sheet output.
-    for (let [key, ability] of Object.entries(data.abilities)) {
-      // Calculate the modifier using d20 rules.
-      ability.mod = Math.floor((ability.value - 10) / 2);
-    }
-  }
-
-  /**
-   * Prepare NPC type specific data.
-   */
-  _prepareNpcData(actorData) {
-    if (actorData.type !== 'npc') return;
-
-    // Make modifications to data here. For example:
-    const data = actorData.data;
-    data.xp = (data.cr * data.cr) * 100;
   }
 
   /**
@@ -74,7 +57,6 @@ export class BoilerplateActor extends Actor {
 
     // Prepare character roll data.
     this._getCharacterRollData(data);
-    this._getNpcRollData(data);
 
     return data;
   }
@@ -85,27 +67,10 @@ export class BoilerplateActor extends Actor {
   _getCharacterRollData(data) {
     if (this.data.type !== 'character') return;
 
-    // Copy the ability scores to the top level, so that rolls can use
-    // formulas like `@str.mod + 4`.
-    if (data.abilities) {
-      for (let [k, v] of Object.entries(data.abilities)) {
-        data[k] = foundry.utils.deepClone(v);
-      }
-    }
-
     // Add level for easier access, or fall back to 0.
     if (data.attributes.level) {
-      data.lvl = data.attributes.level.value ?? 0;
+      data.lvl = data.attributes.level ?? 0;
     }
-  }
-
-  /**
-   * Prepare NPC roll data.
-   */
-  _getNpcRollData(data) {
-    if (this.data.type !== 'npc') return;
-
-    // Process additional NPC data here.
   }
 
 }
