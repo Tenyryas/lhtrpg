@@ -12,6 +12,7 @@
           "value": 0,
           "max": 0
         },
+        "tags": [],
         "biography": "",
         "race": ""
       },
@@ -61,7 +62,8 @@
         "staggered": false,
         "afflicted": false,
         "overconfident":false,
-        "decay": 0
+        "decay": 0,
+        "pursuit": 0
         }
       },
 
@@ -131,7 +133,6 @@
         "name": "",
         "subclass": ""
       },
-      "tags": [],
       "attributes": {
         "crank": 1,
         "hate": 0,
