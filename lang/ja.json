@@ -1,0 +1,60 @@
+{
+  "ITEM": {
+    "TypeItem": "Item"
+  },
+  "LHTRPG": {
+    "Add": "Add",
+    "Check": {
+      "Accuracy": "命中",
+      "Analysis": "解析",
+      "Athletics": "運動",
+      "Disable": "解除",
+      "Endurance": "耐久",
+      "Evasion": "回避",
+      "Knowledge": "知識",
+      "Negotiation": "交渉",
+      "Operation": "操作",
+      "Perception": "知覚",
+      "Resistance": "抵抗"
+    },
+    "EffectCreate": "Create Effect",
+    "EffectDelete": "Delete Effect",
+    "EffectEdit": "Edit Effect",
+    "EffectToggle": "Toggle Effect",
+    "Label": {
+      "Afflicted": "重篤",
+      "Barrier": "障壁",
+      "Cancel": "軽減",
+      "Confused": "惑乱",
+      "Dazed": "放心",
+      "Decay": "衰弱",
+      "Defense": "防御力",
+      "Fate": "Fate",
+      "Fatigue": "疲労",
+      "HP": "HP",
+      "Hate": "HATE",
+      "Overconfident": "慢心",
+      "Power": "攻撃力",
+      "Pursuit": "追撃",
+      "Race": "種族",
+      "Regen": "再生",
+      "Rigor": "硬直",
+      "Staggered": "萎縮"
+    },
+    "Placeholder": {
+      "Class": "メイン職業",
+      "Name": "PC名",
+      "Race": "種族",
+      "SubClass": "サブ職業"
+    },
+    "Tooltip": {
+      "AttackPower": "攻撃力",
+      "Initiative": "行動力",
+      "MagicDefense": "魔法防御力",
+      "MagicPower": "魔力",
+      "PhysDefense": "物理防御力",
+      "RestorationPower": "回復力",
+      "Speed": "移動力"
+    }
+  }
+}
