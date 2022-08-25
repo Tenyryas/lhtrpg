@@ -38,6 +38,10 @@
   flex: 0;
 }
 
+.tabs .item.active {
+  text-shadow: 0 0 10px $lhtrpg-font-color-ui;
+}
+
 .sheet-body,
 .sheet-body .tab,
 .sheet-body .tab .editor {

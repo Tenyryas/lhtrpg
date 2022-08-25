@@ -235,6 +235,54 @@ div.app.lhtrpg.actor div.window-resizable-handle {
   visibility: hidden;
 }
 
+div.app.lhtrpg.actor input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  color: #d6ffda;
+  border: 2px solid #d6ffda;
+  border-radius: 100%;
+  display: grid;
+  place-content: center;
+}
+
+div.app.lhtrpg.actor input[type="checkbox"]::before {
+  color: #d6ffda;
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: 120ms -webkit-transform ease-in-out;
+  transition: 120ms -webkit-transform ease-in-out;
+  -o-transition: 120ms transform ease-in-out;
+  transition: 120ms transform ease-in-out;
+  transition: 120ms transform ease-in-out, 120ms -webkit-transform ease-in-out;
+  -webkit-box-shadow: inset 1.15em 1.15em #081910;
+  box-shadow: inset 1.15em 1.15em #081910;
+  -webkit-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  transform-origin: bottom left;
+  -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+
+div.app.lhtrpg.actor input[type="checkbox"]:checked::before {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+div.app.lhtrpg.actor input[type="checkbox"]:checked {
+  -webkit-filter: none;
+  background-color: #d6ffda;
+}
+
 div.app.lhtrpg.actor .window-header {
   position: absolute;
   border-bottom: none;
@@ -397,12 +445,12 @@ div.app.lhtrpg.actor .sheet-header .info-windows .hate-window .hate-label,
 div.app.lhtrpg.actor .sheet-header .info-windows .hate-window .fatigue-label,
 div.app.lhtrpg.actor .sheet-header .info-windows .fatigue-window .hate-label,
 div.app.lhtrpg.actor .sheet-header .info-windows .fatigue-window .fatigue-label {
-  font-size: 12px;
-  text-shadow: 0 0 2px white;
+  text-align: center;
+  font-size: 16px;
   color: white;
   position: absolute;
-  top: 44px;
-  left: 42px;
+  top: 42px;
+  left: 32px;
   width: 65px;
 }
 
@@ -414,7 +462,6 @@ div.app.lhtrpg.actor .sheet-header .info-windows .fatigue-window .fatigue-input 
   height: 32px;
   width: 140px;
   font-family: "Edu SA Beginner", cursive;
-  text-shadow: 0 0 3px white;
   color: white;
   text-align: center;
   position: absolute;
@@ -460,7 +507,6 @@ div.app.lhtrpg.actor .sheet-header .header-fields .race label {
   font-size: 20px;
   margin-right: 30px;
   color: #d6ffda;
-  text-shadow: 0 0 2px #d6ffda;
 }
 
 div.app.lhtrpg.actor .sheet-header .header-fields .race input {
@@ -483,7 +529,6 @@ div.app.lhtrpg.actor .sheet-header .header-fields .classes {
 div.app.lhtrpg.actor .sheet-header .header-fields .classes .subclass {
   font-size: 25px;
   color: #d6ffda;
-  text-shadow: 0 0 2px #d6ffda;
 }
 
 div.app.lhtrpg.actor .sheet-header .header-fields .classes .class {
@@ -519,7 +564,6 @@ div.app.lhtrpg.actor .sheet-body {
   width: 500px;
   margin-top: 0;
   color: white;
-  text-shadow: 0 0 2px white;
 }
 
 div.app.lhtrpg.actor .sheet-body .stats {
@@ -529,10 +573,53 @@ div.app.lhtrpg.actor .sheet-body .stats {
   grid-template-rows: 95px 95px;
 }
 
+div.app.lhtrpg.actor .sheet-body .stats nav.status-tabs {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  top: 325px;
+  left: 162px;
+  width: 220px;
+  height: 45px;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats nav.status-tabs a {
+  background: url("../assets/ui/confirm-tab.webp");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  line-height: 45px;
+  height: 45px;
+  width: 120px;
+  -webkit-filter: grayscale(100%) opacity(50%);
+  filter: grayscale(100%) opacity(50%);
+  -webkit-transition: -webkit-filter 0.3s ease-in;
+  transition: -webkit-filter 0.3s ease-in;
+  -o-transition: filter 0.3s ease-in;
+  transition: filter 0.3s ease-in;
+  transition: filter 0.3s ease-in, -webkit-filter 0.3s ease-in;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats nav.status-tabs a.active {
+  -webkit-filter: grayscale(0%) opacity(100%) drop-shadow(0 0 5px white);
+  filter: grayscale(0%) opacity(100%) drop-shadow(0 0 5px white);
+}
+
 div.app.lhtrpg.actor .sheet-body .stats .battle-status {
   gap: 14px;
   text-align: center;
   margin-top: 0;
+  grid-template-rows: 75px 60px 70px;
+  row-gap: 2px;
 }
 
 div.app.lhtrpg.actor .sheet-body .stats .battle-status img {
@@ -605,7 +692,6 @@ div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  text-shadow: 0 0 1px white;
 }
 
 div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .hp-gauge input,
@@ -627,88 +713,47 @@ div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge span {
   color: #9cf3da;
 }
 
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .hp-gauge .barrier,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .hp-gauge .regen,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .hp-gauge .decay,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .fate-gauge .barrier,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .fate-gauge .regen,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .fate-gauge .decay,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .hp-gauge .barrier,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .hp-gauge .regen,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .hp-gauge .decay,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge .barrier,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge .regen,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge .decay {
-  font-size: 12px;
-}
-
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .hp-gauge .barrier input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .hp-gauge .regen input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .hp-gauge .decay input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .fate-gauge .barrier input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .fate-gauge .regen input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .fate-gauge .decay input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .hp-gauge .barrier input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .hp-gauge .regen input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .hp-gauge .decay input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge .barrier input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge .regen input,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge .decay input {
-  font-size: 16px;
-}
-
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .hp-gauge .barrier h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .hp-gauge .regen h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .hp-gauge .decay h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .fate-gauge .barrier h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .fate-gauge .regen h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .fate-gauge .decay h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .hp-gauge .barrier h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .hp-gauge .regen h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .hp-gauge .decay h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge .barrier h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge .regen h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge .decay h4 {
-  position: relative;
-  top: -8px;
-  color: #d6ffda;
-}
-
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .hp-gauge .decay h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .hp .fate-gauge .decay h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .hp-gauge .decay h4,
-div.app.lhtrpg.actor .sheet-body .stats .battle-status .fate .fate-gauge .decay h4 {
-  color: #c6515d;
-  text-shadow: 0 0 1px #c6515d;
-}
-
 div.app.lhtrpg.actor .sheet-body .stats .battle-status .power {
   margin-top: 0;
+  grid-template-rows: 20px 50px;
 }
 
 div.app.lhtrpg.actor .sheet-body .stats .battle-status .power h4 {
   color: #d6ffda;
 }
 
+div.app.lhtrpg.actor .sheet-body .stats .battle-status .power h4:lang(ja) {
+  font-size: 18px;
+}
+
 div.app.lhtrpg.actor .sheet-body .stats .battle-status .power .power-attack,
 div.app.lhtrpg.actor .sheet-body .stats .battle-status .power .power-resto,
 div.app.lhtrpg.actor .sheet-body .stats .battle-status .power .power-magic {
   position: relative;
-  top: -15px;
+  top: -10px;
 }
 
 div.app.lhtrpg.actor .sheet-body .stats .battle-status .defense {
   margin-top: 0;
+  grid-template-rows: 20px 50px;
 }
 
 div.app.lhtrpg.actor .sheet-body .stats .battle-status .defense h4 {
   color: #d6ffda;
 }
 
+div.app.lhtrpg.actor .sheet-body .stats .battle-status .defense h4:lang(ja) {
+  font-size: 18px;
+}
+
 div.app.lhtrpg.actor .sheet-body .stats .battle-status .defense .defense-phys,
 div.app.lhtrpg.actor .sheet-body .stats .battle-status .defense .defense-magic {
   position: relative;
-  top: -15px;
+  top: -10px;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats .battle-status .speedInit {
+  margin: 0;
 }
 
 div.app.lhtrpg.actor .sheet-body .stats .attributes {
@@ -754,6 +799,10 @@ div.app.lhtrpg.actor .sheet-body .stats .attributes .check h4 {
   font-size: 12px;
 }
 
+div.app.lhtrpg.actor .sheet-body .stats .attributes .check h4:lang(ja) {
+  font-size: 18px;
+}
+
 div.app.lhtrpg.actor .sheet-body .stats .attributes .check div {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -778,6 +827,76 @@ div.app.lhtrpg.actor .sheet-body .stats .attributes .check span {
   -ms-flex-positive: 0.1;
   flex-grow: 0.1;
   min-width: 0;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats .bad-status {
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  margin-top: 25px;
+  grid-template-rows: 80px;
+  text-align: center;
+  gap: 1px;
+  font-size: 12px;
+  color: #d6ffda;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats .bad-status img {
+  height: 25px;
+  border: none;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats .bad-status input {
+  font-size: 16px;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .rated-statuses {
+  gap: 0;
+  margin-top: 0;
+  grid-template-rows: 38px 38px;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .rated-statuses div:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 6;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .barrier h4,
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .regen h4,
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .decay h4,
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .cancel h4,
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .pursuit h4 {
+  position: relative;
+  top: -8px;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .barrier h4:lang(ja),
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .regen h4:lang(ja),
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .decay h4:lang(ja),
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .cancel h4:lang(ja),
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .pursuit h4:lang(ja) {
+  font-size: 18px;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .status-row {
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .status-checkbox {
+  margin-bottom: 5px;
+  text-align: right;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .status-checkbox label {
+  margin-right: 5px;
+}
+
+div.app.lhtrpg.actor .sheet-body .stats .bad-status .status-checkbox label:lang(ja) {
+  font-size: 18px;
 }
 
 div.app.lhtrpg.actor .sheet-body h4.tab-title {
@@ -817,11 +936,11 @@ div.app.lhtrpg.actor .sheet-tabs a {
 div.app.lhtrpg.actor .sheet-tabs a.active {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
-  -webkit-transition: -webkit-filter 0.5s ease-out;
-  transition: -webkit-filter 0.5s ease-out;
-  -o-transition: filter 0.5s ease-out;
-  transition: filter 0.5s ease-out;
-  transition: filter 0.5s ease-out, -webkit-filter 0.5s ease-out;
+  -webkit-transition: -webkit-filter 0.3s ease-out;
+  transition: -webkit-filter 0.3s ease-out;
+  -o-transition: filter 0.3s ease-out;
+  transition: filter 0.3s ease-out;
+  transition: filter 0.3s ease-out, -webkit-filter 0.3s ease-out;
 }
 
 div.app.lhtrpg.actor.minimized h4.window-title {
@@ -928,6 +1047,10 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
   flex: 0;
 }
 
+.lhtrpg .tabs .item.active {
+  text-shadow: 0 0 10px #d6ffda;
+}
+
 .lhtrpg .sheet-body,
 .lhtrpg .sheet-body .tab,
 .lhtrpg .sheet-body .tab .editor {
@@ -974,11 +1097,12 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 
 .lhtrpg .items-list {
   list-style: none;
-  margin: 0;
+  margin: 10px 5px 0 5px;
   padding: 0;
   overflow-y: auto;
   scrollbar-width: thin;
-  color: #444;
+  color: #d6ffda;
+  max-height: 210px;
 }
 
 .lhtrpg .items-list .item-list {
@@ -1040,7 +1164,7 @@ div.app.lhtrpg.actor.minimized .window-header a.header-button.close {
 }
 
 .lhtrpg .items-list .item .item-name {
-  color: #191813;
+  color: white;
 }
 
 .lhtrpg .items-list .item .item-name .item-image {

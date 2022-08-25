@@ -26,11 +26,12 @@
 
 .items-list {
   list-style: none;
-  margin: 0;
+  margin: 10px 5px 0 5px;
   padding: 0;
   overflow-y: auto;
   scrollbar-width: thin;
-  color: $c-tan;
+  color: $lhtrpg-font-color-ui;
+  max-height: 210px;
 
   // Child lists
   .item-list {
@@ -74,7 +75,7 @@
     border-bottom: 1px solid $c-faint;
     &:last-child { border-bottom: none; }
     .item-name {
-      color: $c-dark;
+      color: $lhtrpg-font-color-primary;
       .item-image {
         flex: 0 0 30px;
         height: 30px;
