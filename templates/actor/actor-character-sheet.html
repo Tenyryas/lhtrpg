@@ -2,7 +2,8 @@
 
 	{{!-- Sheet Header --}}
 	<header class="sheet-header">
-		<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
+		<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100"
+			width="100" />
 
 		<span class="collapsible" id="hate-button" title="Show/Hide Fatigue and Hate">
 		</span>
@@ -10,36 +11,42 @@
 		{{!-- Hate/Fatigue Fields --}}
 		<div class="info-windows content" id="hate">
 			<div class="hate-window">
-				<label class="hate-label" for="">HATE</label>
-				<input class="hate-input" type="text" name="data.attributes.hate" value="{{data.attributes.hate}}"
-					placeholder="0" data-dtype="Number" maxlength="3">
+				<label class="hate-label" for="">{{localize 'LHTRPG.Label.Hate'}}</label>
+				<input class="hate-input" type="text" name="data.attributes.hate"
+					value="{{data.attributes.hate}}" placeholder="0" data-dtype="Number"
+					maxlength="3">
 			</div>
 			<div class="fatigue-window">
-				<label class="fatigue-label" for="">FATIGUE</label>
-				<input class="fatigue-input" type="text" name="data.attributes.fatigue" value="{{data.attributes.fatigue}}"
-					placeholder="0" data-dtype="Number" maxlength="3">
+				<label class="fatigue-label" for="">{{localize 'LHTRPG.Label.Fatigue'}}</label>
+				<input class="fatigue-input" type="text" name="data.attributes.fatigue"
+					value="{{data.attributes.fatigue}}" placeholder="0" data-dtype="Number"
+					maxlength="3">
 			</div>
 		</div>
 
 		{{!-- Header Fields --}}
 		<div class="header-fields">
-			<h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+			<h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'LHTRPG.Placeholder.Name'}}" />
+			</h1>
 			<div class="race">
-				<label for="data.race">Race</label>
-				<input type="text" name="data.race" value="{{data.race}}" placeholder="Race">
+				<label for="data.race">{{localize 'LHTRPG.Label.Race'}}</label>
+				<input type="text" name="data.race" value="{{data.race}}" placeholder="{{localize 'LHTRPG.Placeholder.Race'}}">
 			</div>
-			<img class="class-img" src="{{data.class.img}}" data-edit="data.class.img" title="{{data.class.name}}"
-				height="100" width="100" />
+			<img class="class-img" src="{{data.class.img}}" data-edit="data.class.img"
+				title="{{data.class.name}}" height="100" width="100" />
 			<div class="classes">
-				<input class="subclass" type="text" name="data.class.subclass" value="{{data.class.subclass}}"
-					placeholder="SubClass">
-				<input class="class" type="text" name="data.class.name" value="{{data.class.name}}" placeholder="Class">
+				<input class="subclass" type="text" name="data.class.subclass"
+					value="{{data.class.subclass}}" placeholder="{{localize 'LHTRPG.Placeholder.SubClass'}}">
+				<input class="class" type="text" name="data.class.name" value="{{data.class.name}}"
+					placeholder="{{localize 'LHTRPG.Placeholder.Class'}}">
 			</div>
 			<div class="levels">
-				<input class="crank" type="text" name="data.attributes.crank" value="{{data.attributes.crank}}" placeholder="0"
-					data-dtype="Number" maxlength="3">
-				<input class="level" type="text" name="data.attributes.level" value="{{data.attributes.level}}" placeholder="0"
-					data-dtype="Number" maxlength="3">
+				<input class="crank" type="text" name="data.attributes.crank"
+					value="{{data.attributes.crank}}" placeholder="0" data-dtype="Number"
+					maxlength="3">
+				<input class="level" type="text" name="data.attributes.level"
+					value="{{data.attributes.level}}" placeholder="0" data-dtype="Number"
+					maxlength="3">
 			</div>
 		</div>
 
@@ -49,7 +56,8 @@
 	<nav class="sheet-tabs tabs" data-group="primary">
 		{{!-- Default tab is specified in actor-sheet.mjs --}}
 		<a class="item" data-tab="stats"><img src="{{data.class.img}}" alt=""></a>
-		<a class="item" data-tab="skills"><img src="/systems/lhtrpg/assets/ui/navigation/skills.webp" alt=""></a>
+		<a class="item" data-tab="skills"><img src="/systems/lhtrpg/assets/ui/navigation/skills.webp"
+				alt=""></a>
 		<a class="item" data-tab="items"><img src="/systems/lhtrpg/assets/ui/navigation/items.webp" alt=""></a>
 		<a class="item" data-tab="bio"><img src="/systems/lhtrpg/assets/ui/navigation/bio.webp" alt=""></a>
 	</nav>
@@ -58,15 +66,29 @@
 	<section class="sheet-body grid grid-6col">
 		{{!-- <ol>
       {{#each data.attributes.tags}}
-        <li class="item">
-          <h4>{{this}}</h4>
-        </li>
-      {{/each}}
-    </ol> --}}
+			<li class="item">
+				<h4>{{this}}</h4>
+			</li>
+		{{/each}}
+		</ol> --}}
 
 		{{!-- Stats Tab --}}
 		<div class="tab stats grid-span-6" data-group="primary" data-tab="stats">
-			{{> "systems/lhtrpg/templates/actor/parts/actor-stats.html"}}
+
+			<nav class="status-tabs tabs" data-group="stats">
+				{{!-- Default tab is specified in actor-sheet.mjs --}}
+				<a class="item" data-tab="status">STATUS</a>
+				<a class="item" data-tab="effects">EFFECTS</a>
+			</nav>
+			<section class="status-body">
+				<div class="tab status" data-group="stats" data-tab="status">
+					{{> "systems/lhtrpg/templates/actor/parts/actor-stats.html"}}
+				</div>
+				<div class="tab effects" data-group="stats" data-tab="effects">
+					{{> "systems/lhtrpg/templates/actor/parts/actor-effects.html"}}
+				</div>
+
+			</section>
 		</div>
 
 	</section>

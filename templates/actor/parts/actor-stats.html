@@ -6,75 +6,82 @@
 	{{!-- HP, Fate, power, etc --}}
 	<div class="battle-status grid grid-6col grid-span-6">
 		<div class="hp flex grid-span-3">
-			<h4>HP</h4>
+			<h4>{{localize 'LHTRPG.Label.HP'}}</h4>
 			<div class="hp-gauge flexrow">
-				<input class="hp-input current" type="text" name="data.health.value" value="{{data.health.value}}"
-					placeholder="0" data-dtype="Number" maxlength="3">
+				<input class="hp-input current" type="text" name="data.health.value"
+					value="{{data.health.value}}" placeholder="0" data-dtype="Number" maxlength="3">
 				<span>/</span>
-				<input class="hp-input max" type="text" name="data.health.max" value="{{data.health.max}}" placeholder="0"
-					data-dtype="Number" maxlength="3">
-			</div>
-			<div class="hp-gauge flexrow">
-				<div class="regen">
-					<input class="regen-input" type="text" name="data.combat-status.regen"
-						value="{{data.combat-status.regen}}" placeholder="0" data-dtype="Number" maxlength="3">
-					<h4>Regen</h4>
-				</div>
-				<div class="barrier">
-					<input class="barrier-input" type="text" name="data.combat-status.barrier"
-						value="{{data.combat-status.barrier}}" placeholder="0" data-dtype="Number" maxlength="3">
-					<h4>Barrier</h4>
-				</div>
+				<input class="hp-input max" type="text" name="data.health.max"
+					value="{{data.health.max}}" placeholder="0" data-dtype="Number" maxlength="3">
 			</div>
 		</div>
 		<div class="fate flex grid-span-3">
-			<h4>Fate</h4>
+			<h4>{{localize 'LHTRPG.Label.Fate'}}</h4>
 			<div class="fate-gauge flexrow">
-				<input class="fate-input" type="text" name="data.fate.value" value="{{data.fate.value}}" placeholder="0"
-					data-dtype="Number" maxlength="3">
+				<input class="fate-input" type="text" name="data.fate.value" value="{{data.fate.value}}"
+					placeholder="0" data-dtype="Number" maxlength="3">
 				<span>/</span>
-				<input class="fate-input" type="text" name="data.fate.max" value="{{data.fate.max}}" placeholder="0"
-					data-dtype="Number" maxlength="3">
+				<input class="fate-input" type="text" name="data.fate.max" value="{{data.fate.max}}"
+					placeholder="0" data-dtype="Number" maxlength="3">
 			</div>
-			<div class="fate-gauge flexrow">
-				<div class="decay">
-					<input class="decay-input" type="text" name="data.bad-status.decay" value="{{data.bad-status.decay}}"
-						placeholder="0" data-dtype="Number" maxlength="3">
-					<h4>Decay</h4>
+		</div>
+
+		<div class="speedInit grid grid-6col grid-span-6">
+			<div class="grid-span-3 flex flexrow">
+				<div class="speed" title="{{localize 'LHTRPG.Tooltip.Speed'}}">
+					<input class="speed-input" type="text" name="data.battle-status.speed"
+						value="{{data.battle-status.speed}}" placeholder="0" data-dtype="Number"
+						maxlength="2">
+					<h4><img src="/systems/lhtrpg/assets/ui/speed.svg" alt=""></h4>
+				</div>
+			</div>
+			<div class="grid-span-3 flex flexrow">
+				<div class="initiative" title="{{localize 'LHTRPG.Tooltip.Initiative'}}">
+					<input class="initiative-input" type="text" name="data.battle-status.initiative"
+						value="{{data.battle-status.initiative}}" placeholder="0" data-dtype="Number"
+						maxlength="2">
+					<h4><img src="/systems/lhtrpg/assets/ui/initiative.svg" alt=""></h4>
 				</div>
 			</div>
 		</div>
 
 		<div class="power grid grid-3col grid-span-3">
-			<h4 class="grid-span-3">Power</h4>
-			<div class="power-attack grid-span-1" title="Attack Power">
+			<h4 class="grid-span-3">{{localize 'LHTRPG.Label.Power'}}</h4>
+			<div class="power-attack grid-span-1" title="{{localize 'LHTRPG.Tooltip.AttackPower'}}">
 				<input class="power-attack-input" type="text" name="data.battle-status.power.attack"
-					value="{{data.battle-status.power.attack}}" placeholder="0" data-dtype="Number" maxlength="2">
+					value="{{data.battle-status.power.attack}}" placeholder="0" data-dtype="Number"
+					maxlength="2">
 				<h4><img src="/systems/lhtrpg/assets/ui/attack.svg" alt=""></h4>
 			</div>
-			<div class="power-resto grid-span-1" title="Restoration Power">
+			<div class="power-resto grid-span-1" title="{{localize 'LHTRPG.Tooltip.RestorationPower'}}">
 				<input class="power-resto-input" type="text" name="data.battle-status.power.restoration"
-					value="{{data.battle-status.power.restoration}}" placeholder="0" data-dtype="Number" maxlength="2">
+					value="{{data.battle-status.power.restoration}}" placeholder="0"
+					data-dtype="Number" maxlength="2">
 				<h4><img src="/systems/lhtrpg/assets/ui/resto.svg" alt=""></h4>
 			</div>
-			<div class="power-magic grid-span-1" title="Magic Power">
+			<div class="power-magic grid-span-1" title="{{localize 'LHTRPG.Tooltip.MagicPower'}}">
 				<input class="power-magic-input" type="text" name="data.battle-status.power.magic"
-					value="{{data.battle-status.power.magic}}" placeholder="0" data-dtype="Number" maxlength="2">
+					value="{{data.battle-status.power.magic}}" placeholder="0" data-dtype="Number"
+					maxlength="2">
 				<h4><img src="/systems/lhtrpg/assets/ui/magic.svg" alt=""></h4>
 			</div>
 		</div>
 
 		<div class="defense grid grid-3col grid-span-3">
-			<h4 class="grid-span-3">Defense</h4>
+			<h4 class="grid-span-3">{{localize 'LHTRPG.Label.Defense'}}</h4>
 			<div class="grid-span-3 flex flexrow">
-				<div class="defense-phys" title="Physical Defense">
-					<input class="defense-phys-input" type="text" name="data.battle-status.defense.phys"
-						value="{{data.battle-status.defense.phys}}" placeholder="0" data-dtype="Number" maxlength="2">
+				<div class="defense-phys" title="{{localize 'LHTRPG.Tooltip.PhysDefense'}}">
+					<input class="defense-phys-input" type="text"
+						name="data.battle-status.defense.phys"
+						value="{{data.battle-status.defense.phys}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<h4><img src="/systems/lhtrpg/assets/ui/phys-def.svg" alt=""></h4>
 				</div>
-				<div class="defense-magic" title="Magic Defense">
-					<input class="defense-magic-input" type="text" name="data.battle-status.defense.magic"
-						value="{{data.battle-status.defense.magic}}" placeholder="0" data-dtype="Number" maxlength="2">
+				<div class="defense-magic" title="{{localize 'LHTRPG.Tooltip.MagicDefense'}}">
+					<input class="defense-magic-input" type="text"
+						name="data.battle-status.defense.magic"
+						value="{{data.battle-status.defense.magic}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<h4><img src="/systems/lhtrpg/assets/ui/magic-def.svg" alt=""></h4>
 				</div>
 			</div>
@@ -86,30 +93,36 @@
 		<div class="str grid grid-2col grid-span-2">
 			<h4 class="attr-name grid-span-2">[STR]</h4>
 			<div class="attr-inputs flexcolumn grid-span-2">
-				<input class="attr-mod-input" type="text" name="data.attributes.str.mod" value="{{data.attributes.str.mod}}"
-					placeholder="0" data-dtype="Number" maxlength="2" disabled>
-				<input class="attr-input" id="str-value" data-label="str" type="text" name="data.attributes.str.value"
-					value="{{data.attributes.str.value}}" placeholder="0" data-dtype="Number" maxlength="2">
+				<input class="attr-mod-input" type="text" name="data.attributes.str.mod"
+					value="{{data.attributes.str.mod}}" placeholder="0" data-dtype="Number"
+					maxlength="2" disabled>
+				<input class="attr-input" id="str-value" data-label="str" type="text"
+					name="data.attributes.str.value" value="{{data.attributes.str.value}}"
+					placeholder="0" data-dtype="Number" maxlength="2">
 			</div>
 			<div class="check flexcolumn grid-span-2">
-				<h4>Athletics</h4>
+				<h4>{{localize 'LHTRPG.Check.Athletics'}}</h4>
 				<div class="flexrow">
 					<input class="attr-input" type="text" name="data.checks.athletics.mod"
-						value="{{data.checks.athletics.mod}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.athletics.mod}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>+</span>
 					<input class="attr-input" type="text" name="data.checks.athletics.dice"
-						value="{{data.checks.athletics.dice}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.athletics.dice}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>D</span>
 				</div>
 			</div>
 			<div class="check flexcolumn grid-span-2">
-				<h4>Endurance</h4>
+				<h4>{{localize 'LHTRPG.Check.Endurance'}}</h4>
 				<div class="flexrow">
 					<input class="attr-input" type="text" name="data.checks.endurance.mod"
-						value="{{data.checks.endurance.mod}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.endurance.mod}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>+</span>
 					<input class="attr-input" type="text" name="data.checks.endurance.dice"
-						value="{{data.checks.endurance.dice}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.endurance.dice}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>D</span>
 				</div>
 			</div>
@@ -118,30 +131,36 @@
 		<div class="dex grid grid-2col grid-span-2">
 			<h4 class="attr-name grid-span-2">[DEX]</h4>
 			<div class="attr-inputs flexcolumn grid-span-2">
-				<input class="attr-mod-input" type="text" name="data.attributes.dex.mod" value="{{data.attributes.dex.mod}}"
-					placeholder="0" data-dtype="Number" maxlength="2" disabled>
-				<input class="attr-input" id="dex-value" data-label="dex" type="text" name="data.attributes.dex.value"
-					value="{{data.attributes.dex.value}}" placeholder="0" data-dtype="Number" maxlength="2">
+				<input class="attr-mod-input" type="text" name="data.attributes.dex.mod"
+					value="{{data.attributes.dex.mod}}" placeholder="0" data-dtype="Number"
+					maxlength="2" disabled>
+				<input class="attr-input" id="dex-value" data-label="dex" type="text"
+					name="data.attributes.dex.value" value="{{data.attributes.dex.value}}"
+					placeholder="0" data-dtype="Number" maxlength="2">
 			</div>
 			<div class="check flexcolumn grid-span-2">
-				<h4>Disable</h4>
+				<h4>{{localize 'LHTRPG.Check.Disable'}}</h4>
 				<div class="flexrow">
-					<input class="attr-input" type="text" name="data.checks.disable.mod" value="{{data.checks.disable.mod}}"
-						placeholder="0" data-dtype="Number" maxlength="2">
+					<input class="attr-input" type="text" name="data.checks.disable.mod"
+						value="{{data.checks.disable.mod}}" placeholder="0" data-dtype="Number"
+						maxlength="2">
 					<span>+</span>
 					<input class="attr-input" type="text" name="data.checks.disable.dice"
-						value="{{data.checks.disable.dice}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.disable.dice}}" placeholder="0" data-dtype="Number"
+						maxlength="2">
 					<span>D</span>
 				</div>
 			</div>
 			<div class="check flexcolumn grid-span-2">
-				<h4>Operation</h4>
+				<h4>{{localize 'LHTRPG.Check.Operation'}}</h4>
 				<div class="flexrow">
 					<input class="attr-input" type="text" name="data.checks.operation.mod"
-						value="{{data.checks.operation.mod}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.operation.mod}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>+</span>
 					<input class="attr-input" type="text" name="data.checks.operation.dice"
-						value="{{data.checks.operation.dice}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.operation.dice}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>D</span>
 				</div>
 			</div>
@@ -150,30 +169,36 @@
 		<div class="pow grid grid-2col grid-span-2">
 			<h4 class="attr-name grid-span-2">[POW]</h4>
 			<div class="attr-inputs flexcolumn grid-span-2">
-				<input class="attr-mod-input" type="text" name="data.attributes.pow.mod" value="{{data.attributes.pow.mod}}"
-					placeholder="0" data-dtype="Number" maxlength="2" disabled>
-				<input class="attr-input" id="pow-value" data-label="pow" type="text" name="data.attributes.pow.value"
-					value="{{data.attributes.pow.value}}" placeholder="0" data-dtype="Number" maxlength="2">
+				<input class="attr-mod-input" type="text" name="data.attributes.pow.mod"
+					value="{{data.attributes.pow.mod}}" placeholder="0" data-dtype="Number"
+					maxlength="2" disabled>
+				<input class="attr-input" id="pow-value" data-label="pow" type="text"
+					name="data.attributes.pow.value" value="{{data.attributes.pow.value}}"
+					placeholder="0" data-dtype="Number" maxlength="2">
 			</div>
 			<div class="check flexcolumn grid-span-2">
-				<h4>Perception</h4>
+				<h4>{{localize 'LHTRPG.Check.Perception'}}</h4>
 				<div class="flexrow">
 					<input class="attr-input" type="text" name="data.checks.perception.mod"
-						value="{{data.checks.perception.mod}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.perception.mod}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>+</span>
 					<input class="attr-input" type="text" name="data.checks.perception.dice"
-						value="{{data.checks.perception.dice}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.perception.dice}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>D</span>
 				</div>
 			</div>
 			<div class="check flexcolumn grid-span-2">
-				<h4>Negotiation</h4>
+				<h4>{{localize 'LHTRPG.Check.Negotiation'}}</h4>
 				<div class="flexrow">
 					<input class="attr-input" type="text" name="data.checks.negotiation.mod"
-						value="{{data.checks.negotiation.mod}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.negotiation.mod}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>+</span>
 					<input class="attr-input" type="text" name="data.checks.negotiation.dice"
-						value="{{data.checks.negotiation.dice}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.negotiation.dice}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>D</span>
 				</div>
 			</div>
@@ -182,30 +207,36 @@
 		<div class="int grid grid-2col grid-span-2">
 			<h4 class="attr-name grid-span-2">[INT]</h4>
 			<div class="attr-inputs flexcolumn grid-span-2">
-				<input class="attr-mod-input" type="text" name="data.attributes.int.mod" value="{{data.attributes.int.mod}}"
-					placeholder="0" data-dtype="Number" maxlength="2" disabled>
-				<input class="attr-input" id="int-value" data-label="int" type="text" name="data.attributes.int.value"
-					value="{{data.attributes.int.value}}" placeholder="0" data-dtype="Number" maxlength="2">
+				<input class="attr-mod-input" type="text" name="data.attributes.int.mod"
+					value="{{data.attributes.int.mod}}" placeholder="0" data-dtype="Number"
+					maxlength="2" disabled>
+				<input class="attr-input" id="int-value" data-label="int" type="text"
+					name="data.attributes.int.value" value="{{data.attributes.int.value}}"
+					placeholder="0" data-dtype="Number" maxlength="2">
 			</div>
 			<div class="check flexcolumn grid-span-2">
-				<h4>Knowledge</h4>
+				<h4>{{localize 'LHTRPG.Check.Knowledge'}}</h4>
 				<div class="flexrow">
 					<input class="attr-input" type="text" name="data.checks.knowledge.mod"
-						value="{{data.checks.knowledge.mod}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.knowledge.mod}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>+</span>
 					<input class="attr-input" type="text" name="data.checks.knowledge.dice"
-						value="{{data.checks.knowledge.dice}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.knowledge.dice}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>D</span>
 				</div>
 			</div>
 			<div class="check flexcolumn grid-span-2">
-				<h4>Analysis</h4>
+				<h4>{{localize 'LHTRPG.Check.Analysis'}}</h4>
 				<div class="flexrow">
 					<input class="attr-input" type="text" name="data.checks.analysis.mod"
-						value="{{data.checks.analysis.mod}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.analysis.mod}}" placeholder="0" data-dtype="Number"
+						maxlength="2">
 					<span>+</span>
 					<input class="attr-input" type="text" name="data.checks.analysis.dice"
-						value="{{data.checks.analysis.dice}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.analysis.dice}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>D</span>
 				</div>
 			</div>
@@ -215,40 +246,122 @@
 
 		<div class="grid-span-8 flexrow">
 			<div class="check flexcolumn grid-span-2">
-				<h4>Accuracy</h4>
+				<h4>{{localize 'LHTRPG.Check.Accuracy'}}</h4>
 				<div class="flexrow">
 					<input class="attr-input" type="text" name="data.checks.accuracy.mod"
-						value="{{data.checks.accuracy.mod}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.accuracy.mod}}" placeholder="0" data-dtype="Number"
+						maxlength="2">
 					<span>+</span>
 					<input class="attr-input" type="text" name="data.checks.accuracy.dice"
-						value="{{data.checks.accuracy.dice}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.accuracy.dice}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>D</span>
 				</div>
 			</div>
 			<div class="check flexcolumn grid-span-2">
-				<h4>Evasion</h4>
+				<h4>{{localize 'LHTRPG.Check.Evasion'}}</h4>
 				<div class="flexrow">
-					<input class="attr-input" type="text" name="data.checks.evasion.mod" value="{{data.checks.evasion.mod}}"
-						placeholder="0" data-dtype="Number" maxlength="2">
+					<input class="attr-input" type="text" name="data.checks.evasion.mod"
+						value="{{data.checks.evasion.mod}}" placeholder="0" data-dtype="Number"
+						maxlength="2">
 					<span>+</span>
 					<input class="attr-input" type="text" name="data.checks.evasion.dice"
-						value="{{data.checks.evasion.dice}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.evasion.dice}}" placeholder="0" data-dtype="Number"
+						maxlength="2">
 					<span>D</span>
 				</div>
 			</div>
 			<div class="check flexcolumn grid-span-2">
-				<h4>Resistance</h4>
+				<h4>{{localize 'LHTRPG.Check.Resistance'}}</h4>
 				<div class="flexrow">
 					<input class="attr-input" type="text" name="data.checks.resistance.mod"
-						value="{{data.checks.resistance.mod}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.resistance.mod}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>+</span>
 					<input class="attr-input" type="text" name="data.checks.resistance.dice"
-						value="{{data.checks.resistance.dice}}" placeholder="0" data-dtype="Number" maxlength="2">
+						value="{{data.checks.resistance.dice}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<span>D</span>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
+<div class="bad-status grid grid-14col">
+	<div class="rated-statuses grid grid-6col grid-span-6">
+		<div class="grid-span-6 flexrow">
+			<div class="regen">
+				<input class="regen-input" type="text" name="data.combat-status.regen"
+					value="{{data.combat-status.regen}}" placeholder="0" data-dtype="Number"
+					maxlength="3">
+				<h4>{{localize 'LHTRPG.Label.Regen'}}</h4>
+			</div>
+			<div class="barrier">
+				<input class="barrier-input" type="text" name="data.combat-status.barrier"
+					value="{{data.combat-status.barrier}}" placeholder="0" data-dtype="Number"
+					maxlength="3">
+				<h4>{{localize 'LHTRPG.Label.Barrier'}}</h4>
+			</div>
+			<div class="cancel">
+				<input class="cancel-input" type="text" name="data.combat-status.cancel"
+					value="{{data.combat-status.cancel}}" placeholder="0"
+					data-dtype="Number" maxlength="3">
+				<h4>{{localize 'LHTRPG.Label.Cancel'}}</h4>
+			</div>
+		</div>
 
+		<div class="grid-span-6 flexrow">
+			<div class="decay">
+				<input class="decay-input" type="text" name="data.bad-status.decay"
+					value="{{data.bad-status.decay}}" placeholder="0" data-dtype="Number"
+					maxlength="3">
+				<h4>{{localize 'LHTRPG.Label.Decay'}}</h4>
+			</div>
+
+			<div class="pursuit">
+				<input class="pursuit-input" type="text" name="data.bad-status.pursuit"
+					value="{{data.bad-status.pursuit}}" placeholder="0" data-dtype="Number"
+					maxlength="3">
+				<h4>{{localize 'LHTRPG.Label.Pursuit'}}</h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="grid-span-2 status-row">
+		<div class="status-checkbox flexrow">
+			<label for="data.bad-status.dazed">{{localize 'LHTRPG.Label.Dazed'}}</label>
+			<input type="checkbox" name="data.bad-status.dazed" {{checked data.bad-status.dazed}}
+				data-dtype="Boolean" />
+		</div>
+		<div class="status-checkbox flexrow">
+			<label for="data.bad-status.rigor">{{localize 'LHTRPG.Label.Rigor'}}</label>
+			<input type="checkbox" name="data.bad-status.rigor" {{checked data.bad-status.rigor}}
+				data-dtype="Boolean" />
+		</div>
+	</div>
+	<div class="grid-span-3 status-row">
+		<div class="status-checkbox flexrow">
+			<label for="data.bad-status.confused">{{localize 'LHTRPG.Label.Confused'}}</label>
+			<input type="checkbox" name="data.bad-status.confused" {{checked data.bad-status.confused}}
+				data-dtype="Boolean" />
+		</div>
+		<div class="status-checkbox flexrow">
+			<label for="data.bad-status.staggered">{{localize 'LHTRPG.Label.Staggered'}}</label>
+			<input type="checkbox" name="data.bad-status.staggered" {{checked data.bad-status.staggered}}
+				data-dtype="Boolean" />
+		</div>
+	</div>
+	<div class="grid-span-3 status-row">
+		<div class="status-checkbox flexrow">
+			<label for="data.bad-status.afflicted">{{localize 'LHTRPG.Label.Afflicted'}}</label>
+			<input type="checkbox" name="data.bad-status.afflicted" {{checked data.bad-status.afflicted}}
+				data-dtype="Boolean" />
+		</div>
+		<div class="status-checkbox flexrow">
+			<label for="data.bad-status.overconfident">{{localize 'LHTRPG.Label.Overconfident'}}</label>
+			<input type="checkbox" name="data.bad-status.overconfident"
+				{{checked data.bad-status.overconfident}} data-dtype="Boolean" />
+		</div>
+	</div>
 </div>
