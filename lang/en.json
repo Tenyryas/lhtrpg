@@ -1,10 +1,60 @@
 {
-
-  "ITEM.TypeItem": "Item",
-  "LHTRPG.EffectCreate": "Create Effect",
-  "LHTRPG.EffectToggle": "Toggle Effect",
-  "LHTRPG.EffectEdit": "Edit Effect",
-  "LHTRPG.EffectDelete": "Delete Effect",
-
-  "LHTRPG.Add": "Add"
+  "ITEM": {
+    "TypeItem": "Item"
+  },
+  "LHTRPG": {
+    "Add": "Add",
+    "Check": {
+      "Accuracy": "Accuracy",
+      "Analysis": "Analysis",
+      "Athletics": "Athletics",
+      "Disable": "Disable",
+      "Endurance": "Endurance",
+      "Evasion": "Evasion",
+      "Knowledge": "Knowledge",
+      "Negotiation": "Negotiation",
+      "Operation": "Operation",
+      "Perception": "Perception",
+      "Resistance": "Resistance"
+    },
+    "EffectCreate": "Create Effect",
+    "EffectDelete": "Delete Effect",
+    "EffectEdit": "Edit Effect",
+    "EffectToggle": "Toggle Effect",
+    "Label": {
+      "Afflicted": "Afflicted",
+      "Barrier": "Barrier",
+      "Cancel": "Cancel",
+      "Confused": "Confused",
+      "Dazed": "Dazed",
+      "Decay": "Decay",
+      "Defense": "Defense",
+      "Fate": "Fate",
+      "Fatigue": "FATIGUE",
+      "HP": "HP",
+      "Hate": "HATE",
+      "Overconfident": "Reckless",
+      "Power": "Offense",
+      "Pursuit": "Pursuit",
+      "Race": "Race",
+      "Regen": "Regen",
+      "Rigor": "Rigor",
+      "Staggered": "Staggered"
+    },
+    "Placeholder": {
+      "Class": "Class",
+      "Name": "Name",
+      "Race": "Race",
+      "SubClass": "Subclass"
+    },
+    "Tooltip": {
+      "AttackPower": "Attack Power",
+      "Initiative": "Initiative",
+      "MagicDefense": "Magic defense",
+      "MagicPower": "Magic Power",
+      "PhysDefense": "Physical Defense",
+      "RestorationPower": "Restoration Power",
+      "Speed": "Speed"
+    }
+  }
 }
