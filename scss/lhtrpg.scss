@@ -58,6 +58,7 @@ div.app.lhtrpg.actor.minimized{
   @import 'components/resource';
   @import 'components/items';
   @import 'components/effects';
+  @import 'components/tags';
 
   color: $lhtrpg-font-color-primary;
   font-family: $lhtrpg-font-primary;
@@ -72,5 +73,22 @@ div.app.lhtrpg.actor.minimized{
   input:focus {
           box-shadow: none;
           text-shadow: 0 0 5px $lhtrpg-font-focus-shadow;
+  }
+}
+
+.lhtrpg.sheet.item {
+  @import 'components/items-form';
+}
+
+.lhtrpg.tag-dialog {
+  
+  input {
+    color: $lhtrpg-items-font-color;
+    border: 1px solid $lhtrpg-items-label-bg-color;
+    text-align: left;
+
+    width: 250px;
+    justify-self: center;
+    margin: 5px;
   }
 }

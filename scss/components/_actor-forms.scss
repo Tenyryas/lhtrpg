@@ -560,6 +560,14 @@ section.window-content {
             font-size: 16px;
          }
 
+         .tag-list {
+            height: 50px;
+
+            .tag {
+               max-height: 25px;
+            }
+         }
+
          .rated-statuses {
             gap: 0;
             margin-top: 0;

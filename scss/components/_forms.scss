@@ -1,3 +1,14 @@
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $lhtrpg-color-dark-green;
+  border-color: $lhtrpg-font-color-ui;
+}
+
 .item-form {
   font-family: $lhtrpg-font-primary;
 }
@@ -15,6 +26,7 @@
     flex: 0 0 100px;
     height: 100px;
     margin-right: 10px;
+    border: none;
   }
 
   .header-fields {
