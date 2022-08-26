@@ -8,6 +8,9 @@
 
     // Actor partials.
     "systems/lhtrpg/templates/actor/parts/actor-stats.html",
-    "systems/lhtrpg/templates/actor/parts/actor-effects.html"
+    "systems/lhtrpg/templates/actor/parts/actor-effects.html",
+
+    //Items partials
+    "systems/lhtrpg/templates/item/parts/item-effects.html",
   ]);
 };

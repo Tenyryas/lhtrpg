@@ -38,8 +38,8 @@
 			<div class="grid-span-3 flex flexrow">
 				<div class="initiative" title="{{localize 'LHTRPG.Tooltip.Initiative'}}">
 					<input class="initiative-input" type="text" name="data.battle-status.initiative"
-						value="{{data.battle-status.initiative}}" placeholder="0" data-dtype="Number"
-						maxlength="2">
+						value="{{data.battle-status.initiative}}" placeholder="0"
+						data-dtype="Number" maxlength="2">
 					<h4><img src="/systems/lhtrpg/assets/ui/initiative.svg" alt=""></h4>
 				</div>
 			</div>
@@ -290,41 +290,23 @@
 
 <div class="bad-status grid grid-14col">
 	<div class="rated-statuses grid grid-6col grid-span-6">
-		<div class="grid-span-6 flexrow">
-			<div class="regen">
-				<input class="regen-input" type="text" name="data.combat-status.regen"
-					value="{{data.combat-status.regen}}" placeholder="0" data-dtype="Number"
-					maxlength="3">
-				<h4>{{localize 'LHTRPG.Label.Regen'}}</h4>
+		<div class="resource grid-span-6">
+			<div class="flexrow">
+				<label class="resource-label">Tags</label>
+				<div class="align-right">
+					<a class="tag-control" data-action="create"><i class="fas fa-plus"></i></a>
+					<a class="tag-control" data-action="edit"><i class="fas fa-edit"></i></a>
+				</div>
 			</div>
-			<div class="barrier">
-				<input class="barrier-input" type="text" name="data.combat-status.barrier"
-					value="{{data.combat-status.barrier}}" placeholder="0" data-dtype="Number"
-					maxlength="3">
-				<h4>{{localize 'LHTRPG.Label.Barrier'}}</h4>
-			</div>
-			<div class="cancel">
-				<input class="cancel-input" type="text" name="data.combat-status.cancel"
-					value="{{data.combat-status.cancel}}" placeholder="0"
-					data-dtype="Number" maxlength="3">
-				<h4>{{localize 'LHTRPG.Label.Cancel'}}</h4>
-			</div>
-		</div>
-
-		<div class="grid-span-6 flexrow">
-			<div class="decay">
-				<input class="decay-input" type="text" name="data.bad-status.decay"
-					value="{{data.bad-status.decay}}" placeholder="0" data-dtype="Number"
-					maxlength="3">
-				<h4>{{localize 'LHTRPG.Label.Decay'}}</h4>
-			</div>
-
-			<div class="pursuit">
-				<input class="pursuit-input" type="text" name="data.bad-status.pursuit"
-					value="{{data.bad-status.pursuit}}" placeholder="0" data-dtype="Number"
-					maxlength="3">
-				<h4>{{localize 'LHTRPG.Label.Pursuit'}}</h4>
-			</div>
+			<ol class="tag-list">
+				{{#each data.tags}}
+					<li class="tag">
+						<span>{{this}}</span>
+						<a class="tag-control" data-action="delete" data-tag-id="{{@index}}"><i
+								class="fas fa-trash"></i></a>
+					</li>
+				{{/each}}
+			</ol>
 		</div>
 	</div>
 

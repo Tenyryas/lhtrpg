@@ -1,4 +1,5 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
+import {onManageTags} from "../helpers/tags.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -63,13 +64,7 @@ export class LHTrpgActorSheet extends ActorSheet {
    * @return {undefined}
    */
   _prepareCharacterData(context) {
-    
-    let data = context.data;
 
-    data.attributes.str.mod = Math.floor(data.attributes.str.value / 3);
-    data.attributes.dex.mod = Math.floor(data.attributes.dex.value / 3);
-    data.attributes.pow.mod = Math.floor(data.attributes.pow.value / 3);
-    data.attributes.int.mod = Math.floor(data.attributes.int.value / 3);
 
   }
 
@@ -149,6 +144,9 @@ export class LHTrpgActorSheet extends ActorSheet {
 
     // Active Effect management
     html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
+
+    // Tag management
+    html.find(".tag-control").click(ev => onManageTags(ev, this.actor));
 
     // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));

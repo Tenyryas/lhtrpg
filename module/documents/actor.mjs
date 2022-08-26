@@ -33,6 +33,11 @@ export class LHTrpgActor extends Actor {
     const data = actorData.data;
     const flags = actorData.flags.lhtrpg || {};
 
+    // Abilities modifiers
+    data.attributes.str.mod = Math.floor(data.attributes.str.value / 3);
+    data.attributes.dex.mod = Math.floor(data.attributes.dex.value / 3);
+    data.attributes.pow.mod = Math.floor(data.attributes.pow.value / 3);
+    data.attributes.int.mod = Math.floor(data.attributes.int.value / 3);
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
@@ -67,10 +72,16 @@ export class LHTrpgActor extends Actor {
   _getCharacterRollData(data) {
     if (this.data.type !== 'character') return;
 
+    // if (data.attributes) {
+    //   for (let [k, v] of Object.entries(data.attributes)) {
+    //     data[k] = foundry.utils.deepClone(v);
+    //   }
+    // }
+
     // Add level for easier access, or fall back to 0.
-    if (data.attributes.level) {
-      data.lvl = data.attributes.level ?? 0;
-    }
+    // if (data.attributes.level) {
+    //   data.lvl = data.attributes.level ?? 0;
+    // }
   }
 
 }
