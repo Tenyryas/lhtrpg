@@ -61,17 +61,7 @@
         "confused": false,
         "staggered": false,
         "afflicted": false,
-        "overconfident":false,
-        "decay": 0,
-        "pursuit": 0
-        }
-      },
-
-      "combat-status": {
-        "combat-status": {
-        "barrier": 0,
-        "regen": 0,
-        "cancel": 0
+        "overconfident":false
         }
       },
 
@@ -127,7 +117,7 @@
     },
 
     "character": {
-      "templates": ["base", "attributes","battle-status", "bad-status", "combat-status", "checks"],
+      "templates": ["base", "attributes","battle-status", "bad-status", "checks"],
       "class": {
         "img": "systems/lhtrpg/assets/ui/classes/Enchanter_Logo.png",
         "name": "",
@@ -142,17 +132,25 @@
     }
   },
   "Item": {
-    "types": ["item", "feature"],
+    "types": ["skill", "feature"],
     "templates": {
       "base": {
-        "description": ""
+        "description": "",
+        "tags": []
       }
     },
-    "item": {
+    "skill": {
       "templates": ["base"],
-      "quantity": 1,
-      "weight": 0,
-      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+      "type" : "Basic",
+      "skillRank": {
+        "value": 1,
+        "max": 1
+      },
+      "timing": "",
+      "checkType": "",
+      "range": "",
+      "cost": "",
+      "limit": ""
     },
     "feature": {
       "templates": ["base"]
