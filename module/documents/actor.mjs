@@ -20,11 +20,11 @@ export class LHTrpgActor extends Actor {
     await super._preCreate(createData, options, user);
 
     // add item default picture depending on type
-    const updateData = {};
-    updateData['img'] = `systems/lhtrpg/assets/ui/actors_icons/${this.type}.svg`;
-    console.log(this);
-
-    await this.data.update(updateData);
+    if(this.img === 'icons/svg/mystery-man.svg'){
+      const updateData = {};
+      updateData['img'] = `systems/lhtrpg/assets/ui/actors_icons/${this.type}.svg`;
+      await this.data.update(updateData);
+    }
   }
 
   /** @override */

@@ -19,19 +19,21 @@ export class LHTrpgItem extends Item {
     await super._preCreate(createData, options, user);
 
     // add item default picture depending on type
-    const updateData = {};
-    updateData['img'] = `systems/lhtrpg/assets/ui/items_icons/${this.type}.svg`;
+    if (this.img === 'icons/svg/item-bag.svg') {
+      const updateData = {};
+      updateData['img'] = `systems/lhtrpg/assets/ui/items_icons/${this.type}.svg`;
 
-    await this.data.update( updateData );
+      await this.data.update(updateData);
+    }
   }
 
   /**
    * Prepare a data object which is passed to any Roll formulas which are created related to this Item
    * @private
    */
-    getRollData() {
+  getRollData() {
     // If present, return the actor's roll data.
-    if ( !this.actor ) return null;
+    if (!this.actor) return null;
     const rollData = this.actor.getRollData();
     rollData.item = foundry.utils.deepClone(this.data.data);
 
