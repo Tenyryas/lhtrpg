@@ -1,6 +1,7 @@
 // Import document classes.
 import { LHTrpgActor } from "./documents/actor.mjs";
 import { LHTrpgItem } from "./documents/item.mjs";
+import { LHTrpgCombat } from "./documents/LHTRpgCombat.mjs";
 // Import sheet classes.
 import { LHTrpgActorSheet } from "./sheets/actor-sheet.mjs";
 import { LHTrpgActorMonsterSheet } from "./sheets/actor-monster-sheet.mjs";
@@ -20,7 +21,8 @@ Hooks.once('init', async function () {
   game.lhtrpg = {
     LHTrpgActor,
     LHTrpgItem,
-    rollItemMacro
+    rollItemMacro,
+    LHTrpgCombat
   };
 
   // Add custom constants for configuration.
@@ -31,13 +33,14 @@ Hooks.once('init', async function () {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: "1d20",
-    decimals: 2
+    formula: "0d6",
+    decimals: 0
   };
 
   // Define custom Document classes
   CONFIG.Actor.documentClass = LHTrpgActor;
   CONFIG.Item.documentClass = LHTrpgItem;
+  CONFIG.Combat.documentClass = LHTrpgCombat;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
