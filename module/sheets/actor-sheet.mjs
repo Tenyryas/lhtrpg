@@ -97,15 +97,15 @@ export class LHTrpgActorSheet extends ActorSheet {
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
       // Append to Combat Skills.
-      if (i.type === 'skill' && i.data.type === 'Combat') {
+      if (i.type === 'skill' && i.data.subtype === 'Combat') {
         skillsCombat.push(i);
       }
       // Append to Basic Skills.
-      else if (i.type === 'skill' && i.data.type === 'Basic') {
+      else if (i.type === 'skill' && i.data.subtype === 'Basic') {
         skillsBasic.push(i);
       }
       // Append to General Skills.
-      else if (i.type === 'skill' && i.data.type === 'General') {
+      else if (i.type === 'skill' && i.data.subtype === 'General') {
         skillsGeneral.push(i);
       }
       // Append to Equipped gear.
@@ -239,6 +239,7 @@ export class LHTrpgActorSheet extends ActorSheet {
     const type = header.dataset.type;
     // Grab any data associated with this control.
     const data = duplicate(header.dataset);
+    console.log(header.dataset);
     // Initialize a default name.
     const name = `New ${type.capitalize()}`;
     // Prepare the item object.
@@ -247,6 +248,8 @@ export class LHTrpgActorSheet extends ActorSheet {
       type: type,
       data: data
     };
+
+    console.log(itemData);
     // Remove the type from the dataset since it's in the itemData.type prop.
     delete itemData.data["type"];
 
