@@ -1,7 +1,7 @@
 // Import document classes.
 import { LHTrpgActor } from "./documents/actor.mjs";
 import { LHTrpgItem } from "./documents/item.mjs";
-import { LHTrpgCombat } from "./documents/LHTrpgCombat.mjs";
+import { LHTrpgCombat } from "./documents/lhtrpgCombat.mjs";
 // Import sheet classes.
 import { LHTrpgActorSheet } from "./sheets/actor-sheet.mjs";
 import { LHTrpgActorMonsterSheet } from "./sheets/actor-monster-sheet.mjs";
