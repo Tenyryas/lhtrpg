@@ -1,9 +1,27 @@
 {
+  "ACTOR": {
+    "TypeCharacter": "Player Character",
+    "TypeMonster": "Monster"
+  },
   "ITEM": {
-    "TypeItem": "Item"
+    "TypeAccessory": "Accessory",
+    "TypeArmor": "Armor",
+    "TypeBag": "Bag",
+    "TypeConnection": "Connection",
+    "TypeGear": "Gear",
+    "TypeShield": "Shield",
+    "TypeSkill": "Skill",
+    "TypeUnion": "Union",
+    "TypeWeapon": "Weapon"
   },
   "LHTRPG": {
     "Add": "Add",
+    "ButtonLabel": {
+      "Tag": {
+        "Add": "Add",
+        "Cancel": "Cancel"
+      }
+    },
     "Check": {
       "Accuracy": "Accuracy",
       "Analysis": "Analysis",
@@ -17,10 +35,31 @@
       "Perception": "Perception",
       "Resistance": "Resistance"
     },
+    "Dex": "DEX",
     "EffectCreate": "Create Effect",
     "EffectDelete": "Delete Effect",
     "EffectEdit": "Edit Effect",
     "EffectToggle": "Toggle Effect",
+    "Int": "INT",
+    "Item": {
+      "Label": {
+        "Accuracy": "Accuracy",
+        "Attack": "Attack",
+        "BagLimit": "Storage Limit",
+        "BagSpace": "Space",
+        "Check": "Check",
+        "Equipped": "Equipped",
+        "Initiative": "Initiative",
+        "MDef": "M. Def.",
+        "Magic": "Magic",
+        "PDef": "Phys. Def.",
+        "Price": "Price",
+        "Range": "Range",
+        "Rank": "Rank",
+        "Target": "Target",
+        "Timing": "Timing"
+      }
+    },
     "Label": {
       "Afflicted": "Afflicted",
       "Barrier": "Barrier",
@@ -39,7 +78,19 @@
       "Race": "Race",
       "Regen": "Regen",
       "Rigor": "Rigor",
-      "Staggered": "Staggered"
+      "Staggered": "Staggered",
+      "Tags": "Tags",
+      "Type": "Type"
+    },
+    "Monster": {
+      "HateMultiplier": "Hate Mult.",
+      "Identification": "ID Difficulty",
+      "Initiative": "Initiative",
+      "MDef": "M. Def.",
+      "PDef": "Phys. Def.",
+      "Rank": "Rank",
+      "Skills": "Skills",
+      "Speed": "Speed"
     },
     "Placeholder": {
       "Class": "Class",
@@ -47,6 +98,33 @@
       "Race": "Race",
       "SubClass": "Subclass"
     },
+    "Pow": "POW",
+    "Skill": {
+      "Label": {
+        "Check": "Check",
+        "Cost": "Cost",
+        "Limit": "Limit",
+        "Range": "Range",
+        "SR": "SR",
+        "Target": "Target",
+        "Timing": "Timing"
+      },
+      "Placeholder": {
+        "Check": "-",
+        "Cost": "-",
+        "Limit": "-",
+        "Range": "-",
+        "Target": "-",
+        "Timing": "-"
+      },
+      "Type": {
+        "Basic": "Basic",
+        "Combat": "Combat",
+        "General": "General",
+        "Monster": "Monster"
+      }
+    },
+    "Str": "STR",
     "Tooltip": {
       "AttackPower": "Attack Power",
       "Initiative": "Initiative",
@@ -55,6 +133,11 @@
       "PhysDefense": "Physical Defense",
       "RestorationPower": "Restoration Power",
       "Speed": "Speed"
+    },
+    "WindowTitle": {
+      "Tag": {
+        "AddNewTag": "Add a new tag"
+      }
     }
   }
 }

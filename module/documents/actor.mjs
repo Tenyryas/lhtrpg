@@ -13,6 +13,20 @@ export class LHTrpgActor extends Actor {
     super.prepareData();
   }
 
+  /**
+   * Make adjustments before Character creation, like an actor type default picture
+   */
+  async _preCreate(createData, options, user) {
+    await super._preCreate(createData, options, user);
+
+    // add item default picture depending on type
+    const updateData = {};
+    updateData['img'] = `systems/lhtrpg/assets/ui/actors_icons/${this.type}.svg`;
+    console.log(this);
+
+    await this.data.update(updateData);
+  }
+
   /** @override */
   prepareBaseData() {
     // Data modifications in this step occur before processing embedded
@@ -33,11 +47,13 @@ export class LHTrpgActor extends Actor {
     const data = actorData.data;
     const flags = actorData.flags.lhtrpg || {};
 
-    // Abilities modifiers
-    data.attributes.str.mod = Math.floor(data.attributes.str.value / 3);
-    data.attributes.dex.mod = Math.floor(data.attributes.dex.value / 3);
-    data.attributes.pow.mod = Math.floor(data.attributes.pow.value / 3);
-    data.attributes.int.mod = Math.floor(data.attributes.int.value / 3);
+    if (actorData.type === 'character') {
+      // Abilities modifiers
+      data.attributes.str.mod = Math.floor(data.attributes.str.value / 3);
+      data.attributes.dex.mod = Math.floor(data.attributes.dex.value / 3);
+      data.attributes.pow.mod = Math.floor(data.attributes.pow.value / 3);
+      data.attributes.int.mod = Math.floor(data.attributes.int.value / 3);
+    }
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
@@ -48,7 +64,7 @@ export class LHTrpgActor extends Actor {
    * Prepare Character type specific data
    */
   _prepareCharacterData(actorData) {
-    if (actorData.type !== 'character') return;
+    if (actorData.type !== 'character' || actorData.type !== 'monster' ) return;
 
     // Make modifications to data here. For example:
     const data = actorData.data;
@@ -72,11 +88,11 @@ export class LHTrpgActor extends Actor {
   _getCharacterRollData(data) {
     if (this.data.type !== 'character') return;
 
-    // if (data.attributes) {
-    //   for (let [k, v] of Object.entries(data.attributes)) {
-    //     data[k] = foundry.utils.deepClone(v);
-    //   }
-    // }
+    if (data.attributes) {
+      for (let [k, v] of Object.entries(data.attributes)) {
+        data[k] = foundry.utils.deepClone(v);
+      }
+    }
 
     // Add level for easier access, or fall back to 0.
     // if (data.attributes.level) {

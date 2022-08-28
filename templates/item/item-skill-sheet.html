@@ -5,18 +5,18 @@
       <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
       <div class="grid grid-3col">
         <div class="resource flexcol">
-          <label class="resource-label">Type</label>
+          <label class="resource-label">{{localize 'LHTRPG.Label.Type'}}</label>
           <select name="data.type" value="{{data.type}}">
             {{#select data.type}}
-              <option value="Basic">Basic</option>
-              <option value="General">General</option>
-              <option value="Combat">Combat</option>
+              <option value="Basic">{{localize 'LHTRPG.Skill.Type.Basic'}}</option>
+              <option value="General">{{localize 'LHTRPG.Skill.Type.General'}}</option>
+              <option value="Combat">{{localize 'LHTRPG.Skill.Type.Combat'}}</option>
             {{/select}}
           </select>
         </div>
         <div class="resource grid-span-2">
           <div class="flexrow">
-            <label class="resource-label">Tags</label>
+            <label class="resource-label">{{localize 'LHTRPG.Label.Tags'}}</label>
             <div class="align-right">
               <a class="tag-control" data-action="create"><i class="fas fa-plus"></i></a>
               <a class="tag-control" data-action="edit"><i class="fas fa-edit"></i></a>
@@ -26,7 +26,11 @@
             {{#each data.tags}}
               <li class="tag">
                 <span>{{this}}</span>
-                <a class="tag-control" data-action="delete" data-tag-id="{{@index}}"><i class="fas fa-trash"></i></a>
+                {{#if @root.flags.lhtrpg.isTagEditActive}}
+                  <a class="tag-control" data-action="delete" data-tag-id="{{@index}}">
+                    <i class="fas fa-trash"></i>
+                  </a>
+                {{/if}}
               </li>
             {{/each}}
           </ol>
@@ -38,7 +42,7 @@
   <section class="sheet-stats">
 
     <div class="stat-div">
-      <label>SR</label>
+      <label>{{localize 'LHTRPG.Skill.Label.SR'}}</label>
       <div>
         <input class="skillRank-input" type="text" name="data.skillRank.value" value="{{data.skillRank.value}}"
           placeholder="0" data-dtype="Number" maxlength="2">
@@ -49,38 +53,37 @@
     </div>
 
     <div class="stat-div">
-      <label>Timing</label>
-      <input class="timing-input" type="text" name="data.timing" value="{{data.timing}}" placeholder="timing"
+      <label>{{localize 'LHTRPG.Skill.Label.Timing'}}</label>
+      <input class="timing-input" type="text" name="data.timing" value="{{data.timing}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Timing'}}"
         data-dtype="text">
     </div>
 
-    <div class="stat-div">
-      <label>Check</label>
+    <div class="stat-div checkType">
+      <label>{{localize 'LHTRPG.Skill.Label.Check'}}</label>
       <input class="checkType-input" type="text" name="data.checkType" value="{{data.checkType}}"
-        placeholder="check type" data-dtype="text">
+        placeholder="{{localize 'LHTRPG.Skill.Placeholder.Check'}}" data-dtype="text">
     </div>
 
     <div class="stat-div">
-      <label>Target</label>
-      <input class="target-input" type="text" name="data.target" value="{{data.target}}" placeholder="target"
+      <label>{{localize 'LHTRPG.Skill.Label.Target'}}</label>
+      <input class="target-input" type="text" name="data.target" value="{{data.target}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Target'}}"
         data-dtype="text">
     </div>
 
     <div class="stat-div">
-      <label>Range</label>
-      <input class="range-input" type="text" name="data.range" value="{{data.range}}" placeholder="range"
+      <label>{{localize 'LHTRPG.Skill.Label.Range'}}</label>
+      <input class="range-input" type="text" name="data.range" value="{{data.range}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Range'}}"
         data-dtype="text">
     </div>
 
     <div class="stat-div">
-      <label>Cost</label>
-      <input class="cost-input" type="text" name="data.cost" value="{{data.cost}}" placeholder="cost"
-        data-dtype="text">
+      <label>{{localize 'LHTRPG.Skill.Label.Cost'}}</label>
+      <input class="cost-input" type="text" name="data.cost" value="{{data.cost}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Cost'}}" data-dtype="text">
     </div>
 
     <div class="stat-div">
-      <label>Limit</label>
-      <input class="limit-input" type="text" name="data.limit" value="{{data.limit}}" placeholder="limit"
+      <label>{{localize 'LHTRPG.Skill.Label.Limit'}}</label>
+      <input class="limit-input" type="text" name="data.limit" value="{{data.limit}}" placeholder="{{localize 'LHTRPG.Skill.Placeholder.Limit'}}"
         data-dtype="text">
     </div>
 

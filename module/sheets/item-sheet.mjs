@@ -50,7 +50,6 @@ export class LHTrpgItemSheet extends ItemSheet {
     context.flags = itemData.flags;
 
     context.effects = prepareActiveEffectCategories(this.item.effects);
-
     return context;
   }
 

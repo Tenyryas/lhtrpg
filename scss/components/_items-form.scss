@@ -85,11 +85,21 @@ nav {
             color: $lhtrpg-font-color-primary;
             background-color: $lhtrpg-items-label-bg-color;
             padding: 4px;
-            width: 60px;
+            width: 80px;
         }
 
         input {
             width: 150px;
+        }
+
+        input.itemEquipped-input {
+            vertical-align: bottom;
+            margin: 0;
+        }
+
+        .monsterHP-input {
+            width: 69px;
+            text-align: right;
         }
 
         .skillRank-input {
@@ -97,20 +107,50 @@ nav {
             text-align: right;
         }
 
+        .small-input {
+            width: 30px;
+            text-align: center;
+        }
+
         .max {
             text-align: left;
         }
 
-        .checkType-input {
-            width: 448px;
-        } 
+    }
+
+    .stat-div.checkType,
+    .stat-div.itemBagLimit,
+    .stat-div.itemCheck {
+        width: 100%;
+
+        div {
+            width: 100%;
+
+        }
+        
+        input {
+            width: 100%;
+        }
     }
 }
 
 .sheet-body {
-    margin-left: 25px;
-    margin-right: 25px;
-    height: 170px;
+    height: 180px;
+
+    div[data-edit="data.description"]{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+.sheet-body.itemArmor,
+.sheet-body.itemBag {
+    height: 240px;
+}
+
+.sheet-body.itemConnection,
+.sheet-body.itemUnion {
+    height: 340px;
 }
 
 .items-list {

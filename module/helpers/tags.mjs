@@ -23,7 +23,7 @@ export async function onManageTags(event, owner) {
       await _onTagDelete(owner, tags, id);
       break;
     case "edit":
-      $(`${html} .tag-control[data-action='delete']`).toggleClass("active");
+      await _onTagEdit(owner);
   }
 }
 
@@ -33,12 +33,12 @@ async function _onTagCreate(owner, tags) {
   const rendered_dialog = await renderTemplate("systems/lhtrpg/templates/dialogs/newTagDialog.html");
 
   let d = new Dialog({
-    title: `Create new tag`,
+    title: game.i18n.localize("LHTRPG.WindowTitle.Tag.AddNewTag"),
     content: rendered_dialog,
     buttons: {
       roll: {
         icon: '<i class="fas fa-plus"></i>',
-        label: "Create",
+        label: game.i18n.localize("LHTRPG.ButtonLabel.Tag.Add"),
         callback: html => {
           newTag = html.find('.create-new-tag-input').val();
           tags.push(newTag);
@@ -52,7 +52,7 @@ async function _onTagCreate(owner, tags) {
       },
       cancel: {
         icon: '<i class="fas fa-times"></i>',
-        label: "Cancel",
+        label: game.i18n.localize("LHTRPG.ButtonLabel.Tag.Cancel"),
       }
     },
     default: "cancel"
@@ -68,4 +68,15 @@ async function _onTagDelete(owner, tags, id) {
       "data.tags": tags
     }
   );
+}
+
+async function _onTagEdit(owner) {
+
+  const flagValue = owner.getFlag('lhtrpg', 'isTagEditActive');
+
+  if(flagValue === undefined || !flagValue){
+    await owner.setFlag('lhtrpg', 'isTagEditActive', true);
+  } else {
+    await owner.setFlag('lhtrpg', 'isTagEditActive', false);
+  }
 }

@@ -302,8 +302,11 @@
 				{{#each data.tags}}
 					<li class="tag">
 						<span>{{this}}</span>
-						<a class="tag-control" data-action="delete" data-tag-id="{{@index}}"><i
-								class="fas fa-trash"></i></a>
+						{{#if @root.flags.lhtrpg.isTagEditActive}}
+						<a class="tag-control" data-action="delete" data-tag-id="{{@index}}">
+							<i class="fas fa-trash"></i>
+						</a>
+						{{/if}}
 					</li>
 				{{/each}}
 			</ol>

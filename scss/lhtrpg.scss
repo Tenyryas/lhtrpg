@@ -13,13 +13,13 @@
 @import 'global/flex';
 
 /* Styles limited to lhtrpg sheets */
-div.app.lhtrpg.actor{
+div.app.lhtrpg.actor {
   background: transparent;
   box-shadow: none;
   @import 'components/actor-forms';
 }
 
-div.app.lhtrpg.actor.minimized{
+div.app.lhtrpg.actor.minimized {
 
   h4.window-title {
     display: block !important;
@@ -32,7 +32,7 @@ div.app.lhtrpg.actor.minimized{
     word-break: break-word;
     text-overflow: ellipsis;
     height: auto;
-}
+  }
 
   .window-header {
     height: 78px;
@@ -64,24 +64,43 @@ div.app.lhtrpg.actor.minimized{
   font-family: $lhtrpg-font-primary;
 
   input {
-          background: transparent;
-          border: 0;
-          text-shadow: 0 0 2px $lhtrpg-font-color-primary;
-          color: $lhtrpg-font-color-primary;
+    background: transparent;
+    border: 0;
+    text-shadow: 0 0 2px $lhtrpg-font-color-primary;
+    color: $lhtrpg-font-color-primary;
   }
 
   input:focus {
-          box-shadow: none;
-          text-shadow: 0 0 5px $lhtrpg-font-focus-shadow;
+    box-shadow: none;
+    text-shadow: 0 0 5px $lhtrpg-font-focus-shadow;
   }
 }
 
-.lhtrpg.sheet.item {
+.lhtrpg.sheet.item,
+.lhtrpg.sheet.monster {
   @import 'components/items-form';
 }
 
+.lhtrpg.sheet.monster {
+
+  .status-row {
+    width: 100%;
+    align-self: center;
+  }
+
+  .status-checkbox {
+    text-align: center;
+    justify-self: center;
+    align-items: center;
+  }
+
+  .sheet-body.monster {
+    height: calc(100% - 170px);
+  }
+}
+
 .lhtrpg.tag-dialog {
-  
+
   input {
     color: $lhtrpg-items-font-color;
     border: 1px solid $lhtrpg-items-label-bg-color;

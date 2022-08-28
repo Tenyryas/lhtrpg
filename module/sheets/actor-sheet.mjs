@@ -77,25 +77,89 @@ export class LHTrpgActorSheet extends ActorSheet {
    */
   _prepareItems(context) {
     // Initialize containers.
-    const gear = [];
-    const features = [];
+    const skillsBasic = [];
+    const skillsCombat = [];
+    const skillsGeneral = [];
+
+    const itemsEquipped = [];
+    const itemsWeapon = [];
+    const itemsArmor = [];
+    const itemsShield = [];
+    const itemsAccessory = [];
+    const itemsBag = [];
+    const itemsGear = [];
+
+    const itemsConnection = [];
+    const itemsUnion = [];
 
     // Iterate through items, allocating to containers
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
-      // Append to gear.
-      if (i.type === 'item') {
-        gear.push(i);
+      // Append to Combat Skills.
+      if (i.type === 'skill' && i.data.type === 'Combat') {
+        skillsCombat.push(i);
       }
-      // Append to features.
-      else if (i.type === 'feature') {
-        features.push(i);
+      // Append to Basic Skills.
+      else if (i.type === 'skill' && i.data.type === 'Basic') {
+        skillsBasic.push(i);
+      }
+      // Append to General Skills.
+      else if (i.type === 'skill' && i.data.type === 'General') {
+        skillsGeneral.push(i);
+      }
+      // Append to Equipped gear.
+      else if (i.data.equipped === true) {
+        itemsEquipped.push(i);
+      }
+      // Append to Weapons.
+      else if (i.data.equipped === false && i.type === 'weapon') {
+        itemsWeapon.push(i);
+      }
+      // Append to Armors.
+      else if (i.data.equipped === false && i.type === 'armor') {
+        itemsArmor.push(i);
+      }
+      // Append to Shields.
+      else if (i.data.equipped === false && i.type === 'shield') {
+        itemsShield.push(i);
+      }
+      // Append to Accessories.
+      else if (i.data.equipped === false && i.type === 'accessory') {
+        itemsAccessory.push(i);
+      }
+      // Append to Bags.
+      else if (i.data.equipped === false && i.type === 'bag') {
+        itemsBag.push(i);
+      }
+      // Append to Gear.
+      else if (i.data.equipped === false && i.type === 'gear') {
+        itemsGear.push(i);
+      }
+      // Append to Connections.
+      else if (i.type === 'connection') {
+        itemsConnection.push(i);
+      }
+      // Append to Unions.
+      else if (i.type === 'union') {
+        itemsUnion.push(i);
       }
     }
 
     // Assign and return
-    context.gear = gear;
-    context.features = features;
+    context.skillsCombat = skillsCombat;
+    context.skillsBasic = skillsBasic;
+    context.skillsGeneral = skillsGeneral;
+
+    context.itemsEquipped = itemsEquipped;
+    context.itemsWeapon = itemsWeapon;
+    context.itemsArmor = itemsArmor;
+    context.itemsShield = itemsShield;
+    context.itemsAccessory = itemsAccessory;
+    context.itemsBag = itemsBag;
+    context.itemsGear = itemsGear;
+
+    context.itemsConnection = itemsConnection;
+    context.itemsUnion = itemsUnion;
   }
 
   /* -------------------------------------------- */
@@ -224,9 +288,7 @@ export class LHTrpgActorSheet extends ActorSheet {
   // async _onOpeningInfoWindow (state, actor) {
   //   console.log(state);
   //   console.log(actor);
-  //   setTimeout(() => {
-  //     actor.setFlag("lhtrpg", "hfWindowOpened", state); 
-  //   }, 2000);
+  //   await actor.setFlag("lhtrpg", "hfWindowOpened", state);
   // }
 
 }
