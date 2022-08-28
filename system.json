@@ -26,8 +26,8 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power",
-  "url": "",
-  "manifest": "",
-  "download": "",
+  "url": "https://github.com/Tenyryas/lhtrpg",
+  "manifest": "https://raw.githubusercontent.com/Tenyryas/lhtrpg/main/system.json",
+  "download": "https://github.com/Tenyryas/lhtrpg/releases/download/v1.0.0/lhtrpg.zip",
   "license": "LICENSE.txt"
 }
