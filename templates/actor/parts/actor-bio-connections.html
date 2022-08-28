@@ -1,0 +1,33 @@
+<h4 class="tab-title">
+	CONNECT.
+</h4>
+
+<ol class="items-list">
+	<li class="item grid grid-6col items-header">
+		<div class="item-name grid-span-3">{{localize "LHTRPG.Connection.Name"}}</div>
+		<div class="item-name grid-span-2">{{localize "LHTRPG.Label.Tags"}}</div>
+		<div class="item-controls">
+			<a class="item-control item-create" title="Create item" data-type="connection"><i class="fas fa-plus"></i>
+				{{localize "LHTRPG.Add"}}</a>
+		</div>
+	</li>
+	{{#each social.connections as |item id|}}
+		<li class="item grid grid-6col" data-item-id="{{item._id}}">
+			<div class="item-name grid-span-3">
+				<div class="item-image">
+					<a class="" data-roll-type="item"><img src="{{item.img}}" title="{{item.name}}" width="24"
+							height="24" /></a>
+				</div>
+				<a class="item-control item-edit">
+					<h4>{{item.name}}</h4>
+				</a>
+			</div>
+			<div class="item-tags grid-span-2">
+				<h4>{{item.data.tags}}</h4>
+			</div>
+			<div class="item-controls">
+				<a class="item-control item-delete" title=""><i class="fas fa-trash"></i></a>
+			</div>
+		</li>
+	{{/each}}
+</ol>

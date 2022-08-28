@@ -16,7 +16,8 @@ export class LHTrpgActorSheet extends ActorSheet {
       height: 700,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" },
       { navSelector: ".status-tabs", contentSelector: ".status-body", initial: "status" },
-      { navSelector: ".skills-tabs", contentSelector: ".skills-body", initial: "basic" }]
+      { navSelector: ".skills-tabs", contentSelector: ".skills-body", initial: "basic" },
+      { navSelector: ".bio-tabs", contentSelector: ".bio-body", initial: "bio" }]
     });
   }
 
@@ -190,8 +191,10 @@ export class LHTrpgActorSheet extends ActorSheet {
       "gear": itemsGear,
     }
 
-    context.Connections = itemsConnection;
-    context.Unions = itemsUnion;
+    context.social = {
+      "connections": itemsConnection,
+      "unions": itemsUnion
+    }
   }
 
   /* -------------------------------------------- */

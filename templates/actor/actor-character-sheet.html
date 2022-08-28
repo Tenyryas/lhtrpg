@@ -115,5 +115,30 @@
 			{{> "systems/lhtrpg/templates/actor/parts/actor-inventory.html"}}
 		</div>
 
+				{{!-- Inventory Tab --}}
+		<div class="tab stats grid-span-6" data-group="primary" data-tab="bio">
+			<nav class="bio-tabs tabs" data-group="bio">
+				{{!-- Default tab is specified in actor-sheet.mjs --}}
+				<a class="item" data-tab="bio">BIO.</a>
+				<a class="item" data-tab="connections">CONNECT.</a>
+				<a class="item" data-tab="unions">UNIONS</a>
+			</nav>
+			<section class="bio-body">
+				<div class="tab skills" data-group="bio" data-tab="bio">
+					{{> "systems/lhtrpg/templates/actor/parts/actor-biography.html"}}
+				</div>
+				<div class="tab skills" data-group="bio" data-tab="connections">
+					{{> "systems/lhtrpg/templates/actor/parts/actor-bio-connections.html"}}
+				</div>
+				<div class="tab skills" data-group="bio" data-tab="unions">
+					{{> "systems/lhtrpg/templates/actor/parts/actor-bio-unions.html"}}
+				</div>
+				<div class="guild">
+					<h4>{{localize 'LHTRPG.Label.Guild'}}</h4>
+					<input class="guild-input" type="text" name="data.social.guild"
+					value="{{data.social.guild}}" placeholder="{{localize 'LHTRPG.Label.Guild'}}" data-dtype="text">
+				</div>
+		</div>
+
 	</section>
 </form>

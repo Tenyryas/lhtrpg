@@ -35,6 +35,9 @@
       "Perception": "Perception",
       "Resistance": "Resistance"
     },
+    "Connection": {
+      "Name": "Name"
+    },
     "Dex": "DEX",
     "EffectCreate": "Create Effect",
     "EffectDelete": "Delete Effect",
@@ -70,6 +73,7 @@
       "Defense": "Defense",
       "Fate": "Fate",
       "Fatigue": "FATIGUE",
+      "Guild": "Guild",
       "HP": "HP",
       "Hate": "HATE",
       "Overconfident": "Reckless",
@@ -133,6 +137,9 @@
       "PhysDefense": "Physical Defense",
       "RestorationPower": "Restoration Power",
       "Speed": "Speed"
+    },
+    "Union": {
+      "Name": "Union"
     },
     "WindowTitle": {
       "Tag": {

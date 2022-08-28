@@ -28,6 +28,9 @@
       "Perception": "知覚",
       "Resistance": "抵抗"
     },
+    "Connection": {
+      "Name": "人物名"
+    },
     "Dex": "DEX",
     "EffectCreate": "Create Effect",
     "EffectDelete": "Delete Effect",
@@ -62,6 +65,7 @@
       "Defense": "防御力",
       "Fate": "Fate",
       "Fatigue": "疲労",
+      "Guild": "所属ギルド",
       "HP": "HP",
       "Hate": "HATE",
       "Overconfident": "慢心",
@@ -125,6 +129,9 @@
       "PhysDefense": "物理防御力",
       "RestorationPower": "回復力",
       "Speed": "移動力"
+    },
+    "Union": {
+      "Name": "ユニオン名"
     }
   }
 }

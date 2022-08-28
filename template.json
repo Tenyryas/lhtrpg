@@ -131,10 +131,8 @@
         "fatigue": 0,
         "level": 35
       },
-      "creed": {
-        "name": "",
-        "principle": "",
-        "tag": ""
+      "social": {
+        "guild": ""
       },
       "inventory": {
         "space": 0,

@@ -316,7 +316,8 @@ section.window-content {
       grid-template-rows: 95px 95px;
 
       nav.status-tabs,
-      nav.skills-tabs {
+      nav.skills-tabs,
+      nav.bio-tabs {
          position: absolute;
          display: flex;
          flex-direction: row;
@@ -620,11 +621,50 @@ section.window-content {
 	h4.tab-title {
 		position: absolute;
 		top: 317px;
-		left: 47px;
+      left: 34px;
+      width: 125px;
+      text-align: center;  
 		font-family: 'Edu SA Beginner';
 		font-size: 25px;
 		color: $lhtrpg-font-color-ui;
 	}
+
+}
+
+.bio-body {
+   height: 225px;
+
+   div[data-edit="data.biography"] {
+      margin-left: 40px;
+      margin-right: 40px;
+   }
+
+   .item {
+      h4 {
+         text-align: center;
+      }
+   }
+
+   .guild {
+      position: absolute;
+      top: 232px;
+      height: 75px;
+      width: 412px;
+      margin: 0 30px 0 30px;
+
+      h4 {
+         font-size: 20px;
+         color: $lhtrpg-font-color-ui;
+         margin: 0;
+      }
+
+      .guild-input {
+         font-size: 40px;
+         height: 60px;
+         padding: 0;
+         padding-bottom: 20px;
+      }
+   }
 
 }
 
