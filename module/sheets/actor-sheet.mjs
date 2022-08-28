@@ -17,7 +17,9 @@ export class LHTrpgActorSheet extends ActorSheet {
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" },
       { navSelector: ".status-tabs", contentSelector: ".status-body", initial: "status" },
       { navSelector: ".skills-tabs", contentSelector: ".skills-body", initial: "basic" },
-      { navSelector: ".bio-tabs", contentSelector: ".bio-body", initial: "bio" }]
+      { navSelector: ".bio-tabs", contentSelector: ".bio-body", initial: "bio" }],
+      dragDrop: [{dragSelector: ".items-list .item", dropSelector: null},
+      {dragSelector: ".inventory-list .item", dropSelector: null}]
     });
   }
 

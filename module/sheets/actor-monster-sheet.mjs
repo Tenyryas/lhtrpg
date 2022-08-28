@@ -15,7 +15,9 @@ export class LHTrpgActorMonsterSheet extends ActorSheet {
             width: 520,
             height: 550,
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" },
-            { navSelector: ".status-tabs", contentSelector: ".status-body", initial: "status" }]
+            { navSelector: ".status-tabs", contentSelector: ".status-body", initial: "status" }],
+            dragDrop: [{dragSelector: ".items-list .item", dropSelector: null},
+            {dragSelector: ".inventory-list .item", dropSelector: null}]
         });
     }
 
