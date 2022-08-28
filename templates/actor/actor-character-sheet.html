@@ -26,17 +26,20 @@
 
 		{{!-- Header Fields --}}
 		<div class="header-fields">
-			<h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'LHTRPG.Placeholder.Name'}}" />
+			<h1 class="charname"><input name="name" type="text" value="{{actor.name}}"
+					placeholder="{{localize 'LHTRPG.Placeholder.Name'}}" />
 			</h1>
 			<div class="race">
 				<label for="data.race">{{localize 'LHTRPG.Label.Race'}}</label>
-				<input type="text" name="data.race" value="{{data.race}}" placeholder="{{localize 'LHTRPG.Placeholder.Race'}}">
+				<input type="text" name="data.race" value="{{data.race}}"
+					placeholder="{{localize 'LHTRPG.Placeholder.Race'}}">
 			</div>
 			<img class="class-img" src="{{data.class.img}}" data-edit="data.class.img"
 				title="{{data.class.name}}" height="100" width="100" />
 			<div class="classes">
 				<input class="subclass" type="text" name="data.class.subclass"
-					value="{{data.class.subclass}}" placeholder="{{localize 'LHTRPG.Placeholder.SubClass'}}">
+					value="{{data.class.subclass}}"
+					placeholder="{{localize 'LHTRPG.Placeholder.SubClass'}}">
 				<input class="class" type="text" name="data.class.name" value="{{data.class.name}}"
 					placeholder="{{localize 'LHTRPG.Placeholder.Class'}}">
 			</div>
@@ -79,6 +82,29 @@
 				</div>
 				<div class="tab effects" data-group="stats" data-tab="effects">
 					{{> "systems/lhtrpg/templates/actor/parts/actor-effects.html"}}
+				</div>
+
+			</section>
+		</div>
+
+		{{!-- Skills Tab --}}
+		<div class="tab stats grid-span-6" data-group="primary" data-tab="skills">
+
+			<nav class="skills-tabs tabs" data-group="skills">
+				{{!-- Default tab is specified in actor-sheet.mjs --}}
+				<a class="item" data-tab="basic">BASIC</a>
+				<a class="item" data-tab="general">GENERAL</a>
+				<a class="item" data-tab="combat">COMBAT</a>
+			</nav>
+			<section class="skills-body">
+				<div class="tab skills" data-group="skills" data-tab="basic">
+					{{> "systems/lhtrpg/templates/actor/parts/actor-skills-basic.html"}}
+				</div>
+				<div class="tab skills" data-group="skills" data-tab="general">
+					{{> "systems/lhtrpg/templates/actor/parts/actor-skills-general.html"}}					
+				</div>
+				<div class="tab skills" data-group="skills" data-tab="combat">
+					{{> "systems/lhtrpg/templates/actor/parts/actor-skills-combat.html"}}
 				</div>
 
 			</section>

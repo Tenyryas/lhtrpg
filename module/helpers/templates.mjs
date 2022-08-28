@@ -9,6 +9,10 @@
     // Actor partials.
     "systems/lhtrpg/templates/actor/parts/actor-stats.html",
     "systems/lhtrpg/templates/actor/parts/actor-effects.html",
+    "systems/lhtrpg/templates/actor/parts/actor-skills-basic.html",
+    "systems/lhtrpg/templates/actor/parts/actor-skills-combat.html",
+    "systems/lhtrpg/templates/actor/parts/actor-skills-general.html",
+
     "systems/lhtrpg/templates/actor/parts/monster-skills.html",
     "systems/lhtrpg/templates/actor/parts/monster-effects.html",
 

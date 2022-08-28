@@ -315,14 +315,16 @@ section.window-content {
       gap: 4px;
       grid-template-rows: 95px 95px;
 
-      nav.status-tabs {
+      nav.status-tabs,
+      nav.skills-tabs {
          position: absolute;
          display: flex;
          flex-direction: row;
          top: 325px;
          left: 162px;
-         width: 220px;
+         width: 350px;
          height: 45px;
+         justify-content: flex-start;
 
          a {
             background: url("../assets/ui/confirm-tab.webp");
