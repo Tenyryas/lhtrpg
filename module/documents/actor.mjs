@@ -31,6 +31,7 @@ export class LHTrpgActor extends Actor {
   prepareBaseData() {
     // Data modifications in this step occur before processing embedded
     // documents or derived data.
+
   }
 
   /**
@@ -45,7 +46,9 @@ export class LHTrpgActor extends Actor {
   prepareDerivedData() {
     const actorData = this.data;
     const data = actorData.data;
+    const itemlist = actorData.items;
     const flags = actorData.flags.lhtrpg || {};
+    let itemNumber = 0;
 
     if (actorData.type === 'character') {
       // Abilities modifiers
@@ -53,6 +56,15 @@ export class LHTrpgActor extends Actor {
       data.attributes.dex.mod = Math.floor(data.attributes.dex.value / 3);
       data.attributes.pow.mod = Math.floor(data.attributes.pow.value / 3);
       data.attributes.int.mod = Math.floor(data.attributes.int.value / 3);
+
+      itemlist.forEach(item => {
+        if(item.data.data.equipped !== undefined) {
+          if(item.data.data.equipped == false) {
+            itemNumber += 1;
+          }
+        }
+      });
+      data.inventory.space = itemNumber;
     }
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep

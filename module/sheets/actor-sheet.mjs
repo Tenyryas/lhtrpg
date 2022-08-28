@@ -82,7 +82,12 @@ export class LHTrpgActorSheet extends ActorSheet {
     const skillsCombat = [];
     const skillsGeneral = [];
 
-    const itemsEquipped = [];
+    const itemsEquippedWeapon = [];
+    const itemsEquippedArmor = [];
+    const itemsEquippedShield = [];
+    const itemsEquippedAccessory = [];
+    const itemsEquippedBag = [];
+    const itemsEquippedGear = [];
     const itemsWeapon = [];
     const itemsArmor = [];
     const itemsShield = [];
@@ -109,8 +114,23 @@ export class LHTrpgActorSheet extends ActorSheet {
         skillsGeneral.push(i);
       }
       // Append to Equipped gear.
-      else if (i.data.equipped === true) {
-        itemsEquipped.push(i);
+      else if (i.data.equipped === true && i.type === 'weapon') {
+        itemsEquippedWeapon.push(i);
+      }
+      else if (i.data.equipped === true && i.type === 'armor') {
+        itemsEquippedArmor.push(i);
+      }
+      else if (i.data.equipped === true && i.type === 'shield') {
+        itemsEquippedShield.push(i);
+      }
+      else if (i.data.equipped === true && i.type === 'accessory') {
+        itemsEquippedAccessory.push(i);
+      }
+      else if (i.data.equipped === true && i.type === 'bag') {
+        itemsEquippedBag.push(i);
+      }
+      else if (i.data.equipped === true && i.type === 'gear') {
+        itemsEquippedGear.push(i);
       }
       // Append to Weapons.
       else if (i.data.equipped === false && i.type === 'weapon') {
@@ -147,20 +167,31 @@ export class LHTrpgActorSheet extends ActorSheet {
     }
 
     // Assign and return
-    context.skillsCombat = skillsCombat;
-    context.skillsBasic = skillsBasic;
-    context.skillsGeneral = skillsGeneral;
+    context.skills = {
+      "combat": skillsCombat,
+      "basic": skillsBasic,
+      "general": skillsGeneral
+    };
 
-    context.itemsEquipped = itemsEquipped;
-    context.itemsWeapon = itemsWeapon;
-    context.itemsArmor = itemsArmor;
-    context.itemsShield = itemsShield;
-    context.itemsAccessory = itemsAccessory;
-    context.itemsBag = itemsBag;
-    context.itemsGear = itemsGear;
+    context.items = {
+      "equipped": {
+        "weapons": itemsEquippedWeapon,
+        "armors": itemsEquippedArmor,
+        "shields": itemsEquippedShield,
+        "accessories": itemsEquippedAccessory,
+        "bags": itemsEquippedBag,
+        "gear": itemsEquippedGear
+      },
+      "weapons": itemsWeapon,
+      "armors": itemsArmor,
+      "shields": itemsShield,
+      "accessories": itemsAccessory,
+      "bags": itemsBag,
+      "gear": itemsGear,
+    }
 
-    context.itemsConnection = itemsConnection;
-    context.itemsUnion = itemsUnion;
+    context.Connections = itemsConnection;
+    context.Unions = itemsUnion;
   }
 
   /* -------------------------------------------- */
@@ -176,6 +207,10 @@ export class LHTrpgActorSheet extends ActorSheet {
       item.sheet.render(true);
     });
 
+    // Render the item sheet for viewing/editing prior to the editable check.
+    html.find('.addItem a.item-controls').click(ev => {
+      $('.addItem .dropdown-content').toggleClass('show');
+    });
 
     html.find('#hate-button').click(ev => {
       let content = ev.target.nextElementSibling;
@@ -198,6 +233,19 @@ export class LHTrpgActorSheet extends ActorSheet {
 
     // Add Inventory Item
     html.find('.item-create').click(this._onItemCreate.bind(this));
+
+    // Delete Inventory Item
+    html.find('.item-equip').click(ev => {
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));
+      let equipped = item.data.data.equipped;
+      equipped = !equipped;
+      console.log(equipped);
+      item.update(
+        { 'data.equipped': equipped}
+      )
+      li.slideUp(200, () => this.render(false));
+    });
 
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {

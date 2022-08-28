@@ -75,6 +75,10 @@
     a.item-delete {
       color: $lhtrpg-font-color-bad-status;
     }
+
+    a:hover {
+      text-shadow: 0 0 8px $lhtrpg-font-focus-shadow;
+    }
   }
 
   // Individual Item
@@ -83,6 +87,7 @@
     padding: 5px 2px; // to align with the header border
     margin: 0;
     gap: 0;
+    color: $lhtrpg-font-color-primary;
     &:last-child { border-bottom: none; }
     .item-name {
       color: $lhtrpg-font-color-primary;

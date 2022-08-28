@@ -1,3 +1,7 @@
+<h4 class="tab-title">
+	SKILLS
+</h4>
+
 <ol class="items-list">
 	<li class="item grid grid-7col items-header">
 		<div class="item-name grid-span-3">{{localize "LHTRPG.Monster.Skills"}}</div>
@@ -8,7 +12,7 @@
 				{{localize "LHTRPG.Add"}}</a>
 		</div>
 	</li>
-	{{#each skillsCombat as |item id|}}
+	{{#each skills.combat as |item id|}}
 		<li class="item grid grid-7col" data-item-id="{{item._id}}">
 			<div class="item-name grid-span-3">
 				<div class="item-image">

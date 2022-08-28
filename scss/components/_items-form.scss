@@ -127,7 +127,7 @@ nav {
             width: 100%;
 
         }
-        
+
         input {
             width: 100%;
         }
@@ -137,7 +137,7 @@ nav {
 .sheet-body {
     height: 180px;
 
-    div[data-edit="data.description"]{
+    div[data-edit="data.description"] {
         margin-left: 40px;
         margin-right: 40px;
     }
@@ -153,12 +153,18 @@ nav {
     height: 340px;
 }
 
+
+.items-header {
+    color: $lhtrpg-items-font-color;
+}
+
 .items-list {
     margin-top: 0;
     color: $lhtrpg-items-font-color;
     max-height: 100%;
 
-    .item{
+    .item {
+        color: $lhtrpg-items-font-color;
         .item-name {
             color: $lhtrpg-items-font-color;
         }

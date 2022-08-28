@@ -1,0 +1,76 @@
+<h4 class="tab-title">
+	ITEMS
+</h4>
+
+<ol class="inventory-list grid grid-7col">
+	{{#each items.equipped.weapons as |item id|}}
+		{{!-- item=item id=id is needed to pass the context of the variables to the partial --}}
+		{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html" item=item id=id }}
+	{{/each}}
+	{{#each items.equipped.armors as |item id|}}
+		{{!-- item=item id=id is needed to pass the context of the variables to the partial --}}
+		{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html" item=item id=id }}
+	{{/each}}
+	{{#each items.equipped.shields as |item id|}}
+		{{!-- item=item id=id is needed to pass the context of the variables to the partial --}}
+		{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html" item=item id=id }}
+	{{/each}}
+	{{#each items.equipped.accessories as |item id|}}
+		{{!-- item=item id=id is needed to pass the context of the variables to the partial --}}
+		{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html" item=item id=id }}
+	{{/each}}
+	{{#each items.equipped.bags as |item id|}}
+		{{!-- item=item id=id is needed to pass the context of the variables to the partial --}}
+		{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html" item=item id=id }}
+	{{/each}}
+	{{#each items.equipped.gear as |item id|}}
+		{{!-- item=item id=id is needed to pass the context of the variables to the partial --}}
+		{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html" item=item id=id }}
+	{{/each}}
+
+
+	{{#each items.weapons as |item id|}}
+		{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html" item=item id=id }}
+	{{/each}}
+	{{#each items.armors as |item id|}}
+		{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html" item=item id=id }}
+	{{/each}}
+	{{#each items.shields as |item id|}}
+		{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html" item=item id=id }}
+	{{/each}}
+	{{#each items.accessories as |item id|}}
+		{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html" item=item id=id }}
+	{{/each}}
+	{{#each items.bags as |item id|}}
+		{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html" item=item id=id }}
+	{{/each}}
+	{{#each items.gear as |item id|}}
+		{{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html" item=item id=id }}
+	{{/each}}
+</ol>
+
+<div class="inventory-infos flexrow">
+	<div class="inventory-space">
+		<input class="invSpace-input" type="text" name="data.inventory.space" value="{{data.inventory.space}}"
+			placeholder="0" data-dtype="Number" maxlength="3" disabled>
+		<span>/</span>
+		<input class="invSpace-input max" type="text" name="data.inventory.maxSpace" value="{{data.inventory.maxSpace}}"
+			placeholder="0" data-dtype="Number" maxlength="3">
+	</div>
+	<div class="addItem">
+		<a class="item-controls"><i class="fas fa-plus" title="{{localize 'LHTRPG.Add'}}"></i></a>
+		<div class="dropdown-content">
+			<a class="item-control item-create" title="{{localize 'ITEM.TypeWeapon'}}" data-type="weapon"><img src="systems/lhtrpg/assets/ui/items_icons/weapon.svg" alt="" height="30" width="30"></a>
+			<a class="item-control item-create" title="{{localize 'ITEM.TypeArmor'}}" data-type="armor"><img src="systems/lhtrpg/assets/ui/items_icons/armor.svg" alt="" height="30" width="30"></a>
+			<a class="item-control item-create" title="{{localize 'ITEM.TypeShield'}}" data-type="shield"><img src="systems/lhtrpg/assets/ui/items_icons/shield.svg" alt="" height="30" width="30"></a>
+			<a class="item-control item-create" title="{{localize 'ITEM.TypeAccessory'}}" data-type="accessory"><img src="systems/lhtrpg/assets/ui/items_icons/accessory.svg" alt="" height="30" width="30"></a>
+			<a class="item-control item-create" title="{{localize 'ITEM.TypeBag'}}" data-type="bag"><img src="systems/lhtrpg/assets/ui/items_icons/bag.svg" alt="" height="30" width="30"></a>
+			<a class="item-control item-create" title="{{localize 'ITEM.TypeGear'}}" data-type="gear"><img src="systems/lhtrpg/assets/ui/items_icons/gear.svg" alt="" height="30" width="30"></a>
+		</div>
+	</div>
+	<div class="inventory-gold">
+		<input class="gold-input" type="text" name="data.inventory.gold" value="{{data.inventory.gold}}" placeholder="0"
+			data-dtype="Number" maxlength="8">
+		<img src="systems/lhtrpg/assets/ui/gold.svg" alt="" height="36" width="36">
+	</div>
+</div>
