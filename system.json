@@ -1,11 +1,24 @@
 {
   "name": "lhtrpg",
+  "id": "lhtrpg",
   "title": "Log Horizon TRPG (ログ・ホライズンTRPG)",
   "description": "<em><p>Database Database<br>Just living in the Database<br>Wow Wow</em>",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "minimumCoreVersion": "9",
   "compatibleCoreVersion": "9",
+  "compatibility": {
+    "minimum": 9,
+    "verified": 9,
+    "maximum": 9
+  },
   "author": "Kyane",
+  "authors": [
+    {
+      "name": "Kyane",
+      "url": "https://github.com/Tenyryas",
+      "discord": "Kyane#8654"
+    }
+  ],
   "esmodules": ["module/lhtrpg.mjs"],
   "styles": ["css/lhtrpg.css"],
   "scripts": [],
@@ -25,9 +38,9 @@
   "gridDistance": 5,
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power",
+  "secondaryTokenAttribute": "fate",
   "url": "https://github.com/Tenyryas/lhtrpg",
   "manifest": "https://raw.githubusercontent.com/Tenyryas/lhtrpg/latest/system.json",
-  "download": "https://github.com/Tenyryas/lhtrpg/releases/download/v1.0.1/lhtrpg.zip",
+  "download": "https://github.com/Tenyryas/lhtrpg/releases/download/v1.0.2/lhtrpg.zip",
   "license": "LICENSE.txt"
 }
