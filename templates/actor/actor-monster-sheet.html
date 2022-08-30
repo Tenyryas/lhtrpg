@@ -13,7 +13,7 @@
             </div>
           </div>
           <ol class="tag-list">
-            {{#each data.tags}}
+            {{#each system.tags}}
               <li class="tag">
                 <span>{{this}}</span>
                 {{#if @root.flags.lhtrpg.isTagEditActive}}
@@ -47,7 +47,7 @@
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Monster.Rank'}}</label>
           <div>
-            <input class="monsterRank-input" type="text" name="data.rank" value="{{data.rank}}" placeholder="0"
+            <input class="monsterRank-input" type="text" name="system.rank" value="{{system.rank}}" placeholder="0"
               data-dtype="Number" maxlength="2">
           </div>
         </div>
@@ -55,10 +55,10 @@
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Label.HP'}}</label>
           <div>
-            <input class="monsterHP-input" type="text" name="data.health.value" value="{{data.health.value}}"
+            <input class="monsterHP-input" type="text" name="system.health.value" value="{{system.health.value}}"
               placeholder="0" data-dtype="Number" maxlength="4">
             <span>/</span>
-            <input class="monsterHP-input max" type="text" name="data.health.max" value="{{data.health.max}}"
+            <input class="monsterHP-input max" type="text" name="system.health.max" value="{{system.health.max}}"
               placeholder="0" data-dtype="Number" maxlength="4">
           </div>
         </div>
@@ -66,7 +66,7 @@
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Monster.Identification'}}</label>
           <div>
-            <input class="monsterIdDif-input" type="text" name="data.idendification" value="{{data.idendification}}"
+            <input class="monsterIdDif-input" type="text" name="system.idendification" value="{{system.idendification}}"
               placeholder="-" data-dtype="text">
           </div>
         </div>
@@ -74,7 +74,7 @@
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Monster.HateMultiplier'}}</label>
           <div>
-            <input class="monsterHateMulti-input" type="text" name="data.hateMultiplier" value="{{data.hateMultiplier}}"
+            <input class="monsterHateMulti-input" type="text" name="system.hateMultiplier" value="{{system.hateMultiplier}}"
               placeholder="-" data-dtype="text">
           </div>
         </div>
@@ -82,39 +82,39 @@
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Str'}}</label>
           <div>
-            <input class="monsterSTR-input" type="text" name="data.attributes.str.mod"
-              value="{{data.attributes.str.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
+            <input class="monsterSTR-input" type="text" name="system.attributes.str.mod"
+              value="{{system.attributes.str.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Dex'}}</label>
           <div>
-            <input class="monsterDEX-input" type="text" name="data.attributes.dex.mod"
-              value="{{data.attributes.dex.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
+            <input class="monsterDEX-input" type="text" name="system.attributes.dex.mod"
+              value="{{system.attributes.dex.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Pow'}}</label>
           <div>
-            <input class="monsterPOW-input" type="text" name="data.attributes.pow.mod"
-              value="{{data.attributes.pow.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
+            <input class="monsterPOW-input" type="text" name="system.attributes.pow.mod"
+              value="{{system.attributes.pow.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Int'}}</label>
           <div>
-            <input class="monsterINT-input" type="text" name="data.attributes.int.mod"
-              value="{{data.attributes.int.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
+            <input class="monsterINT-input" type="text" name="system.attributes.int.mod"
+              value="{{system.attributes.int.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Check.Evasion'}}</label>
           <div>
-            <input class="monsterEvasion-input" type="text" name="data.checks.evasion" value="{{data.checks.evasion}}"
+            <input class="monsterEvasion-input" type="text" name="system.checks.evasion" value="{{system.checks.evasion}}"
               placeholder="-" data-dtype="text">
           </div>
         </div>
@@ -122,74 +122,74 @@
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Check.Resistance'}}</label>
           <div>
-            <input class="monsterResistance-input" type="text" name="data.checks.resistance"
-              value="{{data.checks.resistance}}" placeholder="-" data-dtype="text">
+            <input class="monsterResistance-input" type="text" name="system.checks.resistance"
+              value="{{system.checks.resistance}}" placeholder="-" data-dtype="text">
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Monster.PDef'}}</label>
           <div>
-            <input class="monsterPDef-input" type="text" name="data.battle-status.defense.phys"
-              value="{{data.battle-status.defense.phys}}" placeholder="-" data-dtype="Number" maxlength="3">
+            <input class="monsterPDef-input" type="text" name="system.battle-status.defense.phys"
+              value="{{system.battle-status.defense.phys}}" placeholder="-" data-dtype="Number" maxlength="3">
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Monster.MDef'}}</label>
           <div>
-            <input class="monsterMDef-input" type="text" name="data.battle-status.defense.magic"
-              value="{{data.battle-status.defense.magic}}" placeholder="-" data-dtype="Number" maxlength="3">
+            <input class="monsterMDef-input" type="text" name="system.battle-status.defense.magic"
+              value="{{system.battle-status.defense.magic}}" placeholder="-" data-dtype="Number" maxlength="3">
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Monster.Speed'}}</label>
           <div>
-            <input class="monsterSpeed-input" type="text" name="data.battle-status.speed"
-              value="{{data.battle-status.speed}}" placeholder="-" data-dtype="Number" maxlength="3">
+            <input class="monsterSpeed-input" type="text" name="system.battle-status.speed"
+              value="{{system.battle-status.speed}}" placeholder="-" data-dtype="Number" maxlength="3">
           </div>
         </div>
 
         <div class="stat-div">
           <label>{{localize 'LHTRPG.Monster.Initiative'}}</label>
           <div>
-            <input class="monsterInit-input" type="text" name="data.battle-status.initiative"
-              value="{{data.battle-status.initiative}}" placeholder="-" data-dtype="Number" maxlength="3">
+            <input class="monsterInit-input" type="text" name="system.battle-status.initiative"
+              value="{{system.battle-status.initiative}}" placeholder="-" data-dtype="Number" maxlength="3">
           </div>
         </div>
 
         <div class="grid grid-6col grid-span-6 status-row">
           <div class="status-checkbox flexcol">
-            <label for="data.bad-status.dazed">{{localize 'LHTRPG.Label.Dazed'}}</label>
-            <input type="checkbox" name="data.bad-status.dazed" {{checked data.bad-status.dazed}}
+            <label for="system.bad-status.dazed">{{localize 'LHTRPG.Label.Dazed'}}</label>
+            <input type="checkbox" name="system.bad-status.dazed" {{checked system.bad-status.dazed}}
               data-dtype="Boolean" />
           </div>
           <div class="status-checkbox flexcol">
-            <label for="data.bad-status.rigor">{{localize 'LHTRPG.Label.Rigor'}}</label>
-            <input type="checkbox" name="data.bad-status.rigor" {{checked data.bad-status.rigor}}
-              data-dtype="Boolean" />
-          </div>
-
-          <div class="status-checkbox flexcol">
-            <label for="data.bad-status.confused">{{localize 'LHTRPG.Label.Confused'}}</label>
-            <input type="checkbox" name="data.bad-status.confused" {{checked data.bad-status.confused}}
-              data-dtype="Boolean" />
-          </div>
-          <div class="status-checkbox flexcol">
-            <label for="data.bad-status.staggered">{{localize 'LHTRPG.Label.Staggered'}}</label>
-            <input type="checkbox" name="data.bad-status.staggered" {{checked data.bad-status.staggered}}
+            <label for="system.bad-status.rigor">{{localize 'LHTRPG.Label.Rigor'}}</label>
+            <input type="checkbox" name="system.bad-status.rigor" {{checked system.bad-status.rigor}}
               data-dtype="Boolean" />
           </div>
 
           <div class="status-checkbox flexcol">
-            <label for="data.bad-status.afflicted">{{localize 'LHTRPG.Label.Afflicted'}}</label>
-            <input type="checkbox" name="data.bad-status.afflicted" {{checked data.bad-status.afflicted}}
+            <label for="system.bad-status.confused">{{localize 'LHTRPG.Label.Confused'}}</label>
+            <input type="checkbox" name="system.bad-status.confused" {{checked system.bad-status.confused}}
               data-dtype="Boolean" />
           </div>
           <div class="status-checkbox flexcol">
-            <label for="data.bad-status.overconfident">{{localize 'LHTRPG.Label.Overconfident'}}</label>
-            <input type="checkbox" name="data.bad-status.overconfident" {{checked data.bad-status.overconfident}}
+            <label for="system.bad-status.staggered">{{localize 'LHTRPG.Label.Staggered'}}</label>
+            <input type="checkbox" name="system.bad-status.staggered" {{checked system.bad-status.staggered}}
+              data-dtype="Boolean" />
+          </div>
+
+          <div class="status-checkbox flexcol">
+            <label for="system.bad-status.afflicted">{{localize 'LHTRPG.Label.Afflicted'}}</label>
+            <input type="checkbox" name="system.bad-status.afflicted" {{checked system.bad-status.afflicted}}
+              data-dtype="Boolean" />
+          </div>
+          <div class="status-checkbox flexcol">
+            <label for="system.bad-status.overconfident">{{localize 'LHTRPG.Label.Overconfident'}}</label>
+            <input type="checkbox" name="system.bad-status.overconfident" {{checked system.bad-status.overconfident}}
               data-dtype="Boolean" />
           </div>
         </div>
@@ -199,7 +199,7 @@
     {{!-- Description Tab --}}
     <div class="tab" data-group="primary" data-tab="description">
       {{!-- To render inline rolls in a TinyMCE editor, you need to pass the parent actor's (if any) roll data to the rollData prop. --}}
-      {{editor content=data.description target="data.description" rollData=rollData button=true owner=owner editable=editable}}
+      {{editor enrichments.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
     </div>
 
     <div class="tab" data-group="primary" data-tab="skills">

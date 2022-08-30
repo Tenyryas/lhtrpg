@@ -4,6 +4,7 @@
  */
 export class LHTrpgActor extends Actor {
 
+
   /** @override */
   prepareData() {
     // Prepare data for the actor. Calling the super version of this executes
@@ -23,7 +24,7 @@ export class LHTrpgActor extends Actor {
     if(this.img === 'icons/svg/mystery-man.svg'){
       const updateData = {};
       updateData['img'] = `systems/lhtrpg/assets/ui/actors_icons/${this.type}.svg`;
-      await this.data.update(updateData);
+      await this.update(updateData);
     }
   }
 
@@ -44,27 +45,27 @@ export class LHTrpgActor extends Actor {
    * is queried and has a roll executed directly from it).
    */
   prepareDerivedData() {
-    const actorData = this.data;
-    const data = actorData.data;
+    const actorData = this;
+    const system = actorData.system;
     const itemlist = actorData.items;
     const flags = actorData.flags.lhtrpg || {};
     let itemNumber = 0;
 
     if (actorData.type === 'character') {
       // Abilities modifiers
-      data.attributes.str.mod = Math.floor(data.attributes.str.value / 3);
-      data.attributes.dex.mod = Math.floor(data.attributes.dex.value / 3);
-      data.attributes.pow.mod = Math.floor(data.attributes.pow.value / 3);
-      data.attributes.int.mod = Math.floor(data.attributes.int.value / 3);
+      system.attributes.str.mod = Math.floor(system.attributes.str.value / 3);
+      system.attributes.dex.mod = Math.floor(system.attributes.dex.value / 3);
+      system.attributes.pow.mod = Math.floor(system.attributes.pow.value / 3);
+      system.attributes.int.mod = Math.floor(system.attributes.int.value / 3);
 
       itemlist.forEach(item => {
-        if(item.data.data.equipped !== undefined) {
-          if(item.data.data.equipped == false) {
+        if(item.system.equipped !== undefined) {
+          if(item.system.equipped == false) {
             itemNumber += 1;
           }
         }
       });
-      data.inventory.space = itemNumber;
+      system.inventory.space = itemNumber;
     }
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
@@ -79,30 +80,30 @@ export class LHTrpgActor extends Actor {
     if (actorData.type !== 'character' || actorData.type !== 'monster' ) return;
 
     // Make modifications to data here. For example:
-    const data = actorData.data;
+    const data = actorData;
   }
 
   /**
    * Override getRollData() that's supplied to rolls.
    */
   getRollData() {
-    const data = super.getRollData();
+    const system = super.getRollData();
 
     // Prepare character roll data.
-    this._getCharacterRollData(data);
+    this._getCharacterRollData(system);
 
-    return data;
+    return system;
   }
 
   /**
    * Prepare character roll data.
    */
-  _getCharacterRollData(data) {
-    if (this.data.type !== 'character') return;
+  _getCharacterRollData(system) {
+    if (this.type !== 'character') return;
 
-    if (data.attributes) {
-      for (let [k, v] of Object.entries(data.attributes)) {
-        data[k] = foundry.utils.deepClone(v);
+    if (system.attributes) {
+      for (let [k, v] of Object.entries(system.attributes)) {
+        system[k] = foundry.utils.deepClone(v);
       }
     }
 

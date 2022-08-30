@@ -12,14 +12,14 @@
 		<div class="info-windows content" id="hate">
 			<div class="hate-window">
 				<label class="hate-label" for="">{{localize 'LHTRPG.Label.Hate'}}</label>
-				<input class="hate-input" type="text" name="data.attributes.hate"
-					value="{{data.attributes.hate}}" placeholder="0" data-dtype="Number"
+				<input class="hate-input" type="text" name="system.attributes.hate"
+					value="{{system.attributes.hate}}" placeholder="0" data-dtype="Number"
 					maxlength="3">
 			</div>
 			<div class="fatigue-window">
 				<label class="fatigue-label" for="">{{localize 'LHTRPG.Label.Fatigue'}}</label>
-				<input class="fatigue-input" type="text" name="data.attributes.fatigue"
-					value="{{data.attributes.fatigue}}" placeholder="0" data-dtype="Number"
+				<input class="fatigue-input" type="text" name="system.attributes.fatigue"
+					value="{{system.attributes.fatigue}}" placeholder="0" data-dtype="Number"
 					maxlength="3">
 			</div>
 		</div>
@@ -30,25 +30,25 @@
 					placeholder="{{localize 'LHTRPG.Placeholder.Name'}}" />
 			</h1>
 			<div class="race">
-				<label for="data.race">{{localize 'LHTRPG.Label.Race'}}</label>
-				<input type="text" name="data.race" value="{{data.race}}"
+				<label for="system.race">{{localize 'LHTRPG.Label.Race'}}</label>
+				<input type="text" name="system.race" value="{{system.race}}"
 					placeholder="{{localize 'LHTRPG.Placeholder.Race'}}">
 			</div>
-			<img class="class-img" src="{{data.class.img}}" data-edit="data.class.img"
-				title="{{data.class.name}}" height="100" width="100" />
+			<img class="class-img" src="{{system.class.img}}" data-edit="system.class.img"
+				title="{{system.class.name}}" height="100" width="100" />
 			<div class="classes">
-				<input class="subclass" type="text" name="data.class.subclass"
-					value="{{data.class.subclass}}"
+				<input class="subclass" type="text" name="system.class.subclass"
+					value="{{system.class.subclass}}"
 					placeholder="{{localize 'LHTRPG.Placeholder.SubClass'}}">
-				<input class="class" type="text" name="data.class.name" value="{{data.class.name}}"
+				<input class="class" type="text" name="system.class.name" value="{{system.class.name}}"
 					placeholder="{{localize 'LHTRPG.Placeholder.Class'}}">
 			</div>
 			<div class="levels">
-				<input class="crank" type="text" name="data.attributes.crank"
-					value="{{data.attributes.crank}}" placeholder="0" data-dtype="Number"
+				<input class="crank" type="text" name="system.attributes.crank"
+					value="{{system.attributes.crank}}" placeholder="0" data-dtype="Number"
 					maxlength="3">
-				<input class="level" type="text" name="data.attributes.level"
-					value="{{data.attributes.level}}" placeholder="0" data-dtype="Number"
+				<input class="level" type="text" name="system.attributes.level"
+					value="{{system.attributes.level}}" placeholder="0" data-dtype="Number"
 					maxlength="3">
 			</div>
 		</div>
@@ -58,7 +58,7 @@
 	{{!-- Sheet Tab Navigation --}}
 	<nav class="sheet-tabs tabs" data-group="primary">
 		{{!-- Default tab is specified in actor-sheet.mjs --}}
-		<a class="item" data-tab="stats"><img src="{{data.class.img}}" alt=""></a>
+		<a class="item" data-tab="stats"><img src="{{system.class.img}}" alt=""></a>
 		<a class="item" data-tab="skills"><img src="/systems/lhtrpg/assets/ui/navigation/skills.webp"
 				alt=""></a>
 		<a class="item" data-tab="items"><img src="/systems/lhtrpg/assets/ui/navigation/items.webp" alt=""></a>
@@ -135,8 +135,8 @@
 				</div>
 				<div class="guild">
 					<h4>{{localize 'LHTRPG.Label.Guild'}}</h4>
-					<input class="guild-input" type="text" name="data.social.guild"
-					value="{{data.social.guild}}" placeholder="{{localize 'LHTRPG.Label.Guild'}}" data-dtype="text">
+					<input class="guild-input" type="text" name="system.social.guild"
+					value="{{system.social.guild}}" placeholder="{{localize 'LHTRPG.Label.Guild'}}" data-dtype="text">
 				</div>
 		</div>
 
