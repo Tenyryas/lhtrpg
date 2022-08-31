@@ -54,6 +54,7 @@ export class LHTrpgActorSheet extends ActorSheet {
     // Add roll data for TinyMCE editors.
     context.rollData = context.actor.getRollData();
 
+    // Enrich textarea content
     context.enrichments = {
       "biography": await TextEditor.enrichHTML(context.system.biography, {async: true})
     };
