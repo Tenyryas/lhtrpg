@@ -73,7 +73,7 @@ export class LHTrpgItem extends Item {
         speaker: speaker,
         rollMode: rollMode,
         flavor: label,
-        content: item.data.description ?? ''
+        content: item.system.description ?? ''
       });
     }
     // Otherwise, create a roll and send a chat message from it.

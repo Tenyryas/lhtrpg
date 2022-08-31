@@ -641,7 +641,7 @@ section.window-content {
 .bio-body {
    height: 225px;
 
-   div[data-edit="data.biography"] {
+   div[data-edit="system.biography"] {
       margin-left: 40px;
       margin-right: 40px;
    }
@@ -701,4 +701,9 @@ section.window-content {
       filter: grayscale(0%);
       transition: filter 0.3s ease-out;
    }
+}
+
+.items-list {
+   max-height: 290px;
+   background-color: rgba(26, 41, 34, 0.9);
 }
