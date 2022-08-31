@@ -41,16 +41,30 @@
       "battle-status": {
         "battle-status": {
           "power": {
-            "attack": 0,
-            "restoration": 0,
-            "magic": 0
+            "attack": {
+              "mod": 0
+            },
+            "restoration": {
+              "mod": 0
+            },
+            "magic": {
+              "mod": 0
+            }
           },
           "defense": {
-            "phys": 0,
-            "magic": 0
+            "phys": {
+              "mod": 0
+            },
+            "magic": {
+              "mod": 0
+            }
           },
-          "speed": 0,
-          "initiative": 0
+          "speed": {
+            "mod": 0
+          },
+          "initiative": {
+            "mod": 0
+          }
         }
       },
       "bad-status": {
@@ -135,8 +149,6 @@
         "guild": ""
       },
       "inventory": {
-        "space": 0,
-        "maxSpace": 2,
         "gold": 350
       }
     },
@@ -214,11 +226,13 @@
       "attack": 0,
       "magic": 0,
       "accuracy": 0,
+      "main": false,
       "range": ""
     },
     "armor": {
       "templates": [
         "base",
+        "defenses",
         "init",
         "itemBase"
       ]
