@@ -8,8 +8,11 @@ npm-debug.log
 
 # Foundry
 *.lock
-lhtrpg.zip
 
 # gulp
 css/
 css/lhtrpg.css
+
+# archiving
+zip.bat
+lhtrpg.zip

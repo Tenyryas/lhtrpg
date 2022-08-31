@@ -3,6 +3,20 @@
  * @extends {Item}
  */
 export class LHTrpgItem extends Item {
+
+
+  /**
+ * Should this item's active effects be suppressed.
+ * @type {boolean}
+ */
+  get areEffectsSuppressed() {
+    const requireEquipped = (this.type !== "skill") && (this.type !== "connection") && (this.type !== "union");
+    if (requireEquipped && (this.system.equipped === false)) return true;
+
+    return false;
+  }
+
+
   /**
    * Augment the basic Item data model with additional dynamic data.
    */
@@ -22,8 +36,8 @@ export class LHTrpgItem extends Item {
     if (this.img === 'icons/svg/item-bag.svg') {
       const updateData = {};
       updateData['img'] = `systems/lhtrpg/assets/ui/items_icons/${this.type}.svg`;
-
-      await this.data.update(updateData);
+      
+      await this.updateSource(updateData);
     }
   }
 
@@ -46,7 +60,7 @@ export class LHTrpgItem extends Item {
    * @private
    */
   async roll() {
-    const item = this.data;
+    const item = this.system;
 
     // Initialize chat data.
     const speaker = ChatMessage.getSpeaker({ actor: this.actor });

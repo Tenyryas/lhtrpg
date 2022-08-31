@@ -23,13 +23,13 @@ export class LHTrpgActorMonsterSheet extends ActorSheet {
 
     /** @override */
     get template() {
-        return `systems/lhtrpg/templates/actor/actor-${this.actor.data.type}-sheet.html`;
+        return `systems/lhtrpg/templates/actor/actor-${this.actor.type}-sheet.html`;
     }
 
     /* -------------------------------------------- */
 
     /** @override */
-    getData() {
+    async getData() {
         // Retrieve the data structure from the base sheet. You can inspect or log
         // the context variable to see the structure, but some key properties for
         // sheets are the actor object, the data object, whether or not it's
@@ -37,10 +37,10 @@ export class LHTrpgActorMonsterSheet extends ActorSheet {
         const context = super.getData();
 
         // Use a safe clone of the actor data for further operations.
-        const actorData = this.actor.data.toObject(false);
+        const actorData = this.actor.toObject(false);
 
-        // Add the actor's data to context.data for easier access, as well as flags.
-        context.data = actorData.data;
+        // Add the actor's data to context.system for easier access, as well as flags.
+        context.system = actorData.system;
         context.flags = actorData.flags;
 
         // Prepare character data and items.
@@ -50,6 +50,10 @@ export class LHTrpgActorMonsterSheet extends ActorSheet {
         }
         // Add roll data for TinyMCE editors.
         context.rollData = context.actor.getRollData();
+
+        context.enrichments = {
+            "description": await TextEditor.enrichHTML(context.system.description, {async: true})
+        };
 
         // Prepare active effects
         context.effects = prepareActiveEffectCategories(this.actor.effects);

@@ -25,13 +25,13 @@ export class LHTrpgActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    return `systems/lhtrpg/templates/actor/actor-${this.actor.data.type}-sheet.html`;
+    return `systems/lhtrpg/templates/actor/actor-${this.actor.type}-sheet.html`;
   }
 
   /* -------------------------------------------- */
 
   /** @override */
-  getData() {
+  async getData() {
     // Retrieve the data structure from the base sheet. You can inspect or log
     // the context variable to see the structure, but some key properties for
     // sheets are the actor object, the data object, whether or not it's
@@ -39,10 +39,10 @@ export class LHTrpgActorSheet extends ActorSheet {
     const context = super.getData();
 
     // Use a safe clone of the actor data for further operations.
-    const actorData = this.actor.data.toObject(false);
+    const actorData = this.actor.toObject(false);
 
     // Add the actor's data to context.data for easier access, as well as flags.
-    context.data = actorData.data;
+    context.system = actorData.system;
     context.flags = actorData.flags;
 
     // Prepare character data and items.
@@ -53,6 +53,11 @@ export class LHTrpgActorSheet extends ActorSheet {
 
     // Add roll data for TinyMCE editors.
     context.rollData = context.actor.getRollData();
+
+    // Enrich textarea content
+    context.enrichments = {
+      "biography": await TextEditor.enrichHTML(context.system.biography, {async: true})
+    };
 
     // Prepare active effects
     context.effects = prepareActiveEffectCategories(this.actor.effects);
@@ -105,58 +110,58 @@ export class LHTrpgActorSheet extends ActorSheet {
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
       // Append to Combat Skills.
-      if (i.type === 'skill' && i.data.subtype === 'Combat') {
+      if (i.type === 'skill' && i.system.subtype === 'Combat') {
         skillsCombat.push(i);
       }
       // Append to Basic Skills.
-      else if (i.type === 'skill' && i.data.subtype === 'Basic') {
+      else if (i.type === 'skill' && i.system.subtype === 'Basic') {
         skillsBasic.push(i);
       }
       // Append to General Skills.
-      else if (i.type === 'skill' && i.data.subtype === 'General') {
+      else if (i.type === 'skill' && i.system.subtype === 'General') {
         skillsGeneral.push(i);
       }
       // Append to Equipped gear.
-      else if (i.data.equipped === true && i.type === 'weapon') {
+      else if (i.system.equipped === true && i.type === 'weapon') {
         itemsEquippedWeapon.push(i);
       }
-      else if (i.data.equipped === true && i.type === 'armor') {
+      else if (i.system.equipped === true && i.type === 'armor') {
         itemsEquippedArmor.push(i);
       }
-      else if (i.data.equipped === true && i.type === 'shield') {
+      else if (i.system.equipped === true && i.type === 'shield') {
         itemsEquippedShield.push(i);
       }
-      else if (i.data.equipped === true && i.type === 'accessory') {
+      else if (i.system.equipped === true && i.type === 'accessory') {
         itemsEquippedAccessory.push(i);
       }
-      else if (i.data.equipped === true && i.type === 'bag') {
+      else if (i.system.equipped === true && i.type === 'bag') {
         itemsEquippedBag.push(i);
       }
-      else if (i.data.equipped === true && i.type === 'gear') {
+      else if (i.system.equipped === true && i.type === 'gear') {
         itemsEquippedGear.push(i);
       }
       // Append to Weapons.
-      else if (i.data.equipped === false && i.type === 'weapon') {
+      else if (i.system.equipped === false && i.type === 'weapon') {
         itemsWeapon.push(i);
       }
       // Append to Armors.
-      else if (i.data.equipped === false && i.type === 'armor') {
+      else if (i.system.equipped === false && i.type === 'armor') {
         itemsArmor.push(i);
       }
       // Append to Shields.
-      else if (i.data.equipped === false && i.type === 'shield') {
+      else if (i.system.equipped === false && i.type === 'shield') {
         itemsShield.push(i);
       }
       // Append to Accessories.
-      else if (i.data.equipped === false && i.type === 'accessory') {
+      else if (i.system.equipped === false && i.type === 'accessory') {
         itemsAccessory.push(i);
       }
       // Append to Bags.
-      else if (i.data.equipped === false && i.type === 'bag') {
+      else if (i.system.equipped === false && i.type === 'bag') {
         itemsBag.push(i);
       }
       // Append to Gear.
-      else if (i.data.equipped === false && i.type === 'gear') {
+      else if (i.system.equipped === false && i.type === 'gear') {
         itemsGear.push(i);
       }
       // Append to Connections.
@@ -243,11 +248,10 @@ export class LHTrpgActorSheet extends ActorSheet {
     html.find('.item-equip').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
-      let equipped = item.data.data.equipped;
+      let equipped = item.system.equipped;
       equipped = !equipped;
-      console.log(equipped);
       item.update(
-        { 'data.equipped': equipped}
+        { 'system.equipped': equipped}
       )
       li.slideUp(200, () => this.render(false));
     });

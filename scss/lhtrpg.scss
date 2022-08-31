@@ -71,6 +71,18 @@ div.app.lhtrpg.actor.minimized {
     color: $lhtrpg-font-color-primary;
   }
 
+  a:hover {
+    text-shadow: 0 0 8px $lhtrpg-font-color-ui;
+  }
+
+  input:hover {
+    box-shadow: 0 0 8px $lhtrpg-font-color-ui;
+  }
+
+  input:disabled:hover {
+    box-shadow: none;
+  }
+
   input:focus {
     box-shadow: none;
     text-shadow: 0 0 5px $lhtrpg-font-focus-shadow;
