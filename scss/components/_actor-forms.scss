@@ -365,7 +365,7 @@ section.window-content {
             height: 25px;
          }
 
-			.hp {
+			div.hp {
 				h4:first-child {
 					background: -webkit-linear-gradient(#63da30, #e2fb2f);
 					-webkit-background-clip: text;
@@ -374,8 +374,7 @@ section.window-content {
 					font-weight: bold;
 				}
 
-				input[name="data.health.value"] {
-					// flex-grow: inherit;
+				input {
 					background: -webkit-linear-gradient(#63da30, #e2fb2f);
 					-webkit-background-clip: text;
 					-webkit-text-fill-color: transparent;
@@ -384,12 +383,12 @@ section.window-content {
 					text-align: right;
 				}
 
-				input[name="data.health.max"] {
+				input[name="system.health.max"] {
 					text-align: left;
 				}
 			}
 
-			.fate {
+			div.fate {
 				h4:first-child {
 					background: -webkit-linear-gradient(#17d7f0, #c484da);
 					-webkit-background-clip: text;
@@ -398,7 +397,7 @@ section.window-content {
 					font-weight: bold;
 				}
 
-				input[name="data.fate.value"] {
+				input {
 					background: -webkit-linear-gradient(#17d7f0, #c484da);
 					-webkit-background-clip: text;
 					-webkit-text-fill-color: transparent;
@@ -407,7 +406,7 @@ section.window-content {
 					text-align: right;
 				}
 
-				input[name="data.fate.max"] {
+				input[name="system.fate.max"] {
 					text-align: left;
 				}
 			}

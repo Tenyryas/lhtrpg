@@ -88,11 +88,16 @@ nav {
             width: 80px;
         }
 
+        div {
+            align-self: center;
+        }
+
         input {
             width: 150px;
         }
 
-        input.itemEquipped-input {
+        input.itemEquipped-input,
+        input.itemMain-input {
             vertical-align: bottom;
             margin: 0;
         }
