@@ -13,11 +13,11 @@ export class LHTrpgCombat extends Combat {
                 for (const id of ids) {
                         // Get Combatant data
                         const c = this.combatants.get(id, { strict: true });
-                        let Init = c.actor.data.data['battle-status'].initiative;
+                        let Init = c.actor.system['battle-status'].initiative ?? 0;
 
                         console.log(c.actor);
                         //Do not roll for defeated combatants
-                        if (c.data.defeated) continue;
+                        if (c.defeated) continue;
 
                         if(c.actor.type === 'character') {
                                 Init += 0.1;
