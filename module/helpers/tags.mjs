@@ -6,11 +6,11 @@
 export async function onManageTags(event, owner) {
   event.preventDefault();
   const a = event.currentTarget;
-  let tags = [...owner.data.data.tags];
+  let tags = [...owner.system.tags];
   const id = a.dataset.tagId;
 
   // window div id owner
-  const html = "#" + owner.documentName.toLowerCase() + "-" + owner.data._id;
+  const html = "#" + owner.documentName.toLowerCase() + "-" + owner._id;
 
   // console.log(event);
   // console.log(owner);
