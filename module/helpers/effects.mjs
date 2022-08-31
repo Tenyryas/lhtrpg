@@ -66,6 +66,6 @@ export function prepareActiveEffectCategories(effects) {
       else categories.passive.effects.push(e);
     }
 
-    categories.suppressed.hidden = !categories.suppressed.effects.length;
+    categories.suppressed.hidden = true;
     return categories;
 }
