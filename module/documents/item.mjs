@@ -36,8 +36,8 @@ export class LHTrpgItem extends Item {
     if (this.img === 'icons/svg/item-bag.svg') {
       const updateData = {};
       updateData['img'] = `systems/lhtrpg/assets/ui/items_icons/${this.type}.svg`;
-
-      await this.system.update(updateData);
+      
+      await this.updateSource(updateData);
     }
   }
 
