@@ -6,6 +6,18 @@ export class LHTrpgItem extends Item {
 
 
   /**
+ * Should this item's active effects be suppressed.
+ * @type {boolean}
+ */
+  get areEffectsSuppressed() {
+    const requireEquipped = (this.type !== "skill") && (this.type !== "connection") && (this.type !== "union");
+    if (requireEquipped && (this.system.equipped === false)) return true;
+
+    return false;
+  }
+
+
+  /**
    * Augment the basic Item data model with additional dynamic data.
    */
   prepareData() {

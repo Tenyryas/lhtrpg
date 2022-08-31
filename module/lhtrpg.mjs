@@ -2,6 +2,7 @@
 import { LHTrpgActor } from "./documents/actor.mjs";
 import { LHTrpgItem } from "./documents/item.mjs";
 import { LHTrpgCombat } from "./documents/lhtrpgCombat.mjs";
+import { LHTrpgActiveEffect } from "./documents/lhtrpgActiveEffect.mjs"
 // Import sheet classes.
 import { LHTrpgActorSheet } from "./sheets/actor-sheet.mjs";
 import { LHTrpgActorMonsterSheet } from "./sheets/actor-monster-sheet.mjs";
@@ -22,7 +23,8 @@ Hooks.once('init', async function () {
     LHTrpgActor,
     LHTrpgItem,
     rollItemMacro,
-    LHTrpgCombat
+    LHTrpgCombat,
+    LHTrpgActiveEffect
   };
 
   // Add custom constants for configuration.
@@ -41,6 +43,7 @@ Hooks.once('init', async function () {
   CONFIG.Actor.documentClass = LHTrpgActor;
   CONFIG.Item.documentClass = LHTrpgItem;
   CONFIG.Combat.documentClass = LHTrpgCombat;
+  CONFIG.ActiveEffect.documentClass = LHTrpgActiveEffect;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);

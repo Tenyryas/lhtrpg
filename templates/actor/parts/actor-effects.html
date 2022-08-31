@@ -4,6 +4,7 @@
 
 <ol class="items-list effects-list">
   {{#each effects as |section sid|}}
+  {{#unless section.hidden}}
     <li class="items-header flexrow" data-effect-type="{{section.type}}">
       <h3 class="item-name effect-name flexrow">{{localize section.label}}</h3>
       <div class="effect-source">Source</div>
@@ -38,5 +39,6 @@
       </li>
     {{/each}}
     </ol>
+  {{/unless}}
   {{/each}}
 </ol>

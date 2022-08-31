@@ -35,6 +35,14 @@ export class LHTrpgActor extends Actor {
 
   }
 
+  /** @override */
+  applyActiveEffects() {
+    // The Active Effects do not have access to their parent at preparation time so we wait until this stage to
+    // determine whether they are suppressed or not.
+    this.effects.forEach(e => e.determineSuppression());
+    return super.applyActiveEffects();
+  }
+
   /**
    * @override
    * Augment the basic actor data with additional dynamic data. Typically,

@@ -249,7 +249,6 @@ export class LHTrpgActorSheet extends ActorSheet {
       const item = this.actor.items.get(li.data("itemId"));
       let equipped = item.system.equipped;
       equipped = !equipped;
-      console.log(equipped);
       item.update(
         { 'system.equipped': equipped}
       )
