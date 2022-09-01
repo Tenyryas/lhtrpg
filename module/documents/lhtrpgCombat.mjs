@@ -1,40 +1,44 @@
 
 
 export class LHTrpgCombat extends Combat {
-        /**
-         * @override
-         * Roll initiative for one or multiple Combatants within the Combat entity
-         * @param ids A Combatant id or Array of ids for which to roll
-         * @returns A promise which resolves to the updated Combat entity once updates are complete.
-         */
-        async rollInitiative(ids) {
+	/**
+	 * @override
+	 * Roll initiative for one or multiple Combatants within the Combat entity
+	 * @param ids A Combatant id or Array of ids for which to roll
+	 * @returns A promise which resolves to the updated Combat entity once updates are complete.
+	 */
+	async rollInitiative(ids) {
 
-                let combatantUpdates = [];
-                for (const id of ids) {
-                        // Get Combatant data
-                        const c = this.combatants.get(id, { strict: true });
-                        let Init = c.actor.system['battle-status'].initiative ?? 0;
+		let combatantUpdates = [];
+		for (const id of ids) {
+			// Get Combatant data
+			const c = this.combatants.get(id, { strict: true });
 
-                        console.log(c.actor);
-                        //Do not roll for defeated combatants
-                        if (c.defeated) continue;
+			let Init = c.actor.system['battle-status'].initiative ?? 0;
+			if (c.actor.type === 'character') {
+				Init = c.actor.system['battle-status'].initiative.total ?? 0;
+			}
 
-                        if(c.actor.type === 'character') {
-                                Init += 0.1;
-                        }
+			console.log(c.actor);
+			//Do not roll for defeated combatants
+			if (c.defeated) continue;
 
-                        // Draw initiative
-                        combatantUpdates.push({
-                                _id: c.id,
-                                initiative: Init
-                        });
-                }
+			if (c.actor.type === 'character') {
+				Init += 0.1;
+			}
 
-                // Update multiple combatants
-                await this.updateEmbeddedDocuments('Combatant', combatantUpdates);
+			// Draw initiative
+			combatantUpdates.push({
+				_id: c.id,
+				initiative: Init
+			});
+		}
 
-                // Return the updated Combat
-                return this;
+		// Update multiple combatants
+		await this.updateEmbeddedDocuments('Combatant', combatantUpdates);
 
-        }
+		// Return the updated Combat
+		return this;
+
+	}
 }
