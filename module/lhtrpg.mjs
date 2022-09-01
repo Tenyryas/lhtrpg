@@ -17,6 +17,8 @@ import { LHTRPG } from "./helpers/config.mjs";
 
 Hooks.once('init', async function () {
 
+  console.log(`Log Horizon TRPG | Initializing Half-Gaia Project...\n${LHTRPG.ASCII}`);
+
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
   game.lhtrpg = {
