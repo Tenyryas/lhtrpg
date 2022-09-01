@@ -73,8 +73,8 @@
 
 			<nav class="status-tabs tabs" data-group="stats">
 				{{!-- Default tab is specified in actor-sheet.mjs --}}
-				<a class="item" data-tab="status">STATUS</a>
-				<a class="item" data-tab="effects">EFFECTS</a>
+				<a class="item" data-tab="status">{{toUpperCase (localize 'LHTRPG.Status.Label')}}</a>
+				<a class="item" data-tab="effects">{{toUpperCase (localize 'LHTRPG.Effect.Label')}}</a>
 			</nav>
 			<section class="status-body">
 				<div class="tab status" data-group="stats" data-tab="status">
@@ -92,9 +92,9 @@
 
 			<nav class="skills-tabs tabs" data-group="skills">
 				{{!-- Default tab is specified in actor-sheet.mjs --}}
-				<a class="item" data-tab="basic">BASIC</a>
-				<a class="item" data-tab="general">GENERAL</a>
-				<a class="item" data-tab="combat">COMBAT</a>
+				<a class="item" data-tab="basic">{{toUpperCase (localize 'LHTRPG.Skill.Type.Basic')}}</a>
+				<a class="item" data-tab="general">{{toUpperCase (localize 'LHTRPG.Skill.Type.General')}}</a>
+				<a class="item" data-tab="combat">{{toUpperCase (localize 'LHTRPG.Skill.Type.Combat')}}</a>
 			</nav>
 			<section class="skills-body">
 				<div class="tab skills" data-group="skills" data-tab="basic">
@@ -119,9 +119,9 @@
 		<div class="tab stats grid-span-6" data-group="primary" data-tab="bio">
 			<nav class="bio-tabs tabs" data-group="bio">
 				{{!-- Default tab is specified in actor-sheet.mjs --}}
-				<a class="item" data-tab="bio">BIO.</a>
-				<a class="item" data-tab="connections">CONNECT.</a>
-				<a class="item" data-tab="unions">UNIONS</a>
+				<a class="item" data-tab="bio">{{toUpperCase (localize 'LHTRPG.Connection.Label')}}</a>
+				<a class="item" data-tab="connections">{{toUpperCase (localize 'LHTRPG.Biography.Label')}}</a>
+				<a class="item" data-tab="unions">{{toUpperCase (localize 'LHTRPG.Union.Label')}}</a>
 			</nav>
 			<section class="bio-body">
 				<div class="tab skills" data-group="bio" data-tab="bio">
