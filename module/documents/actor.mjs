@@ -129,16 +129,18 @@ export class LHTrpgActor extends Actor {
   _getCharacterRollData(system) {
     if (this.type !== 'character') return;
 
-    // if (system.attributes) {
-    //   for (let [k, v] of Object.entries(system.attributes)) {
-    //     system[k] = foundry.utils.deepClone(v);
-    //   }
-    // }
+    if (system.attributes) {
+      for (let [k, v] of Object.entries(system.attributes)) {
+        system[k] = foundry.utils.deepClone(v);
+      }
+    }
 
-    // Add level for easier access, or fall back to 0.
-    // if (data.attributes.level) {
-    //   data.lvl = data.attributes.level ?? 0;
-    // }
+    if(system['battle-status'].power) {
+      for (let [k, v] of Object.entries(system['battle-status'].power)) {
+        system[k] = foundry.utils.deepClone(v);
+      }
+    }
+
   }
 
   /**
