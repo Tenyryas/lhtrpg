@@ -329,16 +329,15 @@ export class LHTrpgActor extends Actor {
     if (accessories.length > 0) {
       if (accessories.length <= 3) {
         for (let [i] of Object.entries(accessories)) {
-          pDefBonus += accessories[i].system.pdef ?? 0;
-          mDefBonus += accessories[i].system.mdef ?? 0;
+      pDefBonus += accessories[i].system.pdef ?? 0;
+      mDefBonus += accessories[i].system.mdef ?? 0;
         };
       }
     }
 
     // Assign values to total
-    bStatus.defense.phys.total = (bStatus.defense.phys.base + pDefBonus) ?? 0;
-    bStatus.defense.magic.total = (bStatus.defense.magic.base + mDefBonus) ?? 0;
-
+    bStatus.defense.phys.total = (bStatus.defense.phys.base + bStatus.defense.phys.mod + pDefBonus) ?? 0;
+    bStatus.defense.magic.total = (bStatus.defense.magic.base + bStatus.defense.magic.mod + mDefBonus) ?? 0;
 
     /** 
      * SPEED/MOVEMENT
