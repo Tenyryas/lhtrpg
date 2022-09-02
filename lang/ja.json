@@ -15,6 +15,16 @@
     "TypeWeapon": "武器"
   },
   "LHTRPG": {
+    "Add": "Add",
+    "Biography": {
+      "Label": "説明"
+    },
+    "ButtonLabel": {
+      "Tag": {
+        "Add": "Add",
+        "Cancel": "Cancel"
+      }
+    },
     "Check": {
       "Accuracy": "命中",
       "Analysis": "解析",
@@ -29,9 +39,16 @@
       "Resistance": "抵抗"
     },
     "Connection": {
+      "Label": "コネクション",
       "Name": "人物名"
     },
+    "Description": {
+      "Label": "説明"
+    },
     "Dex": "DEX",
+    "Effect": {
+      "Label": "効果"
+    },
     "EffectCreate": "Create Effect",
     "EffectDelete": "Delete Effect",
     "EffectEdit": "Edit Effect",
@@ -44,9 +61,11 @@
         "BagLimit": "収納制限",
         "BagSpace": "スロット数",
         "Check": "判定",
+        "Equipped": "Equipped",
         "Initiative": "行動",
         "MDef": "魔法防御力",
         "Magic": "魔力",
+        "Main": "Main Weapon",
         "PDef": "物理防御力",
         "Price": "価格",
         "Range": "射程",
@@ -120,6 +139,9 @@
         "Monster": "モンスター"
       }
     },
+    "Status": {
+      "Label": "Status"
+    },
     "Str": "STR",
     "Tooltip": {
       "AttackPower": "攻撃力",
@@ -131,7 +153,13 @@
       "Speed": "移動力"
     },
     "Union": {
+      "Label": "ユニオン",
       "Name": "ユニオン名"
+    },
+    "WindowTitle": {
+      "Tag": {
+        "AddNewTag": "Add a new tag"
+      }
     }
   }
 }

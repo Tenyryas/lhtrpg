@@ -16,6 +16,9 @@
   },
   "LHTRPG": {
     "Add": "Add",
+    "Biography": {
+      "Label": "Bio."
+    },
     "ButtonLabel": {
       "Tag": {
         "Add": "Add",
@@ -36,9 +39,16 @@
       "Resistance": "Resistance"
     },
     "Connection": {
+      "Label": "Connect.",
       "Name": "Name"
     },
+    "Description": {
+      "Label": "Description"
+    },
     "Dex": "DEX",
+    "Effect": {
+      "Label": "Effects"
+    },
     "EffectCreate": "Create Effect",
     "EffectDelete": "Delete Effect",
     "EffectEdit": "Edit Effect",
@@ -129,6 +139,9 @@
         "Monster": "Monster"
       }
     },
+    "Status": {
+      "Label": "Status"
+    },
     "Str": "STR",
     "Tooltip": {
       "AttackPower": "Attack Power",
@@ -140,6 +153,7 @@
       "Speed": "Speed"
     },
     "Union": {
+      "Label": "Unions",
       "Name": "Union"
     },
     "WindowTitle": {
