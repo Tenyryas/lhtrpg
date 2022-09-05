@@ -141,6 +141,21 @@ export class LHTrpgActor extends Actor {
       }
     }
 
+    system.itemData = {};
+    system.skillData = {};
+
+    if(this.items) {
+      this.items.forEach(function(key, _id){
+        if(key.type === "skill") {
+          system.skillData[key._id] = foundry.utils.deepClone(key.system);
+        } else {
+          system.itemData[key._id] = foundry.utils.deepClone(key.system);
+        }
+      });
+    }
+    console.log(system.skillData);
+    console.log(system.itemData);
+
   }
 
   /**
@@ -322,15 +337,17 @@ export class LHTrpgActor extends Actor {
     }
     // Since only one shield can be equipped at a time, only return the first in the array
     if (shields.length > 0) {
-      pDefBonus += shields[0].system.pdef ?? 0;
-      mDefBonus += shields[0].system.mdef ?? 0;
+      for (let [i] of Object.entries(shields)) {
+        pDefBonus += shields[i].system.pdef ?? 0;
+        mDefBonus += shields[i].system.mdef ?? 0;
+      };
     }
     // Only add the defenses of the accessories if there's 3 or less of them, as that's the equippable limit
     if (accessories.length > 0) {
       if (accessories.length <= 3) {
         for (let [i] of Object.entries(accessories)) {
-      pDefBonus += accessories[i].system.pdef ?? 0;
-      mDefBonus += accessories[i].system.mdef ?? 0;
+          pDefBonus += accessories[i].system.pdef ?? 0;
+          mDefBonus += accessories[i].system.mdef ?? 0;
         };
       }
     }
@@ -407,8 +424,6 @@ export class LHTrpgActor extends Actor {
     }
 
     inventory.maxSpace = inventory.base + (inventory.mod ?? 0) + (bonusBagSpace ?? 0);
-
-    
   }
 
 }

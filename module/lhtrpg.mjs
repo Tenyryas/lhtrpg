@@ -9,6 +9,7 @@ import { LHTrpgActorMonsterSheet } from "./sheets/actor-monster-sheet.mjs";
 import { LHTrpgItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
+import { _createItemsCompendiums, _createSkillsCompendiums } from "./helpers/api-import.mjs";
 import { LHTRPG } from "./helpers/config.mjs";
 
 /* -------------------------------------------- */
@@ -98,6 +99,9 @@ Hooks.once("ready", async function () {
   Hooks.on("hotbarDrop", (bar, data, slot) => createItemMacro(data, slot));
 });
 
+Hooks.on("renderCompendiumDirectory", (app, html) => createSkillImportButton(app, html));
+Hooks.on("renderCompendiumDirectory", (app, html) => createItemsImportButton(app, html));
+
 /* -------------------------------------------- */
 /*  Hotbar Macros                               */
 /* -------------------------------------------- */
@@ -146,4 +150,38 @@ function rollItemMacro(itemName) {
 
   // Trigger the item roll
   return item.roll();
+}
+
+
+function createSkillImportButton(app, html) {
+  if (!game.user.isGM) {
+    return;
+  }
+  const button = $(`<button class="buttonImportSkills"><i class="fa-solid fa-book-atlas"></i> ${game.i18n.localize('LHTRPG.Label.ImportSkills')}</button>`);
+  button.on('click', () => {
+    _createSkillsCompendiums();
+  });
+  let footer = html.find('.directory-footer');
+  if (footer.length === 0) {
+    footer = $(`<footer class="directory-footer"></footer>`);
+    html.append(footer);
+  }
+  footer.append(button);
+}
+
+
+function createItemsImportButton(app, html) {
+  if (!game.user.isGM) {
+    return;
+  }
+  const button = $(`<button class="buttonImportItems"><i class="fa-solid fa-book-atlas"></i> ${game.i18n.localize('LHTRPG.Label.ImportItems')}</button>`);
+  button.on('click', () => {
+    _createItemsCompendiums();
+  });
+  let footer = html.find('.directory-footer');
+  if (footer.length === 0) {
+    footer = $(`<footer class="directory-footer"></footer>`);
+    html.append(footer);
+  }
+  footer.append(button);
 }
