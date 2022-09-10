@@ -335,7 +335,7 @@ export class LHTrpgActor extends Actor {
       pDefBonus += armors[0].system.pdef ?? 0;
       mDefBonus += armors[0].system.mdef ?? 0;
     }
-    // Since only one shield can be equipped at a time, only return the first in the array
+
     if (shields.length > 0) {
       for (let [i] of Object.entries(shields)) {
         pDefBonus += shields[i].system.pdef ?? 0;

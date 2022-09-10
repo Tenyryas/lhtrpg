@@ -82,10 +82,13 @@ nav {
 
 
         label {
+            display: flex;
+            align-content: center;
             color: $lhtrpg-font-color-primary;
             background-color: $lhtrpg-items-label-bg-color;
             padding: 4px;
             width: 80px;
+            height: 100%;
         }
 
         div {
@@ -102,7 +105,8 @@ nav {
             margin: 0;
         }
 
-        .monsterHP-input {
+        .monsterHP-input,
+        .monsterFate-input {
             width: 69px;
             text-align: right;
         }
@@ -112,8 +116,12 @@ nav {
             text-align: right;
         }
 
+        .small-label {
+            width: 50px;
+        }
+
         .small-input {
-            width: 30px;
+            width: 40px;
             text-align: center;
         }
 
@@ -121,6 +129,10 @@ nav {
             text-align: left;
         }
 
+    }
+
+    .stat-div.rank {
+        margin-right: 100%;
     }
 
     .stat-div.checkType,
