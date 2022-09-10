@@ -156,9 +156,16 @@
       "templates": [
         "base",
         "attributes",
-        "battle-status",
         "bad-status"
       ],
+      "battle-status": {
+        "defense": {
+          "phys": 0,
+          "magic": 0
+        },
+        "speed": 0,
+        "initiative": 0
+      },
       "rank": 1,
       "idendification": "",
       "hateMultiplier": "",
