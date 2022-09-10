@@ -44,11 +44,44 @@
     <div class="tab" data-group="primary" data-tab="status">
       <section class="sheet-stats">
 
-        <div class="stat-div">
+
+        <div class="stat-div rank">
           <label>{{localize 'LHTRPG.Monster.Rank'}}</label>
           <div>
             <input class="monsterRank-input" type="text" name="system.rank" value="{{system.rank}}" placeholder="0"
               data-dtype="Number" maxlength="2">
+          </div>
+        </div>
+
+<div class="stat-div">
+          <label class="small-label">{{localize 'LHTRPG.Str'}}</label>
+          <div>
+            <input class="monsterSTR-input small-input" type="text" name="system.attributes.str.mod"
+              value="{{system.attributes.str.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
+          </div>
+        </div>
+
+        <div class="stat-div">
+          <label class="small-label">{{localize 'LHTRPG.Dex'}}</label>
+          <div>
+            <input class="monsterDEX-input small-input" type="text" name="system.attributes.dex.mod"
+              value="{{system.attributes.dex.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
+          </div>
+        </div>
+
+        <div class="stat-div">
+          <label class="small-label">{{localize 'LHTRPG.Pow'}}</label>
+          <div>
+            <input class="monsterPOW-input small-input" type="text" name="system.attributes.pow.mod"
+              value="{{system.attributes.pow.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
+          </div>
+        </div>
+
+        <div class="stat-div">
+          <label class="small-label">{{localize 'LHTRPG.Int'}}</label>
+          <div>
+            <input class="monsterINT-input small-input" type="text" name="system.attributes.int.mod"
+              value="{{system.attributes.int.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
           </div>
         </div>
 
@@ -59,6 +92,17 @@
               placeholder="0" data-dtype="Number" maxlength="4">
             <span>/</span>
             <input class="monsterHP-input max" type="text" name="system.health.max" value="{{system.health.max}}"
+              placeholder="0" data-dtype="Number" maxlength="4">
+          </div>
+        </div>
+
+        <div class="stat-div">
+          <label>{{localize 'LHTRPG.Label.Fate'}}</label>
+          <div>
+            <input class="monsterFate-input" type="text" name="system.fate.value" value="{{system.fate.value}}"
+              placeholder="0" data-dtype="Number" maxlength="4">
+            <span>/</span>
+            <input class="monsterFate-input max" type="text" name="system.fate.max" value="{{system.fate.max}}"
               placeholder="0" data-dtype="Number" maxlength="4">
           </div>
         </div>
@@ -76,38 +120,6 @@
           <div>
             <input class="monsterHateMulti-input" type="text" name="system.hateMultiplier" value="{{system.hateMultiplier}}"
               placeholder="-" data-dtype="text">
-          </div>
-        </div>
-
-        <div class="stat-div">
-          <label>{{localize 'LHTRPG.Str'}}</label>
-          <div>
-            <input class="monsterSTR-input" type="text" name="system.attributes.str.mod"
-              value="{{system.attributes.str.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
-          </div>
-        </div>
-
-        <div class="stat-div">
-          <label>{{localize 'LHTRPG.Dex'}}</label>
-          <div>
-            <input class="monsterDEX-input" type="text" name="system.attributes.dex.mod"
-              value="{{system.attributes.dex.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
-          </div>
-        </div>
-
-        <div class="stat-div">
-          <label>{{localize 'LHTRPG.Pow'}}</label>
-          <div>
-            <input class="monsterPOW-input" type="text" name="system.attributes.pow.mod"
-              value="{{system.attributes.pow.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
-          </div>
-        </div>
-
-        <div class="stat-div">
-          <label>{{localize 'LHTRPG.Int'}}</label>
-          <div>
-            <input class="monsterINT-input" type="text" name="system.attributes.int.mod"
-              value="{{system.attributes.int.mod}}" placeholder="0" data-dtype="Number" maxlength="3">
           </div>
         </div>
 
