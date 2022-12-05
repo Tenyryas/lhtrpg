@@ -7,8 +7,9 @@ export class LHTrpgCombat extends Combat {
 	 * @param ids A Combatant id or Array of ids for which to roll
 	 * @returns A promise which resolves to the updated Combat entity once updates are complete.
 	 */
-	async rollInitiative(ids) {
+	async rollInitiative(ids, {formula=null, updateTurn=true, messageOptions={}}={}) {
 
+		const currentId = this.combatant?.id;
 		let combatantUpdates = [];
 		for (const id of ids) {
 			// Get Combatant data
@@ -19,7 +20,6 @@ export class LHTrpgCombat extends Combat {
 				Init = c.actor.system['battle-status'].initiative.total ?? 0;
 			}
 
-			console.log(c.actor);
 			//Do not roll for defeated combatants
 			if (c.defeated) continue;
 
@@ -32,6 +32,11 @@ export class LHTrpgCombat extends Combat {
 				_id: c.id,
 				initiative: Init
 			});
+		}
+
+		// Ensure the turn order remains with the same combatant
+		if ( updateTurn && currentId ) {
+			await this.update({turn: this.turns.findIndex(t => t.id === currentId)});
 		}
 
 		// Update multiple combatants
