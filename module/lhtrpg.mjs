@@ -47,6 +47,7 @@ Hooks.once('init', async function () {
   CONFIG.Item.documentClass = LHTrpgItem;
   CONFIG.Combat.documentClass = LHTrpgCombat;
   CONFIG.ActiveEffect.documentClass = LHTrpgActiveEffect;
+  CONFIG.time.roundTime = 6;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
