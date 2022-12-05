@@ -153,8 +153,6 @@ export class LHTrpgActor extends Actor {
         }
       });
     }
-    console.log(system.skillData);
-    console.log(system.itemData);
 
   }
 

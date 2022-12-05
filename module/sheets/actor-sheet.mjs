@@ -235,6 +235,9 @@ export class LHTrpgActorSheet extends ActorSheet {
       }
 
     });
+
+    // Roll skill
+    html.find('.rollableSkill').click(this._onRollSkill.bind(this));
     
 
     // -------------------------------------------------------------
@@ -344,6 +347,72 @@ export class LHTrpgActorSheet extends ActorSheet {
       });
       return roll;
     }
+  }
+
+  async _onRollSkill(event) {
+
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+    const dice = dataset.dice;
+    const bonus = dataset.bonus;
+    const skillName = dataset.name;
+    console.log(dataset);
+    const rendered_dialog = await renderTemplate("systems/lhtrpg/templates/dialogs/rollDialog.html");
+    const checkName = `LHTRPG.Check.${skillName}`;
+    let mod;
+
+    let d = new Dialog({
+      title: `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(checkName)}`,
+      content: rendered_dialog,
+      buttons: {
+        roll: {
+          icon: '<i class="fas fa-dice"></i>',
+          label: game.i18n.localize("LHTRPG.ButtonLabel.Roll"),
+          callback: html => {
+            mod = html.find('.abilityCheckMod').val();
+            this.rollSkill(skillName, dice, bonus, mod);
+          }
+        },
+        cancel: {
+          icon: '<i class="fas fa-times"></i>',
+          label: game.i18n.localize("LHTRPG.ButtonLabel.Cancel"),
+        }
+      },
+      default: "cancel"
+    });
+    d.render(true);
+
+  }
+
+  rollSkill(skillName, dice, bonus, mod) {
+
+    const checkName = `LHTRPG.Check.${skillName}`;
+    const flavorText = `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(checkName)}`;
+
+    let roll;
+
+    let formula;
+
+    if(mod === undefined || mod == 0) {
+      formula = `${dice}d6+${bonus}`;
+    }
+    else {
+      formula = `${dice}d6+${bonus}+${mod}`;
+    }
+
+    console.log(formula);
+
+
+    roll = new Roll(formula);
+
+    roll.toMessage({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      flavor: flavorText,
+      rollMode: game.settings.get('core', 'rollMode'),
+    });
+
+    return roll;
+
   }
 
   // async _onOpeningInfoWindow (state, actor) {

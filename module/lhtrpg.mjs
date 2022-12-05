@@ -47,6 +47,10 @@ Hooks.once('init', async function () {
   CONFIG.Item.documentClass = LHTrpgItem;
   CONFIG.Combat.documentClass = LHTrpgCombat;
   CONFIG.ActiveEffect.documentClass = LHTrpgActiveEffect;
+  // By default, track hate and skip defeated combatants
+  CONFIG.combatTrackerConfig = {resource: 'infos.hate', skipDefeated: true};
+  // Time passing per round
+  CONFIG.time.roundTime = 6;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);

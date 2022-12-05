@@ -28,9 +28,10 @@
       "Label": "Bio."
     },
     "ButtonLabel": {
+      "Cancel": "Cancel",
+      "Roll": "Roll",
       "Tag": {
-        "Add": "Add",
-        "Cancel": "Cancel"
+        "Add": "Add"
       }
     },
     "Check": {
@@ -107,6 +108,7 @@
       "Tags": "Tags",
       "Type": "Type"
     },
+    "Modifier": "Modifier",
     "Monster": {
       "HateMultiplier": "Hate Mult.",
       "Identification": "ID Difficulty",
@@ -167,6 +169,7 @@
       "Name": "Union"
     },
     "WindowTitle": {
+      "AbilityCheck": "Ability Score Check",
       "Tag": {
         "AddNewTag": "Add a new tag"
       }

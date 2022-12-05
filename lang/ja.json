@@ -20,9 +20,10 @@
       "Label": "説明"
     },
     "ButtonLabel": {
+      "Cancel": "Cancel",
+      "Roll": "ロール",
       "Tag": {
-        "Add": "Add",
-        "Cancel": "Cancel"
+        "Add": "Add"
       }
     },
     "Check": {
@@ -99,6 +100,7 @@
       "Tags": "タグ",
       "Type": "種別"
     },
+    "Modifier": "修正値",
     "Monster": {
       "HateMultiplier": "ヘイト倍率",
       "Identification": "識別難易度",
@@ -159,6 +161,7 @@
       "Name": "ユニオン名"
     },
     "WindowTitle": {
+      "AbilityCheck": "能力値判定",
       "Tag": {
         "AddNewTag": "Add a new tag"
       }
