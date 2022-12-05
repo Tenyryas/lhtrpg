@@ -549,6 +549,22 @@ section.window-content {
 					min-width: 0;
 				}
          }
+
+         .check:hover {
+            background-color: $lhtrpg-font-color-ui;
+            border-radius: 4px;
+            
+            h4, span, input {
+               color: $lhtrpg-color-dark-green;
+            }
+
+         }
+
+         .check:active, .check:focus {
+            background-color: $lhtrpg-font-color-ui;
+            border-radius: 4px;
+            box-shadow: 0px 0px 5px 2px $lhtrpg-font-color-ui;
+         }
       }
 
       .bad-status {
