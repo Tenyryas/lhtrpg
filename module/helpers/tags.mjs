@@ -52,7 +52,7 @@ async function _onTagCreate(owner, tags) {
       },
       cancel: {
         icon: '<i class="fas fa-times"></i>',
-        label: game.i18n.localize("LHTRPG.ButtonLabel.Tag.Cancel"),
+        label: game.i18n.localize("LHTRPG.ButtonLabel.Cancel"),
       }
     },
     default: "cancel"
