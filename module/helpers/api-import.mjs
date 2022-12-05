@@ -81,7 +81,9 @@ export async function _createSkillsCompendiums() {
 
 			const indexes = await game.packs.get(collection).getIndex();
 
-			if (indexes.getName(val2.name) === undefined) {
+			let skill = indexes.getName(val2.name);
+
+			if (skill === undefined) {
 				await Item.create(data, { pack: collection });
 			}
 		}
@@ -185,7 +187,9 @@ export async function _createItemsCompendiums() {
 
 			const indexes = await game.packs.get(collection).getIndex();
 
-			if (indexes.getName(val2.name) === undefined) {
+			let item = indexes.getName(val2.name);
+
+			if (item === undefined) {
 				await Item.create(data, { pack: collection });
 			}
 		}
