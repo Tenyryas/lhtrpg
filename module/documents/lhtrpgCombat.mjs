@@ -66,17 +66,24 @@ export class LHTrpgCombat extends Combat {
 
 		this.rollInitiative(ids);
 
-		for (let combatant of this.combatants){
-
-			if(combatant.actor.type === "character"){
-				let actor = game.actors.get(combatant.actorId);
-				console.log(actor);
-				await actor.updateSource({"system.infos.hate": 0});
-			}
-		
-		};
+		await this._resetHate();
 
 		super.startCombat();
+	}
+
+	/**
+   * Display a dialog querying the GM whether they wish to end the combat encounter and empty the tracker
+   * @returns {Promise<Combat>}
+   */
+	async endCombat() {
+		return Dialog.confirm({
+			title: game.i18n.localize("COMBAT.EndTitle"),
+			content: `<p>${game.i18n.localize("COMBAT.EndConfirmation")}</p>`,
+			yes: async () => {
+				this.delete();
+				await this._resetHate();
+			}
+		});
 	}
 
 	/**
@@ -93,6 +100,7 @@ export class LHTrpgCombat extends Combat {
 		});
 
 		this.rollInitiative(ids);
+
 
 		super.nextRound();
 	}
@@ -112,5 +120,16 @@ export class LHTrpgCombat extends Combat {
 		this.rollInitiative(ids);
 
 		super.previousRound();
+	}
+
+	async _resetHate(){
+		for (let combatant of this.combatants) {
+
+			if (combatant.actor.type === "character") {
+				let actor = game.actors.get(combatant.actorId);
+				console.log(actor);
+				await actor.update({ "system.infos.hate": 0 });
+			}
+		};
 	}
 }
