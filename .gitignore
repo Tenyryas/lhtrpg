@@ -1,6 +1,7 @@
 # IDE
 .idea/
 .vs/
+lhtrpg.code-workspace
 
 # Node Modules
 node_modules/
