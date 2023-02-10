@@ -388,16 +388,17 @@ export class LHTrpgActorSheet extends ActorSheet {
 
     const checkName = `LHTRPG.Check.${skillName}`;
     const flavorText = `${game.i18n.localize("LHTRPG.WindowTitle.AbilityCheck")} - ${game.i18n.localize(checkName)}`;
-
     let roll;
-
     let formula;
 
     if(mod === undefined || mod == 0) {
       formula = `${dice}d6+${bonus}`;
     }
-    else {
+    else if (mod > 0) {
       formula = `${dice}d6+${bonus}+${mod}`;
+    }
+    else {
+      formula = `${dice}d6+${bonus}-${Math.abs(mod)}`;
     }
 
     console.log(formula);
