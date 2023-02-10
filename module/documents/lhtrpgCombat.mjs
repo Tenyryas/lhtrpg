@@ -66,6 +66,16 @@ export class LHTrpgCombat extends Combat {
 
 		this.rollInitiative(ids);
 
+		for (let combatant of this.combatants){
+
+			if(combatant.actor.type === "character"){
+				let actor = game.actors.get(combatant.actorId);
+				console.log(actor);
+				await actor.updateSource({"system.infos.hate": 0});
+			}
+		
+		};
+
 		super.startCombat();
 	}
 
