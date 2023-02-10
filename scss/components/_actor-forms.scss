@@ -486,6 +486,7 @@ section.window-content {
 
       .attributes {
          gap: 14px;
+         column-gap: 6px;
 			grid-template-rows: 150px 10px 30px;
          text-align: center;
          margin-top: 0;
@@ -524,7 +525,7 @@ section.window-content {
 
 				h4 {
 					font-family: $lhtrpg-font-primary;
-					font-size: 12px;
+					font-size: 11px;
 				}
 
             h4:lang(ja) {
