@@ -13,6 +13,7 @@ export class LHTrpgCombat extends Combat {
 		ids = typeof ids === "string" ? [ids] : ids;
 		const currentId = this.combatant?.id;
 		let combatantUpdates = [];
+
 		for (const id of ids) {
 			// Get Combatant data
 			const c = this.combatants.get(id, { strict: true });
@@ -64,11 +65,10 @@ export class LHTrpgCombat extends Combat {
 			ids.push(combatant.id);
 		});
 
-		this.rollInitiative(ids);
-
-		await this._resetHate();
-
 		super.startCombat();
+
+		await this.rollInitiative(ids);
+		await this._resetHate();
 	}
 
 	/**
@@ -99,10 +99,13 @@ export class LHTrpgCombat extends Combat {
 			ids.push(combatant.id);
 		});
 
-		this.rollInitiative(ids);
+		await super.nextRound();
 
+		for (let combatant of this.combatants){
+			await this._checkEffects(combatant);
+		};
 
-		super.nextRound();
+		await this.rollInitiative(ids);
 	}
 
 	/**
@@ -117,19 +120,73 @@ export class LHTrpgCombat extends Combat {
 			ids.push(combatant.id);
 		});
 
-		this.rollInitiative(ids);
+		await super.previousRound();
 
-		super.previousRound();
+		for (let combatant of this.combatants){
+			await this._checkEffects(combatant);
+		};
+
+		await this.rollInitiative(ids);
 	}
+
+			/**
+	 * @override
+	 * Rewind the combat to the next turn
+	 * @returns {Promise<Combat>}
+	 */
+			async nextTurn() {
+				let ids = [];
+		
+				this.combatants.forEach(combatant => {
+					ids.push(combatant.id);
+				});""
+		
+				await super.nextTurn();
+		
+				for (let combatant of this.combatants){
+					await this._checkEffects(combatant);
+				};
+			}
+
+		/**
+	 * @override
+	 * Rewind the combat to the previous turn
+	 * @returns {Promise<Combat>}
+	 */
+		async previousTurn() {
+			let ids = [];
+	
+			this.combatants.forEach(combatant => {
+				ids.push(combatant.id);
+			});
+	
+			await super.previousTurn();
+	
+			for (let combatant of this.combatants){
+				await this._checkEffects(combatant);
+			};
+		}
 
 	async _resetHate(){
 		for (let combatant of this.combatants) {
 
 			if (combatant.actor.type === "character") {
 				let actor = game.actors.get(combatant.actorId);
-				console.log(actor);
 				await actor.update({ "system.infos.hate": 0 });
 			}
 		};
 	}
+
+	async _checkEffects(combatant) {
+		if(combatant.actor.type === "character"){
+			let actor = game.actors.get(combatant.actorId);
+
+			for(let effect of actor.effects){
+				effect.determineSuppressionCombat();
+
+				console.log(effect);
+			}
+		}
+	}
+
 }
