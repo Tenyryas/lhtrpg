@@ -3,6 +3,14 @@
     "TypeCharacter": "Player Character",
     "TypeMonster": "Monster"
   },
+  "IMPORT": {
+    "Notif": {
+      "Items": "API Import - Beginning the importation of Items from the official website's API...",
+      "ItemsDone": "API Import - Items importation done!",
+      "Skills": "API Import - Beginning the importation of Skills from the official website's API...",
+      "SkillsDone": "API Import - Skills importation done!"
+    }
+  },
   "ITEM": {
     "TypeAccessory": "補助",
     "TypeArmor": "防具",
