@@ -2,7 +2,7 @@
   "id": "lhtrpg",
   "title": "Log Horizon TRPG (ログ・ホライズンTRPG)",
   "description": "A system for playing Log Horizon TRPG.<br><em>Database Database<br>Just living in the Database<br>Wow Wow</em>",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "compatibility": {
     "minimum": 10,
     "verified": 10,
@@ -29,6 +29,11 @@
       "lang": "ja",
       "name": "日本語",
       "path": "lang/ja.json"
+    },
+    {
+      "lang": "ko",
+      "name": "Korean",
+      "path": "lang/ko.json"
     }
   ],
   "gridDistance": 5,
@@ -37,6 +42,6 @@
   "secondaryTokenAttribute": "fate",
   "url": "https://github.com/Tenyryas/lhtrpg",
   "manifest": "https://raw.githubusercontent.com/Tenyryas/lhtrpg/latest/system.json",
-  "download": "https://github.com/Tenyryas/lhtrpg/releases/download/v1.2.2/lhtrpg.zip",
+  "download": "https://github.com/Tenyryas/lhtrpg/releases/download/v1.2.3/lhtrpg.zip",
   "license": "LICENSE.txt"
 }
