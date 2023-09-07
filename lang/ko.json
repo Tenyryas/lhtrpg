@@ -29,7 +29,7 @@
     },
     "ButtonLabel": {
       "Cancel": "취소",
-      "Roll": "굴리다",
+      "Roll": "굴리기",
       "Tag": {
         "Add": "추가"
       }
@@ -52,16 +52,16 @@
       "Name": "이름"
     },
     "Description": {
-      "Label": "Description"
+      "Label": "설명"
     },
     "Dex": "DEX",
     "Effect": {
-      "Label": "Effects"
+      "Label": "효과"
     },
-    "EffectCreate": "Create Effect",
-    "EffectDelete": "Delete Effect",
-    "EffectEdit": "Edit Effect",
-    "EffectToggle": "Toggle Effect",
+    "EffectCreate": "효과 생성",
+    "EffectDelete": "효과 삭제",
+    "EffectEdit": "효과 편집",
+    "EffectToggle": "효과 전환",
     "Int": "INT",
     "Item": {
       "Label": {
@@ -70,7 +70,7 @@
         "BagLimit": "수납 제한",
         "BagSpace": "슬롯수",
         "Check": "판정",
-        "Equipped": "장비된",
+        "Equipped": "장착",
         "Initiative": "행동력",
         "MDef": "마법 방어력",
         "Magic": "마력",
