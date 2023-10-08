@@ -1,7 +1,20 @@
 {
-  "ACTOR": {
-    "TypeCharacter": "Player Character",
-    "TypeMonster": "Monster"
+  "TYPES": {
+    "ACTOR": {
+      "TypeCharacter": "Player Character",
+      "TypeMonster": "Monster"
+    },
+    "ITEM": {
+      "TypeAccessory": "Accessory",
+      "TypeArmor": "Armor",
+      "TypeBag": "Bag",
+      "TypeConnection": "Connection",
+      "TypeGear": "Gear",
+      "TypeShield": "Shield",
+      "TypeSkill": "Skill",
+      "TypeUnion": "Union",
+      "TypeWeapon": "Weapon"
+    }
   },
   "IMPORT": {
     "Notif": {
@@ -10,17 +23,6 @@
       "Skills": "API Import - Beginning the importation of Skills from the official website's API...",
       "SkillsDone": "API Import - Skills importation done!"
     }
-  },
-  "ITEM": {
-    "TypeAccessory": "Accessory",
-    "TypeArmor": "Armor",
-    "TypeBag": "Bag",
-    "TypeConnection": "Connection",
-    "TypeGear": "Gear",
-    "TypeShield": "Shield",
-    "TypeSkill": "Skill",
-    "TypeUnion": "Union",
-    "TypeWeapon": "Weapon"
   },
   "LHTRPG": {
     "Add": "Add",

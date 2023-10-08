@@ -259,7 +259,7 @@ section.window-content {
 
          input {
             font-size: 30px;
-            height: 30px;
+            height: 45px;
             flex-basis: 200px;
             flex-grow: 1;
             text-align: left;
@@ -452,6 +452,10 @@ section.window-content {
                font-size: 18px;
             }
 
+            h4:lang(ko) {
+               font-size: 15px;
+            }
+
             .power-attack,
             .power-resto,
             .power-magic {
@@ -530,6 +534,10 @@ section.window-content {
 
             h4:lang(ja) {
                font-size: 18px;
+            }
+
+            h4:lang(ko) {
+               font-size: 15px;
             }
 
             div {
@@ -620,6 +628,10 @@ section.window-content {
             h4:lang(ja) {
                font-size: 18px;
             }
+
+            h4:lang(ko) {
+               font-size: 15px;
+            }
          }
 
          .status-row {
@@ -637,6 +649,10 @@ section.window-content {
 
             label:lang(ja) {
                font-size: 18px;
+            }
+
+            label:lang(ko) {
+               font-size: 15px;
             }
          }
       }

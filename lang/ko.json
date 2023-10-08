@@ -1,7 +1,20 @@
 {
-  "ACTOR": {
-    "TypeCharacter": "플레이어 캐릭터",
-    "TypeMonster": "몬스터"
+  "TYPES": {
+    "Actor": {
+      "TypeCharacter": "플레이어 캐릭터",
+      "TypeMonster": "몬스터"
+    },
+    "Item": {
+      "TypeAccessory": "악세서리",
+      "TypeArmor": "방어구",
+      "TypeBag": "가방",
+      "TypeConnection": "커넥션",
+      "TypeGear": "장비",
+      "TypeShield": "방패",
+      "TypeSkill": "특기",
+      "TypeUnion": "유니온",
+      "TypeWeapon": "무기"
+    }
   },
   "IMPORT": {
     "Notif": {
@@ -10,8 +23,12 @@
       "Skills": "API 불러오기 - 공식 웹사이트의 스킬 API를 불러오는 중입니다...",
       "SkillsDone": "API 불러오기 - 스킬 정보 불러오기 완료!"
     }
+  },    
+  "Actor": {
+    "TypeCharacter": "플레이어 캐릭터",
+    "TypeMonster": "몬스터"
   },
-  "ITEM": {
+  "Item": {
     "TypeAccessory": "악세서리",
     "TypeArmor": "방어구",
     "TypeBag": "가방",
@@ -29,7 +46,7 @@
     },
     "ButtonLabel": {
       "Cancel": "취소",
-      "Roll": "굴리다",
+      "Roll": "굴리기",
       "Tag": {
         "Add": "추가"
       }
@@ -52,16 +69,16 @@
       "Name": "이름"
     },
     "Description": {
-      "Label": "Description"
+      "Label": "설명"
     },
     "Dex": "DEX",
     "Effect": {
-      "Label": "Effects"
+      "Label": "효과"
     },
-    "EffectCreate": "Create Effect",
-    "EffectDelete": "Delete Effect",
-    "EffectEdit": "Edit Effect",
-    "EffectToggle": "Toggle Effect",
+    "EffectCreate": "효과 생성",
+    "EffectDelete": "효과 삭제",
+    "EffectEdit": "효과 편집",
+    "EffectToggle": "효과 전환",
     "Int": "INT",
     "Item": {
       "Label": {
@@ -70,7 +87,7 @@
         "BagLimit": "수납 제한",
         "BagSpace": "슬롯수",
         "Check": "판정",
-        "Equipped": "장비된",
+        "Equipped": "장착",
         "Initiative": "행동력",
         "MDef": "마법 방어력",
         "Magic": "마력",
