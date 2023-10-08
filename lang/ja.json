@@ -24,6 +24,17 @@
       "SkillsDone": "API Import - Skills importation done!"
     }
   },
+  "ITEM": {
+    "TypeAccessory": "補助",
+    "TypeArmor": "防具",
+    "TypeBag": "収納",
+    "TypeConnection": "コネクション",
+    "TypeGear": "装備",
+    "TypeShield": "盾",
+    "TypeSkill": "特技",
+    "TypeUnion": "ユニオン",
+    "TypeWeapon": "武器"
+  },
   "LHTRPG": {
     "Add": "Add",
     "Biography": {
