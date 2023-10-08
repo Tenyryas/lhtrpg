@@ -1,7 +1,20 @@
 {
-  "ACTOR": {
-    "TypeCharacter": "플레이어 캐릭터",
-    "TypeMonster": "몬스터"
+  "TYPES": {
+    "ACTOR": {
+      "TypeCharacter": "플레이어 캐릭터",
+      "TypeMonster": "몬스터"
+    },
+    "ITEM": {
+      "TypeAccessory": "악세서리",
+      "TypeArmor": "방어구",
+      "TypeBag": "가방",
+      "TypeConnection": "커넥션",
+      "TypeGear": "장비",
+      "TypeShield": "방패",
+      "TypeSkill": "특기",
+      "TypeUnion": "유니온",
+      "TypeWeapon": "무기"
+    }
   },
   "IMPORT": {
     "Notif": {
@@ -10,17 +23,6 @@
       "Skills": "API 불러오기 - 공식 웹사이트의 스킬 API를 불러오는 중입니다...",
       "SkillsDone": "API 불러오기 - 스킬 정보 불러오기 완료!"
     }
-  },
-  "ITEM": {
-    "TypeAccessory": "악세서리",
-    "TypeArmor": "방어구",
-    "TypeBag": "가방",
-    "TypeConnection": "커넥션",
-    "TypeGear": "장비",
-    "TypeShield": "방패",
-    "TypeSkill": "특기",
-    "TypeUnion": "유니온",
-    "TypeWeapon": "무기"
   },
   "LHTRPG": {
     "Add": "추가",
