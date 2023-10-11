@@ -1,0 +1,30 @@
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 10px 5px 0 5px;
+  padding: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  color: $lhtrpg-font-color-primary;
+
+  row-gap: 3px;
+  column-gap: 2px;
+}
+
+.tag {
+  text-align: center;
+  padding: 2px;
+  color: $lhtrpg-items-font-color;
+  border: 1px solid $lhtrpg-items-bg-color;
+  background-color: $lhtrpg-items-bg-color;
+  border-radius: 5px;
+}
+
+// a.tag-control[data-action="delete"] {
+//     display: none;
+// }
+
+// a.tag-control.active[data-action="delete"] {
+//     display: inline-flex;
+// }

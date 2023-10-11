@@ -1,0 +1,154 @@
+.inventory-list {
+  list-style: none;
+  margin: 10px 20px 0 20px;
+  padding: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  color: $lhtrpg-font-color-ui;
+  max-height: 216px;
+  gap: 3px;
+
+  .item {
+    height: 60px;
+    width: 60px;
+  }
+  .item:hover {
+    filter: brightness(1.5);
+
+    .items-control {
+      display: flex;
+      position: absolute;
+      top: 40px;
+      width: 60px;
+      justify-content: space-between;
+    }
+
+    a.item-control {
+      display: flex;
+      background-color: $lhtrpg-items-bg-item-control;
+      width: 20px;
+      height: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .item-equip {
+      color: $lhtrpg-items-bg-secondary-color;
+    }
+
+    .item-delete {
+      color: $lhtrpg-font-color-bad-status;
+    }
+  }
+
+  .item-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 60px;
+    height: 60px;
+    background-size: 60px;
+    border: none;
+    background-image: url("../assets/ui/inventory/item-bg.webp");
+
+    img {
+      border: none;
+    }
+  }
+
+  .items-control {
+    display: none;
+  }
+
+  .item.equipped {
+    a.item-control {
+      background-color: $lhtrpg-items-bg-item-control-equipped;
+    }
+    .item-image {
+      background-image: url("../assets/ui/inventory/equipped-bg.webp");
+    }
+  }
+}
+
+.inventory-infos {
+  position: absolute;
+  top: 228px;
+
+  display: flex;
+  margin: 5px 25px;
+  font-size: 36px;
+  height: 72px;
+  justify-content: space-between;
+  align-items: center;
+
+  input {
+    height: 36px;
+    flex: 0 0 70px;
+  }
+
+  img {
+    border: none;
+    flex: 0 0 36px;
+    align-self: baseline;
+  }
+
+  .inventory-space,
+  .inventory-gold,
+  .addItem {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .inventory-space {
+    justify-content: flex-start;
+  }
+
+  .inventory-gold {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .invSpace-input,
+  .gold-input {
+    text-align: right;
+  }
+
+  .gold-input {
+    font-size: 24px;
+    flex: 0 0 120px;
+  }
+
+  .max {
+    text-align: left;
+  }
+
+  span {
+    flex: 0 0 fit-content;
+  }
+
+  .addItem {
+    justify-content: center;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      min-width: 160px;
+      background-color: rgba(26, 41, 34, 0.9);
+      min-width: 160px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      top: -100px;
+      left: -6px;
+      border-radius: 5px;
+      box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+      z-index: 1;
+    }
+
+    .show {
+      display: block;
+    }
+  }
+}
