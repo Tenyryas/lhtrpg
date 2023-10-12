@@ -1,0 +1,185 @@
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $lhtrpg-items-font-color;
+  border-color: $lhtrpg-items-bg-secondary-color;
+}
+
+section {
+  color: $lhtrpg-items-font-color;
+  background-image: none;
+  background-color: $lhtrpg-items-bg-color;
+  padding: 0;
+}
+
+nav {
+  padding: 0;
+
+  a.item {
+    width: 50%;
+    padding: 5px 0 5px 0;
+  }
+
+  a.item.active {
+    background-color: $lhtrpg-items-label-bg-color;
+    color: $lhtrpg-font-color-primary;
+    text-shadow: none;
+  }
+}
+
+.sheet-header {
+  background-color: $lhtrpg-items-bg-secondary-color;
+  color: $lhtrpg-font-color-primary;
+  padding: 8px;
+
+  .resource {
+    align-self: center;
+  }
+
+  .header-fields {
+    padding-left: 10px;
+    border-left: 1px solid $lhtrpg-font-color-primary;
+
+    select {
+      width: 80px;
+      min-height: 26px;
+      margin-top: 10px;
+
+      color: $lhtrpg-font-color-primary;
+      background-color: $lhtrpg-items-label-bg-color;
+    }
+
+    option {
+      background-color: $lhtrpg-items-label-bg-color;
+    }
+  }
+}
+
+.sheet-stats {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 5px;
+  margin-right: 5px;
+
+  input {
+    color: $lhtrpg-items-font-color;
+  }
+
+  .stat-div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    border: 1px solid $lhtrpg-items-label-bg-color;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    margin-bottom: 5px;
+
+    label {
+      display: flex;
+      align-content: center;
+      color: $lhtrpg-font-color-primary;
+      background-color: $lhtrpg-items-label-bg-color;
+      padding: 4px;
+      width: 80px;
+      height: 100%;
+    }
+
+    div {
+      align-self: center;
+    }
+
+    input {
+      width: 150px;
+    }
+
+    input.itemEquipped-input,
+    input.itemMain-input {
+      vertical-align: bottom;
+      margin: 0;
+    }
+
+    .monsterHP-input,
+    .monsterFate-input {
+      width: 69px;
+      text-align: right;
+    }
+
+    .skillRank-input {
+      width: 30px;
+      text-align: right;
+    }
+
+    .small-label {
+      width: 50px;
+    }
+
+    .small-input {
+      width: 40px;
+      text-align: center;
+    }
+
+    .max {
+      text-align: left;
+    }
+  }
+
+  .stat-div.rank {
+    margin-right: 100%;
+  }
+
+  .stat-div.checkType,
+  .stat-div.itemBagLimit,
+  .stat-div.itemCheck {
+    width: 100%;
+
+    div {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+}
+
+.sheet-body {
+  height: 180px;
+
+  div[data-edit="system.description"] {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+.sheet-body.itemArmor,
+.sheet-body.itemBag {
+  height: 240px;
+}
+
+.sheet-body.itemConnection,
+.sheet-body.itemUnion {
+  height: 340px;
+}
+
+.items-header {
+  color: $lhtrpg-items-font-color;
+}
+
+.items-list {
+  margin-top: 0;
+  color: $lhtrpg-items-font-color;
+  max-height: 100%;
+
+  .item {
+    color: $lhtrpg-items-font-color;
+    .item-name {
+      color: $lhtrpg-items-font-color;
+    }
+  }
+}

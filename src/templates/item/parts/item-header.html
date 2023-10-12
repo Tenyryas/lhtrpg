@@ -1,0 +1,56 @@
+<header class="sheet-header">
+  <img
+    class="profile-img"
+    src="{{item.img}}"
+    title="{{item.name}}"
+    alt=""
+    data-edit="img"
+  />
+  <div class="header-fields">
+    <h1 class="charname">
+      <input
+        name="name"
+        type="text"
+        value="{{item.name}}"
+        placeholder="Name"
+      />
+    </h1>
+    <div class="grid grid-3col">
+      <div class="resource grid-span-3">
+        <div class="flexrow">
+          <label class="resource-label">{{localize 'LHTRPG.Label.Tags'}}</label>
+          <div class="align-right">
+            <a
+              class="tag-control"
+              data-action="create"
+            >
+              <i class="fas fa-plus"></i>
+            </a>
+            <a
+              class="tag-control"
+              data-action="edit"
+            >
+              <i class="fas fa-edit"></i>
+            </a>
+          </div>
+        </div>
+        <ol class="tag-list">
+          {{#each system.tags}}
+          <li class="tag">
+            <span>{{this}}</span>
+            {{#if @root.flags.lhtrpg.isTagEditActive}}
+            <a
+              class="tag-control"
+              data-action="delete"
+              data-tag-id="{{@index}}"
+            >
+              <i class="fas fa-trash"></i>
+            </a>
+            {{/if}}
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+  </div>
+</header>

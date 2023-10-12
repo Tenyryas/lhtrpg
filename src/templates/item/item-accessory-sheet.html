@@ -1,0 +1,153 @@
+<form
+  class="{{cssClass}}"
+  autocomplete="off"
+>
+  {{> "systems/lhtrpg/templates/item/parts/item-header.html"}}
+
+  <section class="sheet-stats">
+    <div class="stat-div">
+      <label>{{localize 'LHTRPG.Item.Label.Rank'}}</label>
+      <div>
+        <input
+          class="itemRank-input"
+          name="system.rank"
+          type="text"
+          value="{{system.rank}}"
+          placeholder="0"
+          data-dtype="Number"
+          maxlength="2"
+        />
+      </div>
+    </div>
+
+    <div class="stat-div">
+      <label>{{localize 'LHTRPG.Item.Label.PDef'}}</label>
+      <div>
+        <input
+          class="itemPDef-input"
+          name="system.pdef"
+          type="text"
+          value="{{system.pdef}}"
+          placeholder="0"
+          data-dtype="Number"
+          maxlength="2"
+        />
+      </div>
+    </div>
+
+    <div class="stat-div">
+      <label>{{localize 'LHTRPG.Item.Label.Magic'}}</label>
+      <div>
+        <input
+          class="itemMagic-input"
+          name="system.magic"
+          type="text"
+          value="{{system.magic}}"
+          placeholder="0"
+          data-dtype="Number"
+          maxlength="2"
+        />
+      </div>
+    </div>
+
+    <div class="stat-div">
+      <label>{{localize 'LHTRPG.Item.Label.MDef'}}</label>
+      <div>
+        <input
+          class="itemMDef-input"
+          name="system.mdef"
+          type="text"
+          value="{{system.mdef}}"
+          placeholder="0"
+          data-dtype="Number"
+          maxlength="2"
+        />
+      </div>
+    </div>
+
+    <div class="stat-div">
+      <label>{{localize 'LHTRPG.Item.Label.Initiative'}}</label>
+      <div>
+        <input
+          class="itemInit-input"
+          name="system.initiative"
+          type="text"
+          value="{{system.initiative}}"
+          placeholder="0"
+          data-dtype="Number"
+          maxlength="2"
+        />
+      </div>
+    </div>
+
+    <div class="stat-div">
+      <label>{{localize 'LHTRPG.Item.Label.Price'}}</label>
+      <div>
+        <input
+          class="itemPrice-input"
+          name="system.price"
+          type="text"
+          value="{{system.price}}"
+          placeholder="0"
+          data-dtype="Number"
+        />
+      </div>
+    </div>
+
+    <div class="stat-div">
+      <label>{{localize 'LHTRPG.Item.Label.Equipped'}}</label>
+      <div>
+        <input
+          class="itemEquipped-input"
+          name="system.equipped"
+          type="checkbox"
+          {{checked
+          system.equipped}}
+          data-dtype="Boolean"
+        />
+      </div>
+    </div>
+  </section>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav
+    class="sheet-tabs tabs"
+    data-group="primary"
+  >
+    <a
+      class="item"
+      data-tab="description"
+      >{{localize 'LHTRPG.Description.Label'}}</a
+    >
+    <a
+      class="item"
+      data-tab="effects"
+      >{{localize 'LHTRPG.Effect.Label'}}</a
+    >
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body itemAccessory">
+    {{!-- Description Tab --}}
+    <div
+      class="tab"
+      data-group="primary"
+      data-tab="description"
+    >
+      {{!-- To render inline rolls in a TinyMCE editor, you need to pass the
+      parent actor's (if any) roll data to the rollData prop. --}} {{editor
+      enrichments.description target="system.description" rollData=rollData
+      button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Attributes Tab --}}
+    <div
+      class="tab effects"
+      data-group="primary"
+      data-tab="effects"
+    >
+      {{!-- As you add new fields, add them in here! --}} {{>
+      "systems/lhtrpg/templates/item/parts/item-effects.html"}}
+    </div>
+  </section>
+</form>

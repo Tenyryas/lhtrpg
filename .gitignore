@@ -1,11 +1,15 @@
 # IDE
 .idea/
 .vs/
+.vscode/
 lhtrpg.code-workspace
 
 # Node Modules
 node_modules/
 npm-debug.log
+
+# Eslint
+.eslintcache
 
 # Foundry
 *.lock
@@ -17,3 +21,4 @@ css/lhtrpg.css
 # archiving
 zip.bat
 lhtrpg.zip
+dist
