@@ -1,0 +1,72 @@
+{
+  "folder": "nlRp99DFNdlfAC1A",
+  "name": "Energy CR1-CR5",
+  "_id": "A0LoEHjSeqBPsW3K",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        1,
+        4
+      ],
+      "drawn": false,
+      "_id": "gr1asl4vIqs5bXkJ",
+      "text": "Lose 1 [Fate Point]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!A0LoEHjSeqBPsW3K.gr1asl4vIqs5bXkJ"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        5,
+        999
+      ],
+      "drawn": false,
+      "_id": "aVCz6tOTOJ30Pgjc",
+      "text": "Lose 2 [Fate Points]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!A0LoEHjSeqBPsW3K.aVCz6tOTOJ30Pgjc"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        -999,
+        0
+      ],
+      "drawn": false,
+      "_id": "RLsh14LkxSsCsuc8",
+      "text": "None",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!A0LoEHjSeqBPsW3K.RLsh14LkxSsCsuc8"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697146483887,
+    "modifiedTime": 1697146606745,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "formula": "1d6",
+  "_key": "!tables!A0LoEHjSeqBPsW3K"
+}

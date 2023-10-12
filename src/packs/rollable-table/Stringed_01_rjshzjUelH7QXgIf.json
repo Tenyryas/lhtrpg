@@ -1,0 +1,117 @@
+{
+  "folder": "exvIgVeFo6CO9PoZ",
+  "name": "Stringed 01",
+  "_id": "rjshzjUelH7QXgIf",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "6N7Um0pqVIYai6TR",
+      "text": "Harp",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!rjshzjUelH7QXgIf.6N7Um0pqVIYai6TR"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "pWzbENKhfQrShHIB",
+      "text": "Lute",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!rjshzjUelH7QXgIf.pWzbENKhfQrShHIB"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "CbLBZwC1GNNFnFXN",
+      "text": "Guitar",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!rjshzjUelH7QXgIf.CbLBZwC1GNNFnFXN"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "Ga2PXKbs3yyrDE8y",
+      "text": "Violin",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!rjshzjUelH7QXgIf.Ga2PXKbs3yyrDE8y"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "pajQXZ35vHGC1sr5",
+      "text": "Cello",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!rjshzjUelH7QXgIf.pajQXZ35vHGC1sr5"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "vLrs5bL6tJYrsxmf",
+      "text": "Lyre",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!rjshzjUelH7QXgIf.vLrs5bL6tJYrsxmf"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 150000,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697151409016,
+    "modifiedTime": 1697151793753,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "formula": "1d6",
+  "_key": "!tables!rjshzjUelH7QXgIf"
+}

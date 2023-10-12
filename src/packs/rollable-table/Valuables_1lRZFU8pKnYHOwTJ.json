@@ -1,0 +1,523 @@
+{
+  "folder": "AQrVvDxiXjmT6sv7",
+  "name": "Valuables",
+  "_id": "1lRZFU8pKnYHOwTJ",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "<p>2d6 + (5 x average of party's CR)</p>",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "text": "Ceramic Mug",
+      "documentId": "JW2L1LGpytt6LElv",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "EB7IQFEXuu0qGd0T",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.EB7IQFEXuu0qGd0T"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "text": "Wooden Knight Doll",
+      "documentId": "Cc3CKDpjSSaAvy4l",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "W45EWp2rSzdjH770",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.W45EWp2rSzdjH770"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "text": "Small Landscape Painting",
+      "documentId": "YcQQUj0LsnTZ9lWR",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "Ao6OHuqJhWWCqvOe",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.Ao6OHuqJhWWCqvOe"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "text": "Abstract Painting",
+      "documentId": "cq7AlgWYKXernqA0",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "OSDTSZ1Z3DMdgVJt",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.OSDTSZ1Z3DMdgVJt"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "text": "Masquerade Party Mask",
+      "documentId": "3PLGz8dGTlLEGVSc",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "gD9aT7TWwx9eNXgQ",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.gD9aT7TWwx9eNXgQ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "Copper Dinnerware Set",
+      "documentId": "aHSdj7Jp10G0wfUf",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "2XnfWlX6WbWVZm35",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.2XnfWlX6WbWVZm35"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "text": "Old Poem Book",
+      "documentId": "LKIBYZkxkGI7gvL7",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "4dA9nmREtVORVgOj",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.4dA9nmREtVORVgOj"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "text": "Embroidered Handkerchief",
+      "documentId": "Z1nOCgfOVyCj99mf",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "afNxz4OGVAzgum1n",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.afNxz4OGVAzgum1n"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "text": "Ceramic Plate",
+      "documentId": "MfIB80PDPGqSZoY5",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "EyrbY6XRVhUpKvk9",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.EyrbY6XRVhUpKvk9"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "text": "Picture Scroll",
+      "documentId": "iREDM3oTSciuB1Xn",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "opi3c6eMPll5E7ri",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.opi3c6eMPll5E7ri"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "text": "Ceramic Flower Pot",
+      "documentId": "VAKoxQ94YyuuN5cH",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "tYe06A1NmWtqWHT0",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.tYe06A1NmWtqWHT0"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "text": "Scrimshawed Earring",
+      "documentId": "FUWVinB4dGCavW9H",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "HkqvAjKszy4mzM1F",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.HkqvAjKszy4mzM1F"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "text": "Portrait of a Lady",
+      "documentId": "9kk0Awz19gQFGUrQ",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "0lx130mrR5ZwhnKe",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.0lx130mrR5ZwhnKe"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "text": "Small Jewelry Box",
+      "documentId": "nnte6ntrNKNIyIRq",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "8NSmHW974R5I4nSG",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.8NSmHW974R5I4nSG"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        21,
+        21
+      ],
+      "drawn": false,
+      "text": "Brass Candlestick",
+      "documentId": "t6NrwvZI3iHn8LNP",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "oald2vZn6YqaOFGM",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.oald2vZn6YqaOFGM"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        22,
+        22
+      ],
+      "drawn": false,
+      "text": "Noble's Aged Journal",
+      "documentId": "5BBBFXBWK1OEc5AL",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "m3PlwEsMkOaF2FqG",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.m3PlwEsMkOaF2FqG"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        23,
+        23
+      ],
+      "drawn": false,
+      "text": "Portrait of a Knight",
+      "documentId": "dzR1HrhFRa5RxTS0",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "dh4oumIPE0liUa4P",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.dh4oumIPE0liUa4P"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        24,
+        24
+      ],
+      "drawn": false,
+      "text": "Painted Geta",
+      "documentId": "O9lWxgvLnNnlRnyl",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "1wSPHGBOgvkfyR9C",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.1wSPHGBOgvkfyR9C"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "text": "Finely-Crafted Gameboard",
+      "documentId": "nuktEFSz9FKpq5Ui",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "zRrPUnpBC231hivC",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.zRrPUnpBC231hivC"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        26,
+        26
+      ],
+      "drawn": false,
+      "text": "Delicate Still-Life Portrait",
+      "documentId": "DZ1VWpKqEfWeu8W0",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "nfg9B80xUPRK8f2Q",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.nfg9B80xUPRK8f2Q"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        27,
+        27
+      ],
+      "drawn": false,
+      "text": "Oak Chair",
+      "documentId": "Jhw5TvHwzOKTMRlm",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "PVAO6q2IYK3jUWZ2",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.PVAO6q2IYK3jUWZ2"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        28,
+        28
+      ],
+      "drawn": false,
+      "text": "Antique Bisque Doll",
+      "documentId": "5qgqaPvQmz9tiS0n",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "DmaDfAxh8WRkawgc",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.DmaDfAxh8WRkawgc"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        29,
+        29
+      ],
+      "drawn": false,
+      "text": "Gaudy Mask",
+      "documentId": "kyTEUgkFGze9rHQT",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "oARnCaNAJvj4YIjc",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.oARnCaNAJvj4YIjc"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        30,
+        30
+      ],
+      "drawn": false,
+      "text": "Rabbit Plushie",
+      "documentId": "y1faFA0W78FHKE3P",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "Ld9Un7OJKNO261Dt",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.Ld9Un7OJKNO261Dt"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        31,
+        31
+      ],
+      "drawn": false,
+      "text": "Brass Fairy Statue",
+      "documentId": "D2KMxxQX5n3rEe6d",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "W4jQ3FLVRv2nlqjs",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.W4jQ3FLVRv2nlqjs"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        32,
+        32
+      ],
+      "drawn": false,
+      "text": "Regional History Book",
+      "documentId": "9cPtGS5yjk0Y602y",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "8rVUPzqnCLMha98K",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.8rVUPzqnCLMha98K"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        33,
+        33
+      ],
+      "drawn": false,
+      "text": "Opera Glove",
+      "documentId": "SuLsdy94aMeNoxea",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "AOj52em6mCJqkQbR",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.AOj52em6mCJqkQbR"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        34,
+        34
+      ],
+      "drawn": false,
+      "text": "High Heel",
+      "documentId": "3PTGk396jydXDZBJ",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "M8MTVVw8ts6p22kO",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.M8MTVVw8ts6p22kO"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        35,
+        35
+      ],
+      "drawn": false,
+      "text": "Fairytale Book",
+      "documentId": "sWK5IcDWncxUGHbP",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "JehSLDNgQMOTDNu3",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.JehSLDNgQMOTDNu3"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        36,
+        36
+      ],
+      "drawn": false,
+      "text": "Portrait of a Girl",
+      "documentId": "F76EpprKnandig24",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "BtRWrfaUDXESZcF0",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.BtRWrfaUDXESZcF0"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        37,
+        37
+      ],
+      "drawn": false,
+      "text": "Small Kokeshi Doll",
+      "documentId": "Mrpg6b1x4zwu0nKn",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "u9OMFPepD6p772Og",
+      "flags": {},
+      "_key": "!tables.results!1lRZFU8pKnYHOwTJ.u9OMFPepD6p772Og"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697143235048,
+    "modifiedTime": 1697145553830,
+    "lastModifiedBy": "1R6dmRPFIjZvxwby"
+  },
+  "formula": "2d6+5*1",
+  "_key": "!tables!1lRZFU8pKnYHOwTJ"
+}

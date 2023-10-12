@@ -1,0 +1,149 @@
+{
+  "folder": "oZhGcZMH4wte1DRV",
+  "name": "Money CR6-CR10",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        -999,
+        0
+      ],
+      "drawn": false,
+      "_id": "yflZWDdfxvVJA5XC",
+      "text": "None",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!kuZvde6ET2P8G3kL.yflZWDdfxvVJA5XC"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "PY1bMu6uKxbncEIQ",
+      "text": "Lose 25G",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!kuZvde6ET2P8G3kL.PY1bMu6uKxbncEIQ"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "aBOmaewabmAYTC2o",
+      "text": "Lose 35G",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!kuZvde6ET2P8G3kL.aBOmaewabmAYTC2o"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "7cjouxbY7Pi2lSmP",
+      "text": "Lose 50G",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!kuZvde6ET2P8G3kL.7cjouxbY7Pi2lSmP"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "yfPHZ1BKdj7kosKm",
+      "text": "Lose 60G",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!kuZvde6ET2P8G3kL.yfPHZ1BKdj7kosKm"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "0CHaCq3776N49ff0",
+      "text": "Lose 75G",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!kuZvde6ET2P8G3kL.0CHaCq3776N49ff0"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "EWfF4mz0dqHaxr6Q",
+      "text": "Lose 90G",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!kuZvde6ET2P8G3kL.EWfF4mz0dqHaxr6Q"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        7,
+        999
+      ],
+      "drawn": false,
+      "_id": "eV9niOiwvdosSaGX",
+      "text": "Lose 100G",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!kuZvde6ET2P8G3kL.eV9niOiwvdosSaGX"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697146775495,
+    "modifiedTime": 1697147069345,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "formula": "1d6",
+  "_id": "kuZvde6ET2P8G3kL",
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "_key": "!tables!kuZvde6ET2P8G3kL"
+}

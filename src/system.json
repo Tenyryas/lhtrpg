@@ -29,7 +29,52 @@
   "esmodules": ["scripts/module.mjs"],
   "styles": ["styles/lhtrpg.css"],
   "scripts": [],
-  "packs": [],
+  "packs": [
+    {
+      "name": "rollable-table",
+      "label": "Rollable Table",
+      "system": "lhtrpg",
+      "path": "packs/rollable-table",
+      "type": "RollTable"
+    },
+    {
+      "name": "valuable",
+      "label": "Valuables",
+      "system": "lhtrpg",
+      "path": "packs/valuables",
+      "type": "Item"
+    },
+    {
+      "name": "core-material",
+      "label": "Core Material",
+      "system": "lhtrpg",
+      "path": "packs/core-material",
+      "type": "Item"
+    },
+    {
+      "name": "magic-reagants",
+      "label": "Magic Reagants",
+      "system": "lhtrpg",
+      "path": "packs/magic-reagants",
+      "type": "Item"
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Log Horizon TRPG",
+      "sorting": "a",
+      "packs": ["rollable-table"],
+      "folders": [
+        {
+          "name": "Items",
+          "sorting": "a",
+          "color": "#7a4810",
+          "packs": ["valuable", "core-material", "magic-reagants"],
+          "folders": []
+        }
+      ]
+    }
+  ],
   "languages": [
     {
       "lang": "en",
@@ -54,5 +99,10 @@
   "url": "https://github.com/Tenyryas/lhtrpg",
   "manifest": "https://raw.githubusercontent.com/Tenyryas/lhtrpg/latest/system.json",
   "download": "https://github.com/Tenyryas/lhtrpg/releases/download/v1.3.0/lhtrpg.zip",
-  "license": "LICENSE.txt"
+  "license": "LICENSE.txt",
+  "flags": {
+    "hotReload": {
+      "extensions": ["js", "css", "html", "hbs", "json"]
+    }
+  }
 }

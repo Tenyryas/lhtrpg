@@ -1,0 +1,123 @@
+{
+  "folder": "qRMBZ8nIZuc1YldJ",
+  "name": "Musical Instrument Type",
+  "_id": "V85voND49VzwFbDg",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "world.rollable-table-copy",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Percussion",
+      "documentId": "nxq2qRVWQcQJN3WL",
+      "img": "icons/svg/d20-grey.svg",
+      "_id": "yrSyplZCAshu7lXD",
+      "flags": {},
+      "_key": "!tables.results!V85voND49VzwFbDg.yrSyplZCAshu7lXD"
+    },
+    {
+      "type": 2,
+      "documentCollection": "world.rollable-table-copy",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Keyboard",
+      "documentId": "HakcWtT2OGlku98d",
+      "img": "icons/svg/d20-grey.svg",
+      "_id": "Xot5ZDqA6T26vgTJ",
+      "flags": {},
+      "_key": "!tables.results!V85voND49VzwFbDg.Xot5ZDqA6T26vgTJ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "world.rollable-table-copy",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Stringed 01",
+      "documentId": "rjshzjUelH7QXgIf",
+      "img": "icons/svg/d20-grey.svg",
+      "_id": "feIxp37cIqscckTW",
+      "flags": {},
+      "_key": "!tables.results!V85voND49VzwFbDg.feIxp37cIqscckTW"
+    },
+    {
+      "type": 2,
+      "documentCollection": "world.rollable-table-copy",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Stringed 02",
+      "documentId": "ISncBzz99PelV7X1",
+      "img": "icons/svg/d20-grey.svg",
+      "_id": "ShUAUMNJ8sbruvcf",
+      "flags": {},
+      "_key": "!tables.results!V85voND49VzwFbDg.ShUAUMNJ8sbruvcf"
+    },
+    {
+      "type": 2,
+      "documentCollection": "world.rollable-table-copy",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "text": "Wind 01",
+      "documentId": "wowu9M462ZWemCID",
+      "img": "icons/svg/d20-grey.svg",
+      "_id": "CSCraX4SBsNpOJ4R",
+      "flags": {},
+      "_key": "!tables.results!V85voND49VzwFbDg.CSCraX4SBsNpOJ4R"
+    },
+    {
+      "type": 2,
+      "documentCollection": "world.rollable-table-copy",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "text": "Wind 02",
+      "documentId": "qcu1NA64qvZLPNrX",
+      "img": "icons/svg/d20-grey.svg",
+      "_id": "CdwmFcNTAJ25DUYk",
+      "flags": {},
+      "_key": "!tables.results!V85voND49VzwFbDg.CdwmFcNTAJ25DUYk"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697151340935,
+    "modifiedTime": 1697151885705,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "formula": "1d6",
+  "_key": "!tables!V85voND49VzwFbDg"
+}

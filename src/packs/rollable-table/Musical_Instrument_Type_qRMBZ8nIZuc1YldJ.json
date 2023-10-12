@@ -1,0 +1,19 @@
+{
+  "name": "Musical Instrument Type",
+  "sorting": "a",
+  "folder": null,
+  "type": "RollTable",
+  "_id": "qRMBZ8nIZuc1YldJ",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697151205636,
+    "modifiedTime": 1697151205636,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "_key": "!folders!qRMBZ8nIZuc1YldJ"
+}

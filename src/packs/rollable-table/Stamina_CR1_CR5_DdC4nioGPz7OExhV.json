@@ -1,0 +1,149 @@
+{
+  "folder": "nlRp99DFNdlfAC1A",
+  "name": "Stamina CR1-CR5",
+  "_id": "DdC4nioGPz7OExhV",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "P8JqgKWBGpLbfYXv",
+      "text": "Take [Fatigue: 5]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!DdC4nioGPz7OExhV.P8JqgKWBGpLbfYXv"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "pfUzAw8W2LDaSB2X",
+      "text": "Take [Fatigue: 8]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!DdC4nioGPz7OExhV.pfUzAw8W2LDaSB2X"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "yP4kcoGhuqjuRH7R",
+      "text": "Take [Fatigue: 10]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!DdC4nioGPz7OExhV.yP4kcoGhuqjuRH7R"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "K5KtEK66dWl5ypXZ",
+      "text": "Take [Fatigue: 13]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!DdC4nioGPz7OExhV.K5KtEK66dWl5ypXZ"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "tfvIUclpOuxH7cth",
+      "text": "Take [Fatigue: 15]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!DdC4nioGPz7OExhV.tfvIUclpOuxH7cth"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "kjcFYCqlE5wD6G4w",
+      "text": "Take [Fatigue: 18]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!DdC4nioGPz7OExhV.kjcFYCqlE5wD6G4w"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        7,
+        999
+      ],
+      "drawn": false,
+      "_id": "DWdTzRzd4SFtz9ay",
+      "text": "Take [Fatigue: 20]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!DdC4nioGPz7OExhV.DWdTzRzd4SFtz9ay"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        -999,
+        0
+      ],
+      "drawn": false,
+      "_id": "Zy9YwkfjQXsdABQ9",
+      "text": "None",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!DdC4nioGPz7OExhV.Zy9YwkfjQXsdABQ9"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697082474066,
+    "modifiedTime": 1697146653404,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "formula": "1d6",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "_key": "!tables!DdC4nioGPz7OExhV"
+}
