@@ -1,0 +1,1035 @@
+{
+  "folder": "AQrVvDxiXjmT6sv7",
+  "name": "Magic Reagants",
+  "_id": "ThS9cQyPRvQxtKMn",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "<p>2d6 + (5 x average of party's CR)</p>",
+  "results": [
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 02",
+      "documentId": "0S2HptNK8Z2ngXFr",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "4a72uE5Jethbm8rd",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.4a72uE5Jethbm8rd"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        7,
+        8
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 02",
+      "documentId": "0S2HptNK8Z2ngXFr",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "OS8WxfeOV0fa2hsL",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.OS8WxfeOV0fa2hsL"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        9,
+        11
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 01",
+      "documentId": "mfQNH5AizXj4firw",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "Li7M7rDKmTtutNMj",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.Li7M7rDKmTtutNMj"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        9,
+        11
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 01",
+      "documentId": "mfQNH5AizXj4firw",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "Wba2czVk0PY5elvD",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.Wba2czVk0PY5elvD"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        9,
+        11
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 01",
+      "documentId": "mfQNH5AizXj4firw",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "9enn0YibScdo0R0u",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.9enn0YibScdo0R0u"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "Corroded Silver Dust",
+      "documentId": "gB3yH63fO4qmmZjS",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "RCYSh8GMD91XDGtJ",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.RCYSh8GMD91XDGtJ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        12,
+        12
+      ],
+      "drawn": false,
+      "text": "Ore Sample",
+      "documentId": "JY3AENsML5wNRm2D",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "VXysXapBlzLz7rK8",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.VXysXapBlzLz7rK8"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "text": "Verdant Sapling",
+      "documentId": "88MhyO9IlIVwGtFn",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "T0fIiGTmirdid1ek",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.T0fIiGTmirdid1ek"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        13,
+        13
+      ],
+      "drawn": false,
+      "text": "Small Flower Seeds",
+      "documentId": "ZKeVBBtiYveDGSwh",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "cuKfPRxucgmlEfzv",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.cuKfPRxucgmlEfzv"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "text": "Leaf of Life",
+      "documentId": "kIf9XLOggtH49szh",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "eS6msn5DMnjenDMv",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.eS6msn5DMnjenDMv"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        14,
+        14
+      ],
+      "drawn": false,
+      "text": "Tough Ivy",
+      "documentId": "xbIDuLmAh1dixpHE",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "9WpQG2iag1Gxx0T8",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.9WpQG2iag1Gxx0T8"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "text": "Sharp Fang",
+      "documentId": "6ANa6QXEPSgXvIVa",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "71x7CyrIQT0kwA3j",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.71x7CyrIQT0kwA3j"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        15,
+        15
+      ],
+      "drawn": false,
+      "text": "Worn Knife",
+      "documentId": "Dix2Aacd7M53HZb8",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "rGIOjelz68Lhs2Ag",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.rGIOjelz68Lhs2Ag"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 03",
+      "documentId": "elYMrETOGUk0um1s",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "oqsoxLSB9H0AgbJJ",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.oqsoxLSB9H0AgbJJ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        16,
+        16
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 03",
+      "documentId": "elYMrETOGUk0um1s",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "z3AbQRWv1eiCG1iD",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.z3AbQRWv1eiCG1iD"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "text": "Ancient Skull",
+      "documentId": "CF2DJnR8o3nbfFfq",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "T23xp2EhWVIwXcZp",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.T23xp2EhWVIwXcZp"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        17,
+        17
+      ],
+      "drawn": false,
+      "text": "Book of Dark Poetry",
+      "documentId": "zPBGUa1t5cyGW4Dg",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "XtpMXnWSEhYrSuuk",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.XtpMXnWSEhYrSuuk"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "text": "Black Waterlily Petal",
+      "documentId": "8yf5OiYv9WZLXEWG",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "EhNGiP39VvUL1O0O",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.EhNGiP39VvUL1O0O"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        18,
+        18
+      ],
+      "drawn": false,
+      "text": "Water Pipe",
+      "documentId": "Psu7pOYy6YFHDVDv",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "9X7aFAZXca4m8Kle",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.9X7aFAZXca4m8Kle"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "text": "Pure White Plume",
+      "documentId": "NrmJICXBs8fcDveC",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "zVCmDE4FvrR0JDpS",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.zVCmDE4FvrR0JDpS"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        19,
+        19
+      ],
+      "drawn": false,
+      "text": "Small Goggles",
+      "documentId": "Oz6vfpRzjVXzh6Wm",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "WjhGeoCqKS0GKtL4",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.WjhGeoCqKS0GKtL4"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "text": "Scarlet Talon",
+      "documentId": "11pyONJaUg418GMR",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "B9tlfiTOYiLf4Aby",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.B9tlfiTOYiLf4Aby"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        20,
+        20
+      ],
+      "drawn": false,
+      "text": "Small Mirror",
+      "documentId": "UaPuNGlngQZD10yJ",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "bkWlrLU5SSjo0xEK",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.bkWlrLU5SSjo0xEK"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        21,
+        21
+      ],
+      "drawn": false,
+      "text": "Molten Nail",
+      "documentId": "cMuIkedrIQVDXzKr",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "mzFqhL4ELImxYtwU",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.mzFqhL4ELImxYtwU"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        22,
+        22
+      ],
+      "drawn": false,
+      "text": "Thorn of Castigation",
+      "documentId": "v6BccmDMHRMlpabL",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "Ug1YU0mqWD8vn143",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.Ug1YU0mqWD8vn143"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        23,
+        23
+      ],
+      "drawn": false,
+      "text": "Meteor Fragment",
+      "documentId": "L5dWFEBkeCebQBnU",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "KpdLmE0H2FGMgLlu",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.KpdLmE0H2FGMgLlu"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        24,
+        24
+      ],
+      "drawn": false,
+      "text": "Holy Cloth",
+      "documentId": "4ycGFHp7hQ385vmt",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "jBmQZD26uSs3uf8Q",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.jBmQZD26uSs3uf8Q"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "text": "Crooked Shaft",
+      "documentId": "2ImQyyeZKt4Uikli",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "nbxZfquJsokFzhgB",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.nbxZfquJsokFzhgB"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        26,
+        26
+      ],
+      "drawn": false,
+      "text": "Giant's Beard",
+      "documentId": "ltoYY0LRGosS736Q",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "abHDw4oDT0WhMPDT",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.abHDw4oDT0WhMPDT"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        27,
+        27
+      ],
+      "drawn": false,
+      "text": "Precise Cog",
+      "documentId": "4iaTAKp6ltXlKQyU",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "5DzqIc9ILmwOx0xQ",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.5DzqIc9ILmwOx0xQ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        28,
+        28
+      ],
+      "drawn": false,
+      "text": "Razor Claw",
+      "documentId": "FVfYagfN7XqQUaN9",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "789fZEYbgqIatQ9Z",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.789fZEYbgqIatQ9Z"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        29,
+        29
+      ],
+      "drawn": false,
+      "text": "Catalyst Flask",
+      "documentId": "S1vbhkka8MF4mUof",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "G8ED4vx8sUyWidCj",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.G8ED4vx8sUyWidCj"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        30,
+        30
+      ],
+      "drawn": false,
+      "text": "Liquified Magic Stone",
+      "documentId": "MxEzWkImwwosoRWf",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "rhOX8SQu49cGffCr",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.rhOX8SQu49cGffCr"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        31,
+        31
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 05",
+      "documentId": "ZOS0SrdEnJiY5Nz6",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "O0y8z327j4klZa9A",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.O0y8z327j4klZa9A"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        32,
+        32
+      ],
+      "drawn": false,
+      "text": "Soft Stone",
+      "documentId": "4J0VC2sVdKP6bTCn",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "nvLEhRuhbGIjFr4f",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.nvLEhRuhbGIjFr4f"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        33,
+        33
+      ],
+      "drawn": false,
+      "text": "Mysterious Pelt",
+      "documentId": "2XQvTFB6Fkbg93ce",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "q19YNqn3GJyUchqE",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.q19YNqn3GJyUchqE"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        34,
+        34
+      ],
+      "drawn": false,
+      "text": "Stardust Thread",
+      "documentId": "6MzW7LFmppZ6Gafo",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "5iFdajIiQIVr2uh2",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.5iFdajIiQIVr2uh2"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        35,
+        35
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 05",
+      "documentId": "ZOS0SrdEnJiY5Nz6",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "P2Dod8KUQSlDq7OZ",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.P2Dod8KUQSlDq7OZ"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.core-material",
+      "weight": 1,
+      "range": [
+        36,
+        36
+      ],
+      "drawn": false,
+      "text": "Alchemical Formulae",
+      "documentId": "jJ6oFyNBbjSTS5fF",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "shu63mPJh64Rxe1b",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.shu63mPJh64Rxe1b"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        37,
+        37
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 06",
+      "documentId": "S2cugdT1ldGqEAZL",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "DnNfJTmKAkjcyP7b",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.DnNfJTmKAkjcyP7b"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        37,
+        37
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 05",
+      "documentId": "ZOS0SrdEnJiY5Nz6",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "ekcKBsCfE5Cl8EnI",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.ekcKBsCfE5Cl8EnI"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        37,
+        37
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 05",
+      "documentId": "ZOS0SrdEnJiY5Nz6",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "j31cpFflO2dlRhi9",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.j31cpFflO2dlRhi9"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        36,
+        36
+      ],
+      "drawn": false,
+      "text": "Strange Artwork",
+      "documentId": "eHwL4QsJAO51osM7",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "U5xAU4EyzFpznuxN",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.U5xAU4EyzFpznuxN"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        35,
+        35
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 05",
+      "documentId": "ZOS0SrdEnJiY5Nz6",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "0iFGP18mRadUNoa7",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.0iFGP18mRadUNoa7"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        35,
+        35
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 05",
+      "documentId": "ZOS0SrdEnJiY5Nz6",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "W5g54VNi2dLxFbIt",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.W5g54VNi2dLxFbIt"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        34,
+        34
+      ],
+      "drawn": false,
+      "text": "Copper Astrolabe",
+      "documentId": "43Ll1RUX36sGiSJM",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "yU4XOyMBuL0XbgUy",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.yU4XOyMBuL0XbgUy"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        33,
+        33
+      ],
+      "drawn": false,
+      "text": "Strange Skull",
+      "documentId": "izKFtPFPWZmXSzTQ",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "BFm3xTnHye61FkZe",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.BFm3xTnHye61FkZe"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        32,
+        32
+      ],
+      "drawn": false,
+      "text": "Miniature Still",
+      "documentId": "t1n58qIqjzB7fQRo",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "BHPEujj1oNUVdbhM",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.BHPEujj1oNUVdbhM"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        31,
+        31
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 04",
+      "documentId": "i8aoc6LGnw261JIu",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "4IRK4YjEmpqXjx00",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.4IRK4YjEmpqXjx00"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.magic-reagants",
+      "weight": 1,
+      "range": [
+        31,
+        31
+      ],
+      "drawn": false,
+      "text": "Magic Catalyst 04",
+      "documentId": "i8aoc6LGnw261JIu",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "rfxbswp2Gwgflent",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.rfxbswp2Gwgflent"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        30,
+        30
+      ],
+      "drawn": false,
+      "text": "Detailed Doll",
+      "documentId": "SamUgFOApD1tMul8",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "KGbQkW7pdYNUKtp5",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.KGbQkW7pdYNUKtp5"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        29,
+        29
+      ],
+      "drawn": false,
+      "text": "Small Portrait",
+      "documentId": "74e4mtCcJ106WOlN",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "vmdcoHLeYFVyDJiX",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.vmdcoHLeYFVyDJiX"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        28,
+        28
+      ],
+      "drawn": false,
+      "text": "Embroidered Sash",
+      "documentId": "XUBGzKsvNEAjOhHq",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "3pqf2yA158AC0IGU",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.3pqf2yA158AC0IGU"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        27,
+        27
+      ],
+      "drawn": false,
+      "text": "Broken Steel Tool",
+      "documentId": "AMWX5yxq1jgoh3Zg",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "wrj7J72y3nrVkc5H",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.wrj7J72y3nrVkc5H"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        21,
+        21
+      ],
+      "drawn": false,
+      "text": "Handcrafted Handwarmer",
+      "documentId": "RxId0DsbhF8x4765",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "YploDulh6N7n9JTv",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.YploDulh6N7n9JTv"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        22,
+        22
+      ],
+      "drawn": false,
+      "text": "Scortched Drake Leather",
+      "documentId": "Ad0UAbZzj9JNj5bj",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "rmFmO2Nx0HGbhsY6",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.rmFmO2Nx0HGbhsY6"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        23,
+        23
+      ],
+      "drawn": false,
+      "text": "Plain Ring",
+      "documentId": "ku3lrFyDpYmxZJLS",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "9PVOahmGmjXEJSe8",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.9PVOahmGmjXEJSe8"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        24,
+        24
+      ],
+      "drawn": false,
+      "text": "Chipped Medal",
+      "documentId": "A2qiAuh3osE8tJfU",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "bYWb4DiQj3d2oVUp",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.bYWb4DiQj3d2oVUp"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "text": "Heap of Junk",
+      "documentId": "scEKZ2a3Ntm971ML",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "71GbNIWYIViSvHrf",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.71GbNIWYIViSvHrf"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "text": "Heap of Junk",
+      "documentId": "scEKZ2a3Ntm971ML",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "YxGndrXEgdkdw6nj",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.YxGndrXEgdkdw6nj"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "text": "Heap of Junk",
+      "documentId": "scEKZ2a3Ntm971ML",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "3VSWzh5HMhuyaETL",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.3VSWzh5HMhuyaETL"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        25,
+        25
+      ],
+      "drawn": false,
+      "text": "Heap of Junk",
+      "documentId": "scEKZ2a3Ntm971ML",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "DE3tA1V1EKDd4MZL",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.DE3tA1V1EKDd4MZL"
+    },
+    {
+      "type": 2,
+      "documentCollection": "lhtrpg.valuable",
+      "weight": 1,
+      "range": [
+        26,
+        26
+      ],
+      "drawn": false,
+      "text": "Small Comb",
+      "documentId": "8RU4KdPxih2y6jeY",
+      "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+      "_id": "fNVWcBGJApqzgeAA",
+      "flags": {},
+      "_key": "!tables.results!ThS9cQyPRvQxtKMn.fNVWcBGJApqzgeAA"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697147245951,
+    "modifiedTime": 1697150904061,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "formula": "2d6+5*1",
+  "_key": "!tables!ThS9cQyPRvQxtKMn"
+}

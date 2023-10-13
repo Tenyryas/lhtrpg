@@ -1,0 +1,104 @@
+{
+  "folder": "oZhGcZMH4wte1DRV",
+  "name": "Item CR6-CR10",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        -999,
+        0
+      ],
+      "drawn": false,
+      "_id": "Di6WDhWKL0y8kzAE",
+      "text": "None",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!6anojzXSTvqdURp1.Di6WDhWKL0y8kzAE"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        1,
+        2
+      ],
+      "drawn": false,
+      "_id": "5P8zQzQjvw9tRox4",
+      "text": "Lose 1 [Consumable]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!6anojzXSTvqdURp1.5P8zQzQjvw9tRox4"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        3,
+        4
+      ],
+      "drawn": false,
+      "_id": "XJ8DN06rYh435aT9",
+      "text": "Lose 2 [Consumables]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!6anojzXSTvqdURp1.XJ8DN06rYh435aT9"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        7,
+        999
+      ],
+      "drawn": false,
+      "_id": "Jet7SShOUHXmbyIu",
+      "text": "Lose 4 [Consumables]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!6anojzXSTvqdURp1.Jet7SShOUHXmbyIu"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        5,
+        6
+      ],
+      "drawn": false,
+      "_id": "yIEok4yLRUT2hXsW",
+      "text": "Lose 3 [Consumables]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!6anojzXSTvqdURp1.yIEok4yLRUT2hXsW"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697146706778,
+    "modifiedTime": 1697147130048,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "formula": "1d6",
+  "_id": "6anojzXSTvqdURp1",
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "_key": "!tables!6anojzXSTvqdURp1"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Embroidered Sash",
+  "type": "drop",
+  "_id": "XUBGzKsvNEAjOhHq",
+  "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+  "system": {
+    "description": "",
+    "tags": [
+      "Valuable"
+    ],
+    "rank": 1,
+    "price": 30,
+    "equipped": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697149178005,
+    "modifiedTime": 1697149190956,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "_key": "!items!XUBGzKsvNEAjOhHq"
+}

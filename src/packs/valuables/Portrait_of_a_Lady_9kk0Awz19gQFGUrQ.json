@@ -1,0 +1,32 @@
+{
+  "name": "Portrait of a Lady",
+  "type": "drop",
+  "_id": "9kk0Awz19gQFGUrQ",
+  "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+  "system": {
+    "description": "",
+    "tags": [
+      "Valuable"
+    ],
+    "rank": 1,
+    "price": 70,
+    "equipped": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697143613806,
+    "modifiedTime": 1697144153888,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "_key": "!items!9kk0Awz19gQFGUrQ"
+}

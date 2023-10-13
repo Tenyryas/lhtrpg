@@ -1,0 +1,32 @@
+{
+  "name": "Water Pipe",
+  "type": "drop",
+  "_id": "Psu7pOYy6YFHDVDv",
+  "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+  "system": {
+    "description": "",
+    "tags": [
+      "Valuable"
+    ],
+    "rank": 1,
+    "price": 20,
+    "equipped": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697148880780,
+    "modifiedTime": 1697148891014,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "_key": "!items!Psu7pOYy6YFHDVDv"
+}

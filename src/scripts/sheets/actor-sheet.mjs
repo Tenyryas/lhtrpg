@@ -123,6 +123,7 @@ export class LHTrpgActorSheet extends ActorSheet {
     const itemsAccessory = [];
     const itemsBag = [];
     const itemsGear = [];
+    const itemsDrop = [];
 
     const itemsConnection = [];
     const itemsUnion = [];
@@ -179,6 +180,8 @@ export class LHTrpgActorSheet extends ActorSheet {
       // Append to Gear.
       else if (i.system.equipped === false && i.type === "gear") {
         itemsGear.push(i);
+      } else if (i.type === "drop") {
+        itemsDrop.push(i);
       }
       // Append to Connections.
       else if (i.type === "connection") {
@@ -212,6 +215,7 @@ export class LHTrpgActorSheet extends ActorSheet {
       accessories: itemsAccessory,
       bags: itemsBag,
       gear: itemsGear,
+      drop: itemsDrop,
     };
 
     context.social = {
