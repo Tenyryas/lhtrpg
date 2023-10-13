@@ -1,0 +1,32 @@
+{
+  "name": "Magic Catalyst 02",
+  "type": "drop",
+  "_id": "0S2HptNK8Z2ngXFr",
+  "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+  "system": {
+    "description": "",
+    "tags": [
+      "Magic Catalyst 2"
+    ],
+    "rank": 2,
+    "price": 20,
+    "equipped": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 100000,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697147636122,
+    "modifiedTime": 1697148096434,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "_key": "!items!0S2HptNK8Z2ngXFr"
+}

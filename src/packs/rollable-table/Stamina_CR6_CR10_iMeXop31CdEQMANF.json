@@ -1,0 +1,148 @@
+{
+  "folder": "oZhGcZMH4wte1DRV",
+  "name": "Stamina CR6-CR10",
+  "_id": "iMeXop31CdEQMANF",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "esuz4zhX7qvzOGv8",
+      "text": "Take [Fatigue: 10]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "documentCollection": "Actor",
+      "_key": "!tables.results!iMeXop31CdEQMANF.esuz4zhX7qvzOGv8"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "qKLvmgre1WhIxjaC",
+      "text": "Take [Fatigue: 15]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!iMeXop31CdEQMANF.qKLvmgre1WhIxjaC"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "dOa1ROHQceuXg5pW",
+      "text": "Take [Fatigue: 20]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!iMeXop31CdEQMANF.dOa1ROHQceuXg5pW"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "e7uTabNXrvdxl0Pb",
+      "text": "Take [Fatigue: 25]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!iMeXop31CdEQMANF.e7uTabNXrvdxl0Pb"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "gDkrEJ2ViXWbEH2u",
+      "text": "Take [Fatigue: 30]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!iMeXop31CdEQMANF.gDkrEJ2ViXWbEH2u"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "0oIPl1IUBYfm1jBw",
+      "text": "Take [Fatigue: 35]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!iMeXop31CdEQMANF.0oIPl1IUBYfm1jBw"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        7,
+        999
+      ],
+      "drawn": false,
+      "_id": "uokrskttdOPpqhC7",
+      "text": "Take [Fatigue: 40]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!iMeXop31CdEQMANF.uokrskttdOPpqhC7"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        -999,
+        0
+      ],
+      "drawn": false,
+      "_id": "dXC45OpkKWu9l6tB",
+      "text": "None",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!iMeXop31CdEQMANF.dXC45OpkKWu9l6tB"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697082675803,
+    "modifiedTime": 1697147069345,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "formula": "1d6",
+  "sort": 400000,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "_key": "!tables!iMeXop31CdEQMANF"
+}

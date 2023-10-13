@@ -1,0 +1,32 @@
+{
+  "name": "Chipped Medal",
+  "type": "drop",
+  "_id": "A2qiAuh3osE8tJfU",
+  "img": "systems/lhtrpg/assets/ui/items_icons/drop.svg",
+  "system": {
+    "description": "",
+    "tags": [
+      "Valuable"
+    ],
+    "rank": 1,
+    "price": 20,
+    "equipped": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697149044397,
+    "modifiedTime": 1697149057598,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "_key": "!items!A2qiAuh3osE8tJfU"
+}

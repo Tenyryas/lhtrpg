@@ -1,0 +1,117 @@
+{
+  "folder": "exvIgVeFo6CO9PoZ",
+  "name": "Percussion",
+  "_id": "nxq2qRVWQcQJN3WL",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "4HOy81k2ZydQAbaV",
+      "text": "Castanet",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!nxq2qRVWQcQJN3WL.4HOy81k2ZydQAbaV"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "t7Df1xh2rZ0ZutEx",
+      "text": "Maracas",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!nxq2qRVWQcQJN3WL.t7Df1xh2rZ0ZutEx"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "8eSDiHyWecm3cfqB",
+      "text": "Cymbol",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!nxq2qRVWQcQJN3WL.8eSDiHyWecm3cfqB"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "yBBKmharndb6BXYv",
+      "text": "Triangle",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!nxq2qRVWQcQJN3WL.yBBKmharndb6BXYv"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "jI9ofShLyjkWHTeM",
+      "text": "Taiko Drum",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!nxq2qRVWQcQJN3WL.jI9ofShLyjkWHTeM"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "yB5BQ874URyHwFXG",
+      "text": "Drums",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!nxq2qRVWQcQJN3WL.yB5BQ874URyHwFXG"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 200000,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697151221249,
+    "modifiedTime": 1697151792319,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "formula": "1d6",
+  "_key": "!tables!nxq2qRVWQcQJN3WL"
+}

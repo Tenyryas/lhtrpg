@@ -1,0 +1,89 @@
+{
+  "folder": "oZhGcZMH4wte1DRV",
+  "name": "Energy CR6-CR10",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        1,
+        3
+      ],
+      "drawn": false,
+      "_id": "gr1asl4vIqs5bXkJ",
+      "text": "Lose 1 [Fate Point]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!fH9pD9heOM1vNsO4.gr1asl4vIqs5bXkJ"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        4,
+        6
+      ],
+      "drawn": false,
+      "_id": "aVCz6tOTOJ30Pgjc",
+      "text": "Lose 2 [Fate Points]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!fH9pD9heOM1vNsO4.aVCz6tOTOJ30Pgjc"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        -999,
+        0
+      ],
+      "drawn": false,
+      "_id": "RLsh14LkxSsCsuc8",
+      "text": "None",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!fH9pD9heOM1vNsO4.RLsh14LkxSsCsuc8"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        7,
+        999
+      ],
+      "drawn": false,
+      "_id": "1ODyZ5ET7dW38srL",
+      "text": "Lose 3 [Fate Points]",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!fH9pD9heOM1vNsO4.1ODyZ5ET7dW38srL"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697146483887,
+    "modifiedTime": 1697147069345,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "formula": "1d6",
+  "_id": "fH9pD9heOM1vNsO4",
+  "sort": 300000,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "_key": "!tables!fH9pD9heOM1vNsO4"
+}

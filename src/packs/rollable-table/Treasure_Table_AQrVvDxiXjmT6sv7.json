@@ -1,0 +1,19 @@
+{
+  "name": "Treasure Table",
+  "sorting": "a",
+  "folder": null,
+  "type": "RollTable",
+  "_id": "AQrVvDxiXjmT6sv7",
+  "sort": 0,
+  "color": null,
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697083115995,
+    "modifiedTime": 1697143115355,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "_key": "!folders!AQrVvDxiXjmT6sv7"
+}

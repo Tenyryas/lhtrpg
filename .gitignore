@@ -22,3 +22,5 @@ css/lhtrpg.css
 zip.bat
 lhtrpg.zip
 dist
+
+*.ps1

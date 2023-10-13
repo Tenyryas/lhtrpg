@@ -177,6 +177,7 @@
       "accessory",
       "bag",
       "gear",
+      "drop",
       "connection",
       "union"
     ],
@@ -239,6 +240,9 @@
     },
     "gear": {
       "templates": ["base", "itemBase", "infos"]
+    },
+    "drop": {
+      "templates": ["base", "itemBase"]
     },
     "connection": {
       "templates": ["base"]

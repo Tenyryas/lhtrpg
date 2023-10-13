@@ -1,0 +1,117 @@
+{
+  "folder": "exvIgVeFo6CO9PoZ",
+  "name": "Wind 02",
+  "_id": "qcu1NA64qvZLPNrX",
+  "img": "icons/svg/d20-grey.svg",
+  "description": "",
+  "results": [
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "_id": "iDx8E0Lj6PvgFkRt",
+      "text": "Recorder",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!qcu1NA64qvZLPNrX.iDx8E0Lj6PvgFkRt"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "_id": "Rt6ZjCCNPYnMRCMq",
+      "text": "Ocarina",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!qcu1NA64qvZLPNrX.Rt6ZjCCNPYnMRCMq"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "_id": "VMlTDKYt0qjMWQta",
+      "text": "Oboe",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!qcu1NA64qvZLPNrX.VMlTDKYt0qjMWQta"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "_id": "qcjCNHyWyE7bEnDa",
+      "text": "Harmonica",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!qcu1NA64qvZLPNrX.qcjCNHyWyE7bEnDa"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "_id": "KnXq4EMK2n8CDfzU",
+      "text": "Accordion",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!qcu1NA64qvZLPNrX.KnXq4EMK2n8CDfzU"
+    },
+    {
+      "type": 0,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "_id": "4URYh7FVPTUtdLOZ",
+      "text": "Shakuhachi",
+      "documentId": null,
+      "flags": {},
+      "img": "icons/svg/d20-black.svg",
+      "_key": "!tables.results!qcu1NA64qvZLPNrX.4URYh7FVPTUtdLOZ"
+    }
+  ],
+  "replacement": true,
+  "displayRoll": true,
+  "sort": 106250,
+  "ownership": {
+    "default": 0,
+    "fWZvCxwgbhjnrgxJ": 3
+  },
+  "flags": {},
+  "_stats": {
+    "systemId": "lhtrpg",
+    "systemVersion": "1.3.0",
+    "coreVersion": "11.313",
+    "createdTime": 1697151564681,
+    "modifiedTime": 1697151797748,
+    "lastModifiedBy": "fWZvCxwgbhjnrgxJ"
+  },
+  "formula": "1d6",
+  "_key": "!tables!qcu1NA64qvZLPNrX"
+}
