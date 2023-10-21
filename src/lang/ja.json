@@ -48,17 +48,17 @@
       }
     },
     "Check": {
-      "Accuracy": "命中",
-      "Analysis": "解析",
-      "Athletics": "運動",
-      "Disable": "解除",
-      "Endurance": "耐久",
-      "Evasion": "回避",
-      "Knowledge": "知識",
-      "Negotiation": "交渉",
-      "Operation": "操作",
-      "Perception": "知覚",
-      "Resistance": "抵抗"
+      "accuracy": "命中",
+      "analysis": "解析",
+      "athletics": "運動",
+      "disable": "解除",
+      "endurance": "耐久",
+      "evasion": "回避",
+      "knowledge": "知識",
+      "negotiation": "交渉",
+      "operation": "操作",
+      "perception": "知覚",
+      "resistance": "抵抗"
     },
     "Connection": {
       "Label": "コネクション",
@@ -78,7 +78,7 @@
     "Int": "INT",
     "Item": {
       "Label": {
-        "Accuracy": "命中",
+        "accuracy": "命中",
         "Attack": "攻撃力",
         "BagLimit": "収納制限",
         "BagSpace": "スロット数",

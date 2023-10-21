@@ -1,0 +1,36 @@
+<div class="lhtrpg-chat">
+  {{#unless isPrivate}}
+  <div class="grid">
+    <h4 class="">{{localize 'LHTRPG.Skill.Label.SR'}}</h4>
+    <span class="">{{item.skillRank.value}}</span>
+    <h4 class="">{{localize 'LHTRPG.Skill.Label.Timing'}}</h4>
+    <span class="">{{item.timing}}</span>
+    <h4 class="">{{localize 'LHTRPG.Skill.Label.Target'}}</h4>
+    <span class="">{{item.target}}</span>
+    <h4 class="">{{localize 'LHTRPG.Skill.Label.Cost'}}</h4>
+    <span class="">{{item.cost}}</span>
+    <h4 class="">{{localize 'LHTRPG.Skill.Label.Range'}}</h4>
+    <span class="">{{item.range}}</span>
+
+    <h4 class="">{{localize 'LHTRPG.Skill.Label.Limit'}}</h4>
+    <span class="">{{item.limit}}</span>
+  </div>
+  {{/unless}} {{#each rolls}} {{#if this.total}}
+  <div class="dice-roll">
+    {{#if this.flavor}}
+    <div class="dice-flavor">{{this.flavor}}</div>
+    {{/if}}
+    <div class="dice-result">
+      <div class="dice-formula">{{this.formula}}</div>
+      {{{this.tooltip}}}
+      <h4
+        class="dice-total {{#if this.isFumble}}fumble{{/if}} {{#if this.isCritical}}critical{{/if}}"
+      >
+        {{this.total}}
+      </h4>
+    </div>
+  </div>
+  {{/if}} {{/each}} {{#unless isPrivate}} {{#if item.description}}
+  <details class="description">{{{item.description}}}</details>
+  {{/if}} {{/unless}}
+</div>

@@ -29,11 +29,12 @@
       <div class="hate-window">
         <label
           class="hate-label"
-          for=""
+          for="system.infos.hate"
           >{{localize 'LHTRPG.Label.Hate'}}</label
         >
         <input
           class="hate-input"
+          id="system.infos.hate"
           name="system.infos.hate"
           type="text"
           value="{{system.infos.hate}}"
@@ -45,14 +46,15 @@
       <div class="fatigue-window">
         <label
           class="fatigue-label"
-          for=""
+          for="system.lifeStatus.fatigue"
           >{{localize 'LHTRPG.Label.Fatigue'}}</label
         >
         <input
           class="fatigue-input"
-          name="system.infos.fatigue"
+          id="system.lifeStatus.fatigue"
+          name="system.lifeStatus.fatigue"
           type="text"
-          value="{{system.infos.fatigue}}"
+          value="{{system.lifeStatus.fatigue}}"
           placeholder="0"
           data-dtype="Number"
           maxlength="3"
@@ -73,6 +75,7 @@
       <div class="race">
         <label for="system.race">{{localize 'LHTRPG.Label.Race'}}</label>
         <input
+          id="system.race"
           name="system.race"
           type="text"
           value="{{system.race}}"

@@ -112,7 +112,9 @@
         </div>
 
         <div class="stat-div">
-          <label class="small-label">{{localize 'LHTRPG.Str'}}</label>
+          <label class="small-label"
+            >{{localize 'LHTRPG.Ability.base.Str'}}</label
+          >
           <div>
             <input
               class="monsterSTR-input small-input"
@@ -127,7 +129,9 @@
         </div>
 
         <div class="stat-div">
-          <label class="small-label">{{localize 'LHTRPG.Dex'}}</label>
+          <label class="small-label"
+            >{{localize 'LHTRPG.Ability.base.Dex'}}</label
+          >
           <div>
             <input
               class="monsterDEX-input small-input"
@@ -142,7 +146,9 @@
         </div>
 
         <div class="stat-div">
-          <label class="small-label">{{localize 'LHTRPG.Pow'}}</label>
+          <label class="small-label"
+            >{{localize 'LHTRPG.Ability.base.Pow'}}</label
+          >
           <div>
             <input
               class="monsterPOW-input small-input"
@@ -157,7 +163,9 @@
         </div>
 
         <div class="stat-div">
-          <label class="small-label">{{localize 'LHTRPG.Int'}}</label>
+          <label class="small-label"
+            >{{localize 'LHTRPG.Ability.base.Int'}}</label
+          >
           <div>
             <input
               class="monsterINT-input small-input"
@@ -226,9 +234,9 @@
           <div>
             <input
               class="monsterIdDif-input"
-              name="system.idendification"
+              name="system.identification"
               type="text"
-              value="{{system.idendification}}"
+              value="{{system.identification}}"
               placeholder="-"
               data-dtype="text"
             />
@@ -250,7 +258,7 @@
         </div>
 
         <div class="stat-div">
-          <label>{{localize 'LHTRPG.Check.Evasion'}}</label>
+          <label>{{localize 'LHTRPG.Check.evasion'}}</label>
           <div>
             <input
               class="monsterEvasion-input"
@@ -264,7 +272,7 @@
         </div>
 
         <div class="stat-div">
-          <label>{{localize 'LHTRPG.Check.Resistance'}}</label>
+          <label>{{localize 'LHTRPG.Check.resistance'}}</label>
           <div>
             <input
               class="monsterResistance-input"
@@ -282,9 +290,9 @@
           <div>
             <input
               class="monsterPDef-input"
-              name="system.battle-status.defense.phys"
+              name="system.battleStatus.defense.phys"
               type="text"
-              value="{{system.battle-status.defense.phys}}"
+              value="{{system.battleStatus.defense.phys}}"
               placeholder="-"
               data-dtype="Number"
               maxlength="3"
@@ -297,9 +305,9 @@
           <div>
             <input
               class="monsterMDef-input"
-              name="system.battle-status.defense.magic"
+              name="system.battleStatus.defense.magic"
               type="text"
-              value="{{system.battle-status.defense.magic}}"
+              value="{{system.battleStatus.defense.magic}}"
               placeholder="-"
               data-dtype="Number"
               maxlength="3"
@@ -312,9 +320,9 @@
           <div>
             <input
               class="monsterSpeed-input"
-              name="system.battle-status.speed"
+              name="system.battleStatus.speed"
               type="text"
-              value="{{system.battle-status.speed}}"
+              value="{{system.battleStatus.speed}}"
               placeholder="-"
               data-dtype="Number"
               maxlength="3"
@@ -327,9 +335,9 @@
           <div>
             <input
               class="monsterInit-input"
-              name="system.battle-status.initiative"
+              name="system.battleStatus.initiative"
               type="text"
-              value="{{system.battle-status.initiative}}"
+              value="{{system.battleStatus.initiative}}"
               placeholder="-"
               data-dtype="Number"
               maxlength="3"
@@ -343,6 +351,7 @@
               >{{localize 'LHTRPG.Label.Dazed'}}</label
             >
             <input
+              id="system.bad-status.dazed"
               name="system.bad-status.dazed"
               type="checkbox"
               {{checked
@@ -355,6 +364,7 @@
               >{{localize 'LHTRPG.Label.Rigor'}}</label
             >
             <input
+              id="system.bad-status.rigor"
               name="system.bad-status.rigor"
               type="checkbox"
               {{checked
@@ -368,6 +378,7 @@
               >{{localize 'LHTRPG.Label.Confused'}}</label
             >
             <input
+              id="system.bad-status.confused"
               name="system.bad-status.confused"
               type="checkbox"
               {{checked
@@ -380,6 +391,7 @@
               >{{localize 'LHTRPG.Label.Staggered'}}</label
             >
             <input
+              id="system.bad-status.staggered"
               name="system.bad-status.staggered"
               type="checkbox"
               {{checked
@@ -393,6 +405,7 @@
               >{{localize 'LHTRPG.Label.Afflicted'}}</label
             >
             <input
+              id="system.bad-status.afflicted"
               name="system.bad-status.afflicted"
               type="checkbox"
               {{checked
@@ -405,6 +418,7 @@
               >{{localize 'LHTRPG.Label.Overconfident'}}</label
             >
             <input
+              id="system.bad-status.overconfident"
               name="system.bad-status.overconfident"
               type="checkbox"
               {{checked

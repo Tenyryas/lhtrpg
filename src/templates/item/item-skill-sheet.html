@@ -27,13 +27,13 @@
             value="{{system.subtype}}"
           >
             {{#select system.subtype}}
-            <option value="Basic">
+            <option value="basic">
               {{localize 'LHTRPG.Skill.Type.Basic'}}
             </option>
-            <option value="General">
+            <option value="general">
               {{localize 'LHTRPG.Skill.Type.General'}}
             </option>
-            <option value="Combat">
+            <option value="combat">
               {{localize 'LHTRPG.Skill.Type.Combat'}}
             </option>
             {{/select}}
@@ -118,14 +118,23 @@
 
     <div class="stat-div checkType">
       <label>{{localize 'LHTRPG.Skill.Label.Check'}}</label>
-      <input
-        class="checkType-input"
-        name="system.checkType"
-        type="text"
-        value="{{system.checkType}}"
-        placeholder="{{localize 'LHTRPG.Skill.Placeholder.Check'}}"
-        data-dtype="text"
-      />
+      <select
+        name="system.check.value"
+        value="{{system.check.value}}"
+      >
+        {{#select system.check.value}}
+        <option value="none">{{localize 'LHTRPG.Skill.Check.none'}}</option>
+        <option value="automatic">
+          {{localize 'LHTRPG.Skill.Check.automatic'}}
+        </option>
+        <option value="evasion">
+          {{localize 'LHTRPG.Skill.Check.evasion'}}
+        </option>
+        <option value="resistance">
+          {{localize 'LHTRPG.Skill.Check.resistance'}}
+        </option>
+        {{/select}}
+      </select>
     </div>
 
     <div class="stat-div">
@@ -174,6 +183,431 @@
         placeholder="{{localize 'LHTRPG.Skill.Placeholder.Limit'}}"
         data-dtype="text"
       />
+    </div>
+
+    <div id="card-group">
+      <div class="card">
+        <div class="card-header">
+          <a
+            href="#card1"
+            data-bs-toggle="collapse"
+            >Check configuration</a
+          >
+        </div>
+        <div
+          class="collapse"
+          id="card1"
+          data-bs-parent="#card-group"
+        >
+          <div class="card-body">
+            <div>
+              <label for="system.check.bonus">Accuracy Flat bonus</label>
+              <input
+                class=""
+                id="system.check.bonus"
+                name="system.check.bonus"
+                type="text"
+                value="{{system.check.bonus}}"
+                placeholder=""
+                data-dtype="Number"
+                maxlength="2"
+              />
+            </div>
+            <div>
+              <label for="system.check.bonus">Formula</label>
+              <input
+                class=""
+                id="system.check.customFormula"
+                name="system.check.customFormula"
+                type="text"
+                value="{{system.check.customFormula}}"
+                placeholder=""
+                data-dtype="text"
+                maxlength="2"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a
+            href="#card2"
+            data-bs-toggle="collapse"
+          >
+            Damage configuration</a
+          >
+        </div>
+        <div
+          class="collapse"
+          id="card2"
+          data-bs-parent="#card-group"
+        >
+          <div class="card-body">
+            <div>
+              <input
+                class=""
+                name="system.damage.sr.dice"
+                type="text"
+                value="{{system.damage.sr.dice}}"
+                placeholder=""
+                data-dtype="Number"
+                maxlength="2"
+              />
+              <span>x {{localize 'LHTRPG.Skill.Label.SR'}} D</span>
+            </div>
+            <div>
+              <input
+                class=""
+                name="system.damage.dice"
+                type="text"
+                value="{{system.damage.dice}}"
+                placeholder=""
+                data-dtype="Number"
+                maxlength="2"
+              />
+              <span>D</span>
+            </div>
+            <div>
+              <label for="system.damage.power.value"
+                >{{localize 'LHTRPG.Skill.Label.Power'}}</label
+              >
+              <select
+                id="system.damage.power.value"
+                name="system.damage.power.value"
+                value="{{system.damage.power.value}}"
+              >
+                {{#select system.damage.power.value}}
+                <option value=""></option>
+                <option value="attack">
+                  {{localize 'LHTRPG.Tooltip.AttackPower'}}
+                </option>
+                <option value="magic">
+                  {{localize 'LHTRPG.Tooltip.MagicPower'}}
+                </option>
+                {{/select}}
+              </select>
+            </div>
+            <div>
+              <label for="system.damage.ability.multiply"
+                >{{localize 'LHTRPG.Skill.Label.Ability'}}</label
+              >
+              <input
+                class=""
+                id="system.damage.ability.multiply"
+                name="system.damage.ability.multiply"
+                type="text"
+                value="{{system.damage.ability.multiply}}"
+                placeholder=""
+                data-dtype="Number"
+                maxlength="2"
+              />
+              <span>x</span>
+              <select
+                name="system.damage.ability.value"
+                value="{{system.damage.ability.value}}"
+              >
+                {{#select system.damage.ability.value}}
+                <option value=""></option>
+                <option value="str-mod">
+                  {{localize 'LHTRPG.Ability.mod.Str'}}
+                </option>
+                <option value="dex-mod">
+                  {{localize 'LHTRPG.Ability.mod.Dex'}}
+                </option>
+                <option value="pow-mod">
+                  {{localize 'LHTRPG.Ability.mod.Pow'}}
+                </option>
+                <option value="int-mod">
+                  {{localize 'LHTRPG.Ability.mod.Int'}}
+                </option>
+                <option value="str-value">
+                  {{localize 'LHTRPG.Ability.base.Str'}}
+                </option>
+                <option value="dex-value">
+                  {{localize 'LHTRPG.Ability.base.Dex'}}
+                </option>
+                <option value="pow-value">
+                  {{localize 'LHTRPG.Ability.base.Pow'}}
+                </option>
+                <option value="int-value">
+                  {{localize 'LHTRPG.Ability.base.Int'}}
+                </option>
+                {{/select}}
+              </select>
+            </div>
+            <div>
+              <label for="system.damage.sr.ability"
+                >{{localize 'LHTRPG.Skill.Label.Ability'}}</label
+              >
+              <select
+                id="system.damage.sr.ability"
+                name="system.damage.sr.ability"
+                value="{{system.damage.sr.ability}}"
+              >
+                {{#select system.damage.sr.ability}}
+                <option value=""></option>
+                <option value="str-mod">
+                  {{localize 'LHTRPG.Ability.mod.Str'}}
+                </option>
+                <option value="dex-mod">
+                  {{localize 'LHTRPG.Ability.mod.Dex'}}
+                </option>
+                <option value="pow-mod">
+                  {{localize 'LHTRPG.Ability.mod.Pow'}}
+                </option>
+                <option value="int-mod">
+                  {{localize 'LHTRPG.Ability.mod.Int'}}
+                </option>
+                {{/select}}
+              </select>
+              <span>x {{localize 'LHTRPG.Skill.Label.SR'}}</span>
+            </div>
+            <div>
+              <label for="system.damage.type.value"
+                >{{localize 'LHTRPG.Skill.Label.Damage'}}</label
+              >
+              <select
+                id="system.damage.type.value"
+                name="system.damage.type.value"
+                value="{{system.damage.type.value}}"
+              >
+                {{#select system.damage.type.value}}
+                <option value="physical">
+                  {{localize 'LHTRPG.Skill.Damage.physical'}}
+                </option>
+                <option value="magic">
+                  {{localize 'LHTRPG.Skill.Damage.magic'}}
+                </option>
+                <option value="flame">
+                  {{localize 'LHTRPG.Skill.Damage.flame'}}
+                </option>
+                <option value="cold">
+                  {{localize 'LHTRPG.Skill.Damage.cold'}}
+                </option>
+                <option value="shock">
+                  {{localize 'LHTRPG.Skill.Damage.shock'}}
+                </option>
+                <option value="spirit">
+                  {{localize 'LHTRPG.Skill.Damage.spirit'}}
+                </option>
+                <option value="holy">
+                  {{localize 'LHTRPG.Skill.Damage.holy'}}
+                </option>
+                <option value="penetrating">
+                  {{localize 'LHTRPG.Skill.Damage.penetrating'}}
+                </option>
+                <option value="direct">
+                  {{localize 'LHTRPG.Skill.Damage.direct'}}
+                </option>
+                <option value="decay">
+                  {{localize 'LHTRPG.Skill.Damage.decay'}}
+                </option>
+                <option value="pursuit">
+                  {{localize 'LHTRPG.Skill.Damage.pursuit'}}
+                </option>
+                <option value="weakness">
+                  {{localize 'LHTRPG.Skill.Damage.weakness'}}
+                </option>
+                {{/select}}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a
+            href="#card3"
+            data-bs-toggle="collapse"
+          >
+            Heal configuration</a
+          >
+        </div>
+        <div
+          class="collapse"
+          id="card3"
+          data-bs-parent="#card-group"
+        >
+          <div class="card-body">
+            <div>
+              <input
+                class=""
+                name="system.heal.sr.dice"
+                type="text"
+                value="{{system.heal.sr.dice}}"
+                placeholder=""
+                data-dtype="Number"
+                maxlength="2"
+              />
+              <span>x {{localize 'LHTRPG.Skill.Label.SR'}} D</span>
+            </div>
+            <div>
+              <input
+                class=""
+                name="system.heal.dice"
+                type="text"
+                value="{{system.heal.dice}}"
+                placeholder=""
+                data-dtype="Number"
+                maxlength="2"
+              />
+              <span>D</span>
+            </div>
+            <div>
+              <input
+                class=""
+                name="system.heal.bonus"
+                type="text"
+                value="{{system.heal.bonus}}"
+                placeholder=""
+                data-dtype="Number"
+                maxlength="2"
+              />
+            </div>
+            <div>
+              <label for="system.heal.power.value1"
+                >{{localize 'LHTRPG.Skill.Label.Power'}}</label
+              >
+              <select
+                id="system.heal.power.value1"
+                name="system.heal.power.value1"
+                value="{{system.damage.power.value1}}"
+              >
+                {{#select system.heal.power.value1}}
+                <option value=""></option>
+                <option value="magic">
+                  {{localize 'LHTRPG.Tooltip.MagicPower'}}
+                </option>
+                <option value="restoration">
+                  {{localize 'LHTRPG.Tooltip.RestorationPower'}}
+                </option>
+                {{/select}}
+              </select>
+            </div>
+            <div>
+              <label for="system.heal.power.value2"
+                >{{localize 'LHTRPG.Skill.Label.Power'}}</label
+              >
+              <select
+                id="system.heal.power.value2"
+                name="system.heal.power.value2"
+                value="{{system.damage.power.value2}}"
+              >
+                {{#select system.heal.power.value2}}
+                <option value=""></option>
+                <option value="magic">
+                  {{localize 'LHTRPG.Tooltip.MagicPower'}}
+                </option>
+                <option value="restoration">
+                  {{localize 'LHTRPG.Tooltip.RestorationPower'}}
+                </option>
+                {{/select}}
+              </select>
+            </div>
+            <div>
+              <label for="system.heal.ability.multiply"
+                >{{localize 'LHTRPG.Skill.Label.Ability'}}</label
+              >
+              <input
+                class=""
+                id="system.heal.ability.multiply"
+                name="system.heal.ability.multiply"
+                type="text"
+                value="{{system.heal.ability.multiply}}"
+                placeholder=""
+                data-dtype="Number"
+                maxlength="2"
+              />
+              <span>x</span>
+              <select
+                name="system.heal.ability.value"
+                value="{{system.heal.ability.value}}"
+              >
+                {{#select system.heal.ability.value}}
+                <option value=""></option>
+                <option value="str-mod">
+                  {{localize 'LHTRPG.Ability.mod.Str'}}
+                </option>
+                <option value="dex-mod">
+                  {{localize 'LHTRPG.Ability.mod.Dex'}}
+                </option>
+                <option value="pow-mod">
+                  {{localize 'LHTRPG.Ability.mod.Pow'}}
+                </option>
+                <option value="int-mod">
+                  {{localize 'LHTRPG.Ability.mod.Int'}}
+                </option>
+                <option value="str-value">
+                  {{localize 'LHTRPG.Ability.base.Str'}}
+                </option>
+                <option value="dex-value">
+                  {{localize 'LHTRPG.Ability.base.Dex'}}
+                </option>
+                <option value="pow-value">
+                  {{localize 'LHTRPG.Ability.base.Pow'}}
+                </option>
+                <option value="int-value">
+                  {{localize 'LHTRPG.Ability.base.Int'}}
+                </option>
+                {{/select}}
+              </select>
+            </div>
+            <div>
+              <label for="system.heal.sr.ability"
+                >{{localize 'LHTRPG.Skill.Label.Ability'}}</label
+              >
+              <select
+                id="system.heal.sr.ability"
+                name="system.heal.sr.ability"
+                value="{{system.heal.sr.ability}}"
+              >
+                {{#select system.heal.sr.ability}}
+                <option value=""></option>
+                <option value="str-mod">
+                  {{localize 'LHTRPG.Ability.mod.Str'}}
+                </option>
+                <option value="dex-mod">
+                  {{localize 'LHTRPG.Ability.mod.Dex'}}
+                </option>
+                <option value="pow-mod">
+                  {{localize 'LHTRPG.Ability.mod.Pow'}}
+                </option>
+                <option value="int-mod">
+                  {{localize 'LHTRPG.Ability.mod.Int'}}
+                </option>
+                {{/select}}
+              </select>
+              <span>x {{localize 'LHTRPG.Skill.Label.SR'}}</span>
+            </div>
+            <div>
+              <label for="system.damage.type.value"
+                >{{localize 'LHTRPG.Skill.Label.Damage'}}</label
+              >
+              <select
+                id="system.heal.type.value"
+                name="system.heal.type.value"
+                value="{{system.heal.type.value}}"
+              >
+                {{#select system.heal.type.value}}
+                <option value="heal">
+                  {{localize 'LHTRPG.Skill.Heal.heal'}}
+                </option>
+                <option value="regen">
+                  {{localize 'LHTRPG.Skill.Heal.regen'}}
+                </option>
+                <option value="barrier">
+                  {{localize 'LHTRPG.Skill.Heal.barrier'}}
+                </option>
+                <option value="cancel">
+                  {{localize 'LHTRPG.Skill.Heal.cancel'}}
+                </option>
+                {{/select}}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 

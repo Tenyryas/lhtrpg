@@ -3,12 +3,14 @@ import { promises as fs } from "fs";
 import path from "path";
 
 import clean from "gulp-clean";
-import dartSass from "sass";
+import * as dartSass from "sass";
 import debug from "gulp-debug";
 import gulp from "gulp";
 import gulpSass from "gulp-sass";
 import prefix from "gulp-autoprefixer";
 import zip from "gulp-zip";
+import ts from "gulp-typescript";
+import sourcemaps from "gulp-sourcemaps";
 
 import { compilePack } from "@foundryvtt/foundryvtt-cli";
 
@@ -17,7 +19,13 @@ const { series, parallel, src, dest, watch } = gulp;
 const sassCompiler = gulpSass(dartSass);
 
 const GLOB_SCSS = ["src/scss/**/*.scss"];
-const GLOB_SRC = ["src/**/*", "!src/scss{/**,}", "!src/packs{/**,}"];
+const GLOB_TS = ["src/scripts/**/*.ts"];
+const GLOB_SRC = [
+  "src/**/*",
+  "!src/scss{/**,}",
+  "!src/packs{/**,}",
+  `!${GLOB_TS}`,
+];
 
 /* ----------------------------------------- */
 /*  Compile Sass
@@ -43,6 +51,16 @@ function compileScss() {
       }),
     )
     .pipe(dest("dist/styles/"));
+}
+
+const tsProject = ts.createProject("tsconfig.json");
+function compileTs() {
+  return gulp
+    .src()
+    .pipe(sourcemaps.init())
+    .pipe(tsProject())
+    .pipe(sourcemaps.write(".", { sourceRoot: "./", includeContent: false }))
+    .pipe(gulp.dest("dist/scripts/"));
 }
 
 function cleanDist() {
@@ -76,6 +94,10 @@ function watchSrc() {
 
 function watchScss() {
   return watch(GLOB_SCSS, compileScss);
+}
+
+function watchTs() {
+  return watch(GLOB_TS, compileTs);
 }
 
 function zipRelease() {

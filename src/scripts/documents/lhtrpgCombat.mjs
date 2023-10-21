@@ -19,9 +19,9 @@ export class LHTrpgCombat extends Combat {
 
       let Init;
       if (c.actor.type === "character") {
-        Init = c.actor.system["battle-status"].initiative.total ?? 0;
+        Init = c.actor.system.battleStatus.initiative.total ?? 0;
       } else {
-        Init = c.actor.system["battle-status"].initiative ?? 0;
+        Init = c.actor.system.battleStatus.initiative ?? 0;
       }
 
       // Do not roll for defeated combatants

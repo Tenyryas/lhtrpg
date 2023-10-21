@@ -14,7 +14,7 @@
         class="item-control item-create"
         title="Create item"
         data-type="skill"
-        data-subtype="Basic"
+        data-subtype="basic"
       >
         <i class="fas fa-plus"></i>
         <span>{{localize "LHTRPG.Add"}}</span>
@@ -29,7 +29,7 @@
     <div class="item-name grid-span-3">
       <div class="item-image">
         <a
-          class=""
+          class="rollable"
           data-roll-type="item"
           ><img
             src="{{item.img}}"
@@ -47,7 +47,7 @@
       <h4>{{item.system.timing}}</h4>
     </div>
     <div class="item-checkType grid-span-2">
-      <h4>{{item.system.checkType}}</h4>
+      <h4>{{item.system.check.label}}</h4>
     </div>
     <div class="item-controls">
       <a

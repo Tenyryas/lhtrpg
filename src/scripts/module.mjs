@@ -4,15 +4,23 @@ import { LHTrpgItem } from "./documents/item.mjs";
 import { LHTrpgCombat } from "./documents/lhtrpgCombat.mjs";
 import { LHTrpgActiveEffect } from "./documents/lhtrpgActiveEffect.mjs";
 // Import sheet classes.
-import { LHTrpgActorSheet } from "./sheets/actor-sheet.mjs";
-import { LHTrpgActorMonsterSheet } from "./sheets/actor-monster-sheet.mjs";
-import { LHTrpgItemSheet } from "./sheets/item-sheet.mjs";
+
+import LhtrpgCharacterSheet from "./sheets/LhtrpgCharacterSheet.mjs";
+import LhtrpgMonsterSheet from "./sheets/LhtrpgMonsterSheet.mjs";
+import LHTrpgItemSheet from "./sheets/LhtrpgItemSheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import {
   _createItemsCompendiums,
   _createSkillsCompendiums,
 } from "./helpers/api-import.mjs";
+
+import LhtrpgRoll from "./roll/LhtrpgRoll.mjs";
+import DamageRoll from "./roll/DamageRoll.mjs";
+import HealRoll from "./roll/HealRoll.mjs";
+import AttributeRoll from "./roll/AttributeRoll.mjs";
+import AccuracyRoll from "./roll/AccuracyRoll.mjs";
+
 import { LHTRPG } from "./helpers/config.mjs";
 
 /* -------------------------------------------- */
@@ -51,6 +59,22 @@ Hooks.once("init", async function () {
   CONFIG.Item.documentClass = LHTrpgItem;
   CONFIG.Combat.documentClass = LHTrpgCombat;
   CONFIG.ActiveEffect.documentClass = LHTrpgActiveEffect;
+
+  // Define custom rolls
+  CONFIG.Dice.LhtrpgRoll = LhtrpgRoll;
+  CONFIG.Dice.DamageRoll = DamageRoll;
+  CONFIG.Dice.HealRoll = HealRoll;
+  CONFIG.Dice.AttributeRoll = AttributeRoll;
+  CONFIG.Dice.AccuracyRoll = AccuracyRoll;
+
+  CONFIG.Dice.rolls.push(
+    LhtrpgRoll,
+    DamageRoll,
+    HealRoll,
+    AttributeRoll,
+    AccuracyRoll,
+  );
+
   // By default, track hate and skip defeated combatants
   CONFIG.combatTrackerConfig = { resource: "infos.hate", skipDefeated: true };
   // Time passing per round
@@ -58,16 +82,17 @@ Hooks.once("init", async function () {
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("lhtrpg", LHTrpgActorSheet, {
+  Actors.registerSheet("lhtrpg", LhtrpgCharacterSheet, {
     types: ["character"],
     makeDefault: true,
     label: "LHTRPG.PlayerSheet",
   });
-  Actors.registerSheet("lhtrpg", LHTrpgActorMonsterSheet, {
+  Actors.registerSheet("lhtrpg", LhtrpgMonsterSheet, {
     types: ["monster"],
     makeDefault: true,
     label: "LHTRPG.MonsterSheet",
   });
+
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("lhtrpg", LHTrpgItemSheet, { makeDefault: true });
 
@@ -80,22 +105,12 @@ Hooks.once("init", async function () {
 /* -------------------------------------------- */
 
 // If you need to add Handlebars helpers, here are a few useful examples:
-Handlebars.registerHelper("concat", function () {
-  var outStr = "";
-  for (var arg in arguments) {
-    if (typeof arguments[arg] != "object") {
-      outStr += arguments[arg];
-    }
-  }
-  return outStr;
-});
-
-Handlebars.registerHelper("toLowerCase", function (str) {
-  return str.toLowerCase();
-});
-
 Handlebars.registerHelper("toUpperCase", function (str) {
   return str.toUpperCase();
+});
+
+Handlebars.registerHelper("log", function (something) {
+  console.log(something);
 });
 
 /* -------------------------------------------- */

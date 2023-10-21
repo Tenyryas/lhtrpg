@@ -52,17 +52,17 @@
       }
     },
     "Check": {
-      "Accuracy": "명중치",
-      "Analysis": "분석치",
-      "Athletics": "운동치",
-      "Disable": "해제치",
-      "Endurance": "내구치",
-      "Evasion": "회피치",
-      "Knowledge": "지식치",
-      "Negotiation": "교섭치",
-      "Operation": "조작치",
-      "Perception": "지각치",
-      "Resistance": "저항치"
+      "accuracy": "명중치",
+      "analysis": "분석치",
+      "athletics": "운동치",
+      "disable": "해제치",
+      "endurance": "내구치",
+      "evasion": "회피치",
+      "knowledge": "지식치",
+      "negotiation": "교섭치",
+      "operation": "조작치",
+      "perception": "지각치",
+      "resistance": "저항치"
     },
     "Connection": {
       "Label": "커넥션",

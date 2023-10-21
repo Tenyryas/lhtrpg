@@ -82,6 +82,10 @@ div.app.lhtrpg.actor.minimized {
     box-shadow: none;
   }
 
+  input:readonly:hover {
+    box-shadow: none;
+  }
+
   input:focus {
     box-shadow: none;
     text-shadow: 0 0 5px $lhtrpg-font-focus-shadow;
@@ -126,4 +130,8 @@ div.app.lhtrpg.actor.minimized {
 .buttonImportItems {
   margin: 3px;
   width: 98%;
+}
+
+.lhtrpg-chat {
+  @import "components/chat";
 }

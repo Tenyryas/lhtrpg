@@ -1,24 +1,23 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
-    es2021: true,
+    node: true,
+    es2022: true,
   },
   extends: ["eslint:recommended", "prettier"],
+  plugins: ["@typescript-eslint"],
   overrides: [
     {
-      env: {
-        node: true,
-      },
-      files: [".eslintrc.{js,cjs}"],
-      parserOptions: {
-        sourceType: "script",
-      },
+      files: ["*.js", "*.cjs", "*.mjs"],
+      extends: ["plugin:@typescript-eslint/disable-type-checked"],
     },
   ],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
   },
+  ignorePatterns: ["dist/*"],
   rules: {
     "no-undef": "off",
     "no-unused-vars": [

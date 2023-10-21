@@ -2,13 +2,14 @@ import {
   onManageActiveEffect,
   prepareActiveEffectCategories,
 } from "../helpers/effects.mjs";
+import { localizeCheck } from "../helpers/i18n.mjs";
 import { onManageTags } from "../helpers/tags.mjs";
 
 /**
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
-export class LHTrpgItemSheet extends ItemSheet {
+export default class LHTrpgItemSheet extends ItemSheet {
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
@@ -64,6 +65,8 @@ export class LHTrpgItemSheet extends ItemSheet {
     };
 
     context.effects = prepareActiveEffectCategories(this.item.effects);
+
+    localizeCheck(itemData.system.check);
     return context;
   }
 
@@ -81,9 +84,9 @@ export class LHTrpgItemSheet extends ItemSheet {
     // Active Effect management
     html
       .find(".effect-control")
-      .click((ev) => onManageActiveEffect(ev, this.item));
+      .click((event) => onManageActiveEffect(event, this.item));
 
     // Tag management
-    html.find(".tag-control").click((ev) => onManageTags(ev, this.item));
+    html.find(".tag-control").click((event) => onManageTags(event, this.item));
   }
 }

@@ -37,17 +37,17 @@
       }
     },
     "Check": {
-      "Accuracy": "Accuracy",
-      "Analysis": "Analysis",
-      "Athletics": "Athletics",
-      "Disable": "Disable",
-      "Endurance": "Endurance",
-      "Evasion": "Evasion",
-      "Knowledge": "Knowledge",
-      "Negotiation": "Negotiation",
-      "Operation": "Operation",
-      "Perception": "Perception",
-      "Resistance": "Resistance"
+      "accuracy": "Précision",
+      "analysis": "Analyse",
+      "athletics": "Athlétisme",
+      "disable": "Désactivation",
+      "endurance": "Endurance",
+      "evasion": "Evasion",
+      "knowledge": "Connaissance",
+      "negotiation": "Negotiation",
+      "operation": "Operation",
+      "perception": "Perception",
+      "resistance": "Resistance"
     },
     "Connection": {
       "Label": "Connect.",
@@ -67,7 +67,7 @@
     "Int": "INT",
     "Item": {
       "Label": {
-        "Accuracy": "Accuracy",
+        "accuracy": "Précision",
         "Attack": "Attack",
         "BagLimit": "Storage Limit",
         "BagSpace": "Space",

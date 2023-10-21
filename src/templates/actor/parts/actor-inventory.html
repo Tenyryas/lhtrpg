@@ -1,44 +1,50 @@
 <h4 class="tab-title">ITEMS</h4>
 
+<!-- prettier-ignore -->
 <ol class="inventory-list grid grid-7col">
-  {{#each items.equipped.weapons as |item id|}} {{!-- item=item id=id is needed
-  to pass the context of the variables to the partial --}} {{>
-  "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html"
-  item=item id=id }} {{/each}} {{#each items.equipped.armors as |item id|}}
-  {{!-- item=item id=id is needed to pass the context of the variables to the
-  partial --}} {{>
-  "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html"
-  item=item id=id }} {{/each}} {{#each items.equipped.shields as |item id|}}
-  {{!-- item=item id=id is needed to pass the context of the variables to the
-  partial --}} {{>
-  "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html"
-  item=item id=id }} {{/each}} {{#each items.equipped.accessories as |item id|}}
-  {{!-- item=item id=id is needed to pass the context of the variables to the
-  partial --}} {{>
-  "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html"
-  item=item id=id }} {{/each}} {{#each items.equipped.bags as |item id|}} {{!--
-  item=item id=id is needed to pass the context of the variables to the partial
-  --}} {{>
-  "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html"
-  item=item id=id }} {{/each}} {{#each items.equipped.gear as |item id|}} {{!--
-  item=item id=id is needed to pass the context of the variables to the partial
-  --}} {{>
-  "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html"
-  item=item id=id }} {{/each}} {{#each items.weapons as |item id|}} {{>
-  "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html"
-  item=item id=id }} {{/each}} {{#each items.armors as |item id|}} {{>
-  "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html"
-  item=item id=id }} {{/each}} {{#each items.shields as |item id|}} {{>
-  "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html"
-  item=item id=id }} {{/each}} {{#each items.accessories as |item id|}} {{>
-  "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html"
-  item=item id=id }} {{/each}} {{#each items.bags as |item id|}} {{>
-  "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html"
-  item=item id=id }} {{/each}} {{#each items.gear as |item id|}} {{>
-  "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html"
-  item=item id=id }} {{/each}} {{#each items.drop as |item id|}} {{>
-  "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html"
-  item=item id=id }} {{/each}}
+  {{!-- item=item id=id is needed to pass the context of the variables to the partial --}}
+  {{#each items.equipped.weapon as |item id|}}
+    {{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html" item=item id=id }}
+  {{/each}}
+  {{#each items.equipped.armor as |item id|}}
+    {{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html" item=item id=id }}
+  {{/each}}
+  {{#each items.equipped.shield as |item id|}}
+    {{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html" item=item id=id }}
+  {{/each}}
+  {{#each items.equipped.accessory as |item id|}}
+    {{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html" item=item id=id }}
+  {{/each}}
+  {{#each items.equipped.bag as |item id|}}
+    {{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html" item=item id=id }}
+  {{/each}}
+  {{#each items.equipped.gear as |item id|}}
+    {{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html" item=item id=id }}
+  {{/each}}
+  {{#each items.equipped.drop as |item id|}}
+    {{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist-equipped.html" item=item id=id }}
+  {{/each}}
+  {{#each items.weapon as |item id|}}
+    {{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html" item=item id=id }}
+  {{/each}}
+  {{#each items.armor as |item id|}}
+    {{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html" item=item id=id }}
+  {{/each}}
+  {{#each items.shield as |item id|}}
+    {{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html" item=item id=id }}
+  {{/each}}
+  {{#each items.accessory as |item id|}}
+    {{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html" item=item id=id }}
+  {{/each}}
+  {{#each items.bag as |item id|}}
+    {{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html" item=item id=id }}
+  {{/each}}
+  {{#each items.gear as |item id|}}
+    {{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html" item=item id=id }}
+  {{/each}}
+  {{#each items.drop as |item id|}}
+    {{> "systems/lhtrpg/templates/actor/parts/inventory/inventory-itemlist.html" item=item id=id }}
+  {{/each}}
 </ol>
 
 <div class="inventory-infos flexrow">
@@ -146,10 +152,10 @@
       maxlength="8"
     />
     <img
-      src="systems/lhtrpg/assets/ui/gold.svg"
+      src="systems/lhtrpg/assets/ui/gold.png"
       alt=""
-      height="36"
-      width="36"
+      height="72"
+      width="72"
     />
   </div>
 </div>

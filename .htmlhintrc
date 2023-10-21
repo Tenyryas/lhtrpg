@@ -7,7 +7,7 @@
   "script-disabled": true,
   "title-require": true,
 
-  "attr-lowercase": true,
+  "attr-lowercase": false,
   "attr-no-duplication": true,
   "attr-no-unnecessary-whitespace": true,
   "attr-unsafe-chars": true,

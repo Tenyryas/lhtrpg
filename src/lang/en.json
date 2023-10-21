@@ -25,6 +25,20 @@
     }
   },
   "LHTRPG": {
+    "Ability": {
+      "base": {
+        "Str": "STR",
+        "Dex": "DEX",
+        "Pow": "POW",
+        "Int": "INT"
+      },
+      "mod": {
+        "Str": "STR mod",
+        "Dex": "DEX mod",
+        "Pow": "POW mod",
+        "Int": "INT mod"
+      }
+    },
     "Add": "Add",
     "Biography": {
       "Label": "Bio."
@@ -37,17 +51,17 @@
       }
     },
     "Check": {
-      "Accuracy": "Accuracy",
-      "Analysis": "Analysis",
-      "Athletics": "Athletics",
-      "Disable": "Disable",
-      "Endurance": "Endurance",
-      "Evasion": "Evasion",
-      "Knowledge": "Knowledge",
-      "Negotiation": "Negotiation",
-      "Operation": "Operation",
-      "Perception": "Perception",
-      "Resistance": "Resistance"
+      "accuracy": "Accuracy",
+      "analysis": "Analysis",
+      "athletics": "Athletics",
+      "disable": "Disable",
+      "endurance": "Endurance",
+      "evasion": "Evasion",
+      "knowledge": "Knowledge",
+      "negotiation": "Negotiation",
+      "operation": "Operation",
+      "perception": "Perception",
+      "resistance": "Resistance"
     },
     "Connection": {
       "Label": "Connect.",
@@ -56,7 +70,6 @@
     "Description": {
       "Label": "Description"
     },
-    "Dex": "DEX",
     "Effect": {
       "Label": "Effects"
     },
@@ -64,10 +77,9 @@
     "EffectDelete": "Delete Effect",
     "EffectEdit": "Edit Effect",
     "EffectToggle": "Toggle Effect",
-    "Int": "INT",
     "Item": {
       "Label": {
-        "Accuracy": "Accuracy",
+        "accuracy": "Accuracy",
         "Attack": "Attack",
         "BagLimit": "Storage Limit",
         "BagSpace": "Space",
@@ -127,7 +139,6 @@
       "Race": "Race",
       "SubClass": "Subclass"
     },
-    "Pow": "POW",
     "Skill": {
       "Label": {
         "Check": "Check",
@@ -136,7 +147,10 @@
         "Range": "Range",
         "SR": "SR",
         "Target": "Target",
-        "Timing": "Timing"
+        "Timing": "Timing",
+        "Power": "Power",
+        "Damage": "Damage",
+        "Ability": "Ability Score"
       },
       "Placeholder": {
         "Check": "-",
@@ -151,19 +165,46 @@
         "Combat": "Combat",
         "General": "General",
         "Monster": "Monster"
+      },
+      "Check": {
+        "none": "None",
+        "automatic": "Automatic",
+        "evasion": "Accuracy vs Evasion",
+        "resistance": "Accuracy vs Resistance"
+      },
+      "Damage": {
+        "damageType": "Damage Type",
+        "direct": "Direct",
+        "physical": "Physical",
+        "magic": "Magic",
+        "flame": "Flame",
+        "cold": "Cold",
+        "shock": "Shock",
+        "penetrating": "Penetrating",
+        "spirit": "Spirit",
+        "holy": "Holy",
+        "decay": "Decay",
+        "pursuit": "Pursuit",
+        "weakness": "Weakness"
+      },
+      "Heal": {
+        "healType": "Heal Type",
+        "heal": "Heal",
+        "regen": "Regen",
+        "barrier": "Barrier",
+        "cancel": "Cancel"
       }
     },
     "Status": {
       "Label": "Status"
     },
-    "Str": "STR",
     "Tooltip": {
       "AttackPower": "Attack Power",
       "Initiative": "Initiative",
       "MagicDefense": "Magic defense",
       "MagicPower": "Magic Power",
       "PhysDefense": "Physical Defense",
-      "RestorationPower": "Restoration Power",
+      "RestorationPower": "Recovery Power",
       "Speed": "Speed"
     },
     "Union": {

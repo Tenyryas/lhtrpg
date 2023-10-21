@@ -5,22 +5,15 @@
  */
 export async function onManageTags(event, owner) {
   event.preventDefault();
-  const a = event.currentTarget;
-  let tags = [...owner.system.tags];
-  const id = a.dataset.tagId;
+  const { tagId, tags, action } = event.currentTarget.dataset;
+  let copyTags = [...tags];
 
-  // window div id owner
-  // const html = "#" + owner.documentName.toLowerCase() + "-" + owner._id;
-
-  // console.log(event);
-  // console.log(owner);
-  // console.log("tags: " + html);
-  switch (a.dataset.action) {
+  switch (action) {
     case "create":
-      await _onTagCreate(owner, tags);
+      await _onTagCreate(owner, copyTags);
       break;
     case "delete":
-      await _onTagDelete(owner, tags, id);
+      await _onTagDelete(owner, copyTags, tagId);
       break;
     case "edit":
       await _onTagEdit(owner);
@@ -29,13 +22,13 @@ export async function onManageTags(event, owner) {
 
 async function _onTagCreate(owner, tags) {
   let newTag;
-  const rendered_dialog = await renderTemplate(
+  const renderedDialog = await renderTemplate(
     "systems/lhtrpg/templates/dialogs/newTagDialog.html",
   );
 
   let d = new Dialog({
     title: game.i18n.localize("LHTRPG.WindowTitle.Tag.AddNewTag"),
-    content: rendered_dialog,
+    content: renderedDialog,
     buttons: {
       roll: {
         icon: '<i class="fas fa-plus"></i>',
@@ -69,9 +62,6 @@ async function _onTagDelete(owner, tags, id) {
 async function _onTagEdit(owner) {
   const flagValue = owner.getFlag("lhtrpg", "isTagEditActive");
 
-  if (flagValue === undefined || !flagValue) {
-    await owner.setFlag("lhtrpg", "isTagEditActive", true);
-  } else {
-    await owner.setFlag("lhtrpg", "isTagEditActive", false);
-  }
+  const isTagEditActive = flagValue === undefined || !flagValue;
+  await owner.setFlag("lhtrpg", "isTagEditActive", isTagEditActive);
 }

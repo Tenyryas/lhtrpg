@@ -60,9 +60,9 @@
         >
           <input
             class="speed-input"
-            name="system.battle-status.speed.total"
+            name="system.battleStatus.speed.total"
             type="text"
-            value="{{system.battle-status.speed.total}}"
+            value="{{system.battleStatus.speed.total}}"
             placeholder="0"
             data-dtype="Number"
             maxlength="2"
@@ -83,9 +83,9 @@
         >
           <input
             class="initiative-input"
-            name="system.battle-status.initiative.total"
+            name="system.battleStatus.initiative.total"
             type="text"
-            value="{{system.battle-status.initiative.total}}"
+            value="{{system.battleStatus.initiative.total}}"
             placeholder="0"
             data-dtype="Number"
             maxlength="2"
@@ -109,9 +109,9 @@
       >
         <input
           class="power-attack-input"
-          name="system.battle-status.power.attack.total"
+          name="system.battleStatus.power.attack.total"
           type="text"
-          value="{{system.battle-status.power.attack.total}}"
+          value="{{system.battleStatus.power.attack.total}}"
           placeholder="0"
           data-dtype="Number"
           maxlength="2"
@@ -130,9 +130,9 @@
       >
         <input
           class="power-resto-input"
-          name="system.battle-status.power.restoration.total"
+          name="system.battleStatus.power.restoration.total"
           type="text"
-          value="{{system.battle-status.power.restoration.total}}"
+          value="{{system.battleStatus.power.restoration.total}}"
           placeholder="0"
           data-dtype="Number"
           maxlength="2"
@@ -151,9 +151,9 @@
       >
         <input
           class="power-magic-input"
-          name="system.battle-status.power.magic.total"
+          name="system.battleStatus.power.magic.total"
           type="text"
-          value="{{system.battle-status.power.magic.total}}"
+          value="{{system.battleStatus.power.magic.total}}"
           placeholder="0"
           data-dtype="Number"
           maxlength="2"
@@ -177,9 +177,9 @@
         >
           <input
             class="defense-phys-input"
-            name="system.battle-status.defense.phys.total"
+            name="system.battleStatus.defense.phys.total"
             type="text"
-            value="{{system.battle-status.defense.phys.total}}"
+            value="{{system.battleStatus.defense.phys.total}}"
             placeholder="0"
             data-dtype="Number"
             maxlength="2"
@@ -198,9 +198,9 @@
         >
           <input
             class="defense-magic-input"
-            name="system.battle-status.defense.magic.total"
+            name="system.battleStatus.defense.magic.total"
             type="text"
-            value="{{system.battle-status.defense.magic.total}}"
+            value="{{system.battleStatus.defense.magic.total}}"
             placeholder="0"
             data-dtype="Number"
             maxlength="2"
@@ -245,67 +245,29 @@
         />
       </div>
       <div
-        class="check flexcolumn grid-span-2 rollableSkill"
-        data-name="Athletics"
+        class="check flexcolumn grid-span-2 rollable-attributes"
+        data-name="athletics"
         data-dice="{{system.checks.athletics.dice}}"
         data-bonus="{{system.checks.athletics.total}}"
       >
-        <h4>{{localize 'LHTRPG.Check.Athletics'}}</h4>
+        <h4>{{localize 'LHTRPG.Check.athletics'}}</h4>
         <div class="flexrow">
-          <input
-            class="attr-input"
-            name="system.checks.athletics.total"
-            type="text"
-            value="{{system.checks.athletics.total}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
+          <span>{{system.checks.athletics.dice}}D</span>
           <span>+</span>
-          <input
-            class="attr-input"
-            name="system.checks.athletics.dice"
-            type="text"
-            value="{{system.checks.athletics.dice}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
-          <span>D</span>
+          <span>{{system.checks.athletics.total}}</span>
         </div>
       </div>
       <div
-        class="check flexcolumn grid-span-2 rollableSkill"
-        data-name="Endurance"
+        class="check flexcolumn grid-span-2 rollable-attributes"
+        data-name="endurance"
         data-dice="{{system.checks.endurance.dice}}"
         data-bonus="{{system.checks.endurance.total}}"
       >
-        <h4>{{localize 'LHTRPG.Check.Endurance'}}</h4>
+        <h4>{{localize 'LHTRPG.Check.endurance'}}</h4>
         <div class="flexrow">
-          <input
-            class="attr-input"
-            name="system.checks.endurance.total"
-            type="text"
-            value="{{system.checks.endurance.total}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
+          <span>{{system.checks.endurance.dice}}D</span>
           <span>+</span>
-          <input
-            class="attr-input"
-            name="system.checks.endurance.dice"
-            type="text"
-            value="{{system.checks.endurance.dice}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
-          <span>D</span>
+          <span>{{system.checks.endurance.total}}</span>
         </div>
       </div>
     </div>
@@ -335,67 +297,29 @@
         />
       </div>
       <div
-        class="check flexcolumn grid-span-2 rollableSkill"
-        data-name="Disable"
+        class="check flexcolumn grid-span-2 rollable-attributes"
+        data-name="disable"
         data-dice="{{system.checks.disable.dice}}"
         data-bonus="{{system.checks.disable.total}}"
       >
-        <h4>{{localize 'LHTRPG.Check.Disable'}}</h4>
+        <h4>{{localize 'LHTRPG.Check.disable'}}</h4>
         <div class="flexrow">
-          <input
-            class="attr-input"
-            name="system.checks.disable.total"
-            type="text"
-            value="{{system.checks.disable.total}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
+          <span>{{system.checks.disable.dice}}D</span>
           <span>+</span>
-          <input
-            class="attr-input"
-            name="system.checks.disable.dice"
-            type="text"
-            value="{{system.checks.disable.dice}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
-          <span>D</span>
+          <span>{{system.checks.disable.total}}</span>
         </div>
       </div>
       <div
-        class="check flexcolumn grid-span-2 rollableSkill"
-        data-name="Operation"
+        class="check flexcolumn grid-span-2 rollable-attributes"
+        data-name="operation"
         data-dice="{{system.checks.operation.dice}}"
         data-bonus="{{system.checks.operation.total}}"
       >
-        <h4>{{localize 'LHTRPG.Check.Operation'}}</h4>
+        <h4>{{localize 'LHTRPG.Check.operation'}}</h4>
         <div class="flexrow">
-          <input
-            class="attr-input"
-            name="system.checks.operation.total"
-            type="text"
-            value="{{system.checks.operation.total}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
+          <span>{{system.checks.operation.dice}}D</span>
           <span>+</span>
-          <input
-            class="attr-input"
-            name="system.checks.operation.dice"
-            type="text"
-            value="{{system.checks.operation.dice}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
-          <span>D</span>
+          <span>{{system.checks.operation.total}}</span>
         </div>
       </div>
     </div>
@@ -426,67 +350,29 @@
         />
       </div>
       <div
-        class="check flexcolumn grid-span-2 rollableSkill"
-        data-name="Perception"
+        class="check flexcolumn grid-span-2 rollable-attributes"
+        data-name="perception"
         data-dice="{{system.checks.perception.dice}}"
         data-bonus="{{system.checks.perception.total}}"
       >
-        <h4>{{localize 'LHTRPG.Check.Perception'}}</h4>
+        <h4>{{localize 'LHTRPG.Check.perception'}}</h4>
         <div class="flexrow">
-          <input
-            class="attr-input"
-            name="system.checks.perception.total"
-            type="text"
-            value="{{system.checks.perception.total}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
+          <span>{{system.checks.perception.dice}}D</span>
           <span>+</span>
-          <input
-            class="attr-input"
-            name="system.checks.perception.dice"
-            type="text"
-            value="{{system.checks.perception.dice}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
-          <span>D</span>
+          <span>{{system.checks.perception.total}}</span>
         </div>
       </div>
       <div
-        class="check flexcolumn grid-span-2 rollableSkill"
-        data-name="Negotiation"
+        class="check flexcolumn grid-span-2 rollable-attributes"
+        data-name="negotiation"
         data-dice="{{system.checks.negotiation.dice}}"
         data-bonus="{{system.checks.negotiation.total}}"
       >
-        <h4>{{localize 'LHTRPG.Check.Negotiation'}}</h4>
+        <h4>{{localize 'LHTRPG.Check.negotiation'}}</h4>
         <div class="flexrow">
-          <input
-            class="attr-input"
-            name="system.checks.negotiation.total"
-            type="text"
-            value="{{system.checks.negotiation.total}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
+          <span>{{system.checks.negotiation.dice}}D</span>
           <span>+</span>
-          <input
-            class="attr-input"
-            name="system.checks.negotiation.dice"
-            type="text"
-            value="{{system.checks.negotiation.dice}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
-          <span>D</span>
+          <span>{{system.checks.negotiation.total}}</span>
         </div>
       </div>
     </div>
@@ -517,166 +403,71 @@
         />
       </div>
       <div
-        class="check flexcolumn grid-span-2 rollableSkill"
-        data-name="Knowledge"
+        class="check flexcolumn grid-span-2 rollable-attributes"
+        data-name="knowledge"
         data-dice="{{system.checks.knowledge.dice}}"
         data-bonus="{{system.checks.knowledge.total}}"
       >
-        <h4>{{localize 'LHTRPG.Check.Knowledge'}}</h4>
+        <h4>{{localize 'LHTRPG.Check.knowledge'}}</h4>
         <div class="flexrow">
-          <input
-            class="attr-input"
-            name="system.checks.knowledge.total"
-            type="text"
-            value="{{system.checks.knowledge.total}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
+          <span>{{system.checks.knowledge.dice}}D</span>
           <span>+</span>
-          <input
-            class="attr-input"
-            name="system.checks.knowledge.dice"
-            type="text"
-            value="{{system.checks.knowledge.dice}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
-          <span>D</span>
+          <span>{{system.checks.knowledge.total}}</span>
         </div>
       </div>
       <div
-        class="check flexcolumn grid-span-2 rollableSkill"
-        data-name="Analysis"
+        class="check flexcolumn grid-span-2 rollable-attributes"
+        data-name="analysis"
         data-dice="{{system.checks.analysis.dice}}"
         data-bonus="{{system.checks.analysis.total}}"
       >
-        <h4>{{localize 'LHTRPG.Check.Analysis'}}</h4>
+        <h4>{{localize 'LHTRPG.Check.analysis'}}</h4>
         <div class="flexrow">
-          <input
-            class="attr-input"
-            name="system.checks.analysis.total"
-            type="text"
-            value="{{system.checks.analysis.total}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
+          <span>{{system.checks.analysis.dice}}D</span>
           <span>+</span>
-          <input
-            class="attr-input"
-            name="system.checks.analysis.dice"
-            type="text"
-            value="{{system.checks.analysis.dice}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
-          <span>D</span>
+          <span>{{system.checks.analysis.total}}</span>
         </div>
       </div>
     </div>
 
     <div class="grid-span-8 flexrow">
       <div
-        class="check flexcolumn grid-span-2 rollableSkill"
-        data-name="Accuracy"
+        class="check flexcolumn grid-span-2 rollable-attributes"
+        data-name="accuracy"
         data-dice="{{system.checks.accuracy.dice}}"
         data-bonus="{{system.checks.accuracy.total}}"
       >
-        <h4>{{localize 'LHTRPG.Check.Accuracy'}}</h4>
+        <h4>{{localize 'LHTRPG.Check.accuracy'}}</h4>
         <div class="flexrow">
-          <input
-            class="attr-input"
-            name="system.checks.accuracy.total"
-            type="text"
-            value="{{system.checks.accuracy.total}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
+          <span>{{system.checks.accuracy.dice}}D</span>
           <span>+</span>
-          <input
-            class="attr-input"
-            name="system.checks.accuracy.dice"
-            type="text"
-            value="{{system.checks.accuracy.dice}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
-          <span>D</span>
+          <span>{{system.checks.accuracy.total}}</span>
         </div>
       </div>
       <div
-        class="check flexcolumn grid-span-2 rollableSkill"
-        data-name="Evasion"
+        class="check flexcolumn grid-span-2 rollable-attributes"
+        data-name="evasion"
         data-dice="{{system.checks.evasion.dice}}"
         data-bonus="{{system.checks.evasion.total}}"
       >
-        <h4>{{localize 'LHTRPG.Check.Evasion'}}</h4>
+        <h4>{{localize 'LHTRPG.Check.evasion'}}</h4>
         <div class="flexrow">
-          <input
-            class="attr-input"
-            name="system.checks.evasion.total"
-            type="text"
-            value="{{system.checks.evasion.total}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
+          <span>{{system.checks.evasion.dice}}D</span>
           <span>+</span>
-          <input
-            class="attr-input"
-            name="system.checks.evasion.dice"
-            type="text"
-            value="{{system.checks.evasion.dice}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
-          <span>D</span>
+          <span>{{system.checks.evasion.total}}</span>
         </div>
       </div>
       <div
-        class="check flexcolumn grid-span-2 rollableSkill"
-        data-name="Resistance"
+        class="check flexcolumn grid-span-2 rollable-attributes"
+        data-name="resistance"
         data-dice="{{system.checks.resistance.dice}}"
         data-bonus="{{system.checks.resistance.total}}"
       >
-        <h4>{{localize 'LHTRPG.Check.Resistance'}}</h4>
+        <h4>{{localize 'LHTRPG.Check.resistance'}}</h4>
         <div class="flexrow">
-          <input
-            class="attr-input"
-            name="system.checks.resistance.total"
-            type="text"
-            value="{{system.checks.resistance.total}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
+          <span>{{system.checks.resistance.dice}}D</span>
           <span>+</span>
-          <input
-            class="attr-input"
-            name="system.checks.resistance.dice"
-            type="text"
-            value="{{system.checks.resistance.dice}}"
-            placeholder="0"
-            data-dtype="Number"
-            maxlength="2"
-            disabled="true"
-          />
-          <span>D</span>
+          <span>{{system.checks.resistance.total}}</span>
         </div>
       </div>
     </div>
@@ -722,79 +513,85 @@
 
   <div class="grid-span-2 status-row">
     <div class="status-checkbox flexrow">
-      <label for="system.bad-status.dazed"
+      <label for="system.badStatus.dazed"
         >{{localize 'LHTRPG.Label.Dazed'}}</label
       >
       <input
-        name="system.bad-status.dazed"
+        id="system.badStatus.dazed"
+        name="system.badStatus.dazed"
         type="checkbox"
         data-dtype="Boolean"
         {{checked
-        system.bad-status.dazed}}
+        system.badStatus.dazed}}
       />
     </div>
     <div class="status-checkbox flexrow">
-      <label for="system.bad-status.rigor"
+      <label for="system.badStatus.rigor"
         >{{localize 'LHTRPG.Label.Rigor'}}</label
       >
       <input
-        name="system.bad-status.rigor"
+        id="system.badStatus.rigor"
+        name="system.badStatus.rigor"
         type="checkbox"
         data-dtype="Boolean"
         {{checked
-        system.bad-status.rigor}}
+        system.badStatus.rigor}}
       />
     </div>
   </div>
   <div class="grid-span-3 status-row">
     <div class="status-checkbox flexrow">
-      <label for="system.bad-status.confused"
+      <label for="system.badStatus.confused"
         >{{localize 'LHTRPG.Label.Confused'}}</label
       >
       <input
-        name="system.bad-status.confused"
+        id="system.badStatus.confused"
+        name="system.badStatus.confused"
         type="checkbox"
         data-dtype="Boolean"
         {{checked
-        system.bad-status.confused}}
+        system.badStatus.confused}}
       />
     </div>
     <div class="status-checkbox flexrow">
-      <label for="system.bad-status.staggered"
+      <label for="system.badStatus.staggered"
         >{{localize 'LHTRPG.Label.Staggered'}}</label
       >
       <input
-        name="system.bad-status.staggered"
+        id="system.badStatus.staggered"
+        name="system.badStatus.staggered"
         type="checkbox"
         data-dtype="Boolean"
         {{checked
-        system.bad-status.staggered}}
+        system.badStatus.staggered}}
       />
     </div>
   </div>
   <div class="grid-span-3 status-row">
     <div class="status-checkbox flexrow">
-      <label for="system.bad-status.afflicted"
+      <label for="system.badStatus.afflicted"
         >{{localize 'LHTRPG.Label.Afflicted'}}</label
       >
       <input
-        name="system.bad-status.afflicted"
+        id="system.badStatus.afflicted"
+        name="system.badStatus.afflicted"
         type="checkbox"
         data-dtype="Boolean"
         {{checked
-        system.bad-status.afflicted}}
+        system.badStatus.afflicted}}
       />
     </div>
     <div class="status-checkbox flexrow">
-      <label for="system.bad-status.overconfident"
+      <label for="system.badStatus.overconfident"
         >{{localize 'LHTRPG.Label.Overconfident'}}</label
       >
       <input
-        name="system.bad-status.overconfident"
+        id="system.badStatus.overconfident"
+        name="system.badStatus.overconfident"
         type="checkbox"
         data-dtype="Boolean"
         {{checked
-        system.bad-status.overconfident}}
+        system.badStatus.overconfident}}
       />
     </div>
   </div>

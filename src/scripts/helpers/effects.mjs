@@ -7,9 +7,8 @@ export function onManageActiveEffect(event, owner) {
   event.preventDefault();
   const a = event.currentTarget;
   const li = a.closest("li");
-  const effect = li.dataset.effectId
-    ? owner.effects.get(li.dataset.effectId)
-    : null;
+  const { effectId, effectType } = li.dataset;
+  const effect = owner.effects.get(effectId);
   switch (a.dataset.action) {
     case "create":
       return owner.createEmbeddedDocuments("ActiveEffect", [
@@ -17,9 +16,8 @@ export function onManageActiveEffect(event, owner) {
           label: "New Effect",
           icon: "icons/svg/aura.svg",
           origin: owner.uuid,
-          "duration.rounds":
-            li.dataset.effectType === "temporary" ? 1 : undefined,
-          disabled: li.dataset.effectType === "inactive",
+          "duration.rounds": effectType === "temporary" ? 1 : undefined,
+          disabled: effectType === "inactive",
         },
       ]);
     case "edit":
@@ -62,12 +60,12 @@ export function prepareActiveEffectCategories(effects) {
   };
 
   // Iterate over active effects, classifying them into categories
-  for (let e of effects) {
-    e.sourceName; // Trigger a lookup for the source name
-    if (e.isSuppressed) categories.suppressed.effects.push(e);
-    else if (e.disabled) categories.inactive.effects.push(e);
-    else if (e.isTemporary) categories.temporary.effects.push(e);
-    else categories.passive.effects.push(e);
+  for (let effect of effects) {
+    effect.sourceName; // Trigger a lookup for the source name
+    if (effect.isSuppressed) categories.suppressed.effects.push(effect);
+    else if (effect.disabled) categories.inactive.effects.push(effect);
+    else if (effect.isTemporary) categories.temporary.effects.push(effect);
+    else categories.passive.effects.push(effect);
   }
 
   categories.suppressed.hidden = true;

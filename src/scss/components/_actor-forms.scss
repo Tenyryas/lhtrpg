@@ -540,6 +540,7 @@ section.window-content {
         h4 {
           font-family: $lhtrpg-font-primary;
           font-size: 11px;
+          margin-bottom: 1px;
         }
 
         h4:lang(ja) {
@@ -565,7 +566,6 @@ section.window-content {
         span {
           color: $lhtrpg-font-color-ui;
           flex-grow: 0.1;
-          min-width: 0;
         }
       }
 
