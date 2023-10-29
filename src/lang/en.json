@@ -166,11 +166,69 @@
         "General": "General",
         "Monster": "Monster"
       },
+      "Timing": {
+        "constant": "Constant",
+        "prePlay": "Pre Play",
+        "interlude": "Interlude",
+        "briefing": "Briefing",
+        "restTime": "Rest Time",
+        "major": "Major",
+        "minor": "Minor",
+        "move": "Move",
+        "instant": "Instant",
+        "mainProcess": "Main Process",
+        "setup": "Setup",
+        "initiative": "Initiative",
+        "cleanup": "Cleanup",
+        "beforeCheck": "Before Check",
+        "afterCheck": "After Check",
+        "damageRoll": "Damage Roll",
+        "beforeDamage": "Before Damage",
+        "afterDamage": "After Damage",
+        "action": "Action",
+        "refer": "Refer"
+      },
       "Check": {
         "none": "None",
         "automatic": "Automatic",
+        "basic": "Basic",
         "evasion": "Accuracy vs Evasion",
-        "resistance": "Accuracy vs Resistance"
+        "resistance": "Accuracy vs Resistance",
+        "refer": "Refer",
+        "custom": "Custom"
+      },
+      "Target": {
+        "self": "Self",
+        "single": "Single",
+        "multi": "Multi (n)",
+        "area": "Area",
+        "wide": "Wide",
+        "line": "Line",
+        "pick": "Pick",
+        "all": "All",
+        "refer": "Refer"
+      },
+      "Range": {
+        "close": "Close",
+        "weapon": "Weapon",
+        "ranged": "Ranged (n Sq.)",
+        "refer": "Refer"
+      },
+      "Cost": {
+        "none": "None",
+        "hate": "Hate",
+        "fate": "Fate",
+        "party": "Cost (Party)",
+        "allies": "Cost (Allies)",
+        "refer": "Refer"
+      },
+      "Limit": {
+        "none": "None",
+        "scenario": "Scenario",
+        "scene": "Scene",
+        "round": "Round",
+        "party": "Party",
+        "refer": "Refer"
       },
       "Damage": {
         "damageType": "Damage Type",

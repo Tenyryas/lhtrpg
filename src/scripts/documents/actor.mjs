@@ -287,7 +287,7 @@ export class LHTrpgActor extends Actor {
     const weapons = [];
     for (const weapon of itemTypes.weapon) {
       if (weapon.system.equipped) {
-        if (!mainWeapon && weapon.system.isMain === true) {
+        if (!mainWeapon && weapon.system.isMain) {
           mainWeapon = weapon;
         } else {
           weapons.push(weapon);
@@ -445,15 +445,15 @@ export class LHTrpgActor extends Actor {
     const healthValue = Math.min(health.value, health.totalMax);
     health.value = Math.max(healthValue, 0);
 
-    // Fate value can't be bigger than the max value and less than 0
-    const fateValue = Math.min(fate.value, fate.max);
-    fate.value = Math.max(fateValue, 0);
+    // Fate value can't be less than 0
+    fate.value = Math.max(fate.value, 0);
   }
 
   _computeInventoryMaxSpace() {
     const { inventory } = this.system;
 
     inventory.base = 2;
+    inventory.mod ??= 0;
 
     // Get equipped bags
     const bags = this.itemTypes.bag.reduce(this._getItemsEquipped, []);
@@ -463,6 +463,6 @@ export class LHTrpgActor extends Actor {
       bonusBagSpace += bag.system.bagSpace ?? 0;
     }
 
-    inventory.maxSpace = inventory.base + (inventory.mod ?? 0) + bonusBagSpace;
+    inventory.maxSpace = inventory.base + inventory.mod + bonusBagSpace;
   }
 }

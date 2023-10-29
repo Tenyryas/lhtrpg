@@ -21,6 +21,16 @@ import HealRoll from "./roll/HealRoll.mjs";
 import AttributeRoll from "./roll/AttributeRoll.mjs";
 import AccuracyRoll from "./roll/AccuracyRoll.mjs";
 
+import CharacterActorData from "./scripts/datamodel/actor/CharacterActorData.mjs";
+import MonsterActorData from "./scripts/datamodel/actor/MonsterActorData.mjs";
+
+import WeaponItemData from "./scripts/datamodel/item/WeaponItemData.mjs";
+import BagItemData from "./scripts/datamodel/item/BagItemData.mjs";
+import SkillItemData from "./scripts/datamodel/item/SkillItemData.mjs";
+import ConsumableItemData from "./scripts/datamodel/item/ConsumableItemData.mjs";
+import StatsItemData from "./scripts/datamodel/item/StatsItemData.mjs";
+import SocialItemData from "./scripts/datamodel/item/SocialItemData.mjs";
+
 import { LHTRPG } from "./helpers/config.mjs";
 
 /* -------------------------------------------- */
@@ -31,6 +41,26 @@ Hooks.once("init", async function () {
   console.log(
     `Log Horizon TRPG | Initializing Half-Gaia Project...\n${LHTRPG.ASCII}`,
   );
+
+  CONFIG.Actor.systemDataModels.character = CharacterActorData;
+  CONFIG.Actor.systemDataModels.monster = MonsterActorData;
+
+  CONFIG.Item.systemDataModels.gear = CommonItemData;
+
+  CONFIG.Item.systemDataModels.skill = SkillItemData;
+  CONFIG.Item.systemDataModels.consumable = ConsumableItemData;
+
+  CONFIG.Item.systemDataModels.armor = StatsItemData;
+  CONFIG.Item.systemDataModels.shield = StatsItemData;
+  CONFIG.Item.systemDataModels.accessory = StatsItemData;
+  CONFIG.Item.systemDataModels.magicStone = StatsItemData;
+
+  CONFIG.Item.systemDataModels.weapon = WeaponItemData;
+
+  CONFIG.Item.systemDataModels.bag = BagItemData;
+
+  CONFIG.Item.systemDataModels.connection = SocialItemData;
+  CONFIG.Item.systemDataModels.union = SocialItemData;
 
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
@@ -56,6 +86,18 @@ Hooks.once("init", async function () {
 
   // Define custom Document classes
   CONFIG.Actor.documentClass = LHTrpgActor;
+
+  CONFIG.Actor.trackableAttributes = {
+    character: {
+      bar: ["stats.health"],
+      value: ["stats.fate.value", "stats.hate"],
+    },
+    monster: {
+      bar: ["stats.health"],
+      value: ["stats.fate.value"],
+    },
+  };
+
   CONFIG.Item.documentClass = LHTrpgItem;
   CONFIG.Combat.documentClass = LHTrpgCombat;
   CONFIG.ActiveEffect.documentClass = LHTrpgActiveEffect;
@@ -76,7 +118,7 @@ Hooks.once("init", async function () {
   );
 
   // By default, track hate and skip defeated combatants
-  CONFIG.combatTrackerConfig = { resource: "infos.hate", skipDefeated: true };
+  CONFIG.combatTrackerConfig = { resource: "stats.hate", skipDefeated: true };
   // Time passing per round
   CONFIG.time.roundTime = 6;
 

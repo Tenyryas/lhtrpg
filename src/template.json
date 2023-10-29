@@ -1,168 +1,12 @@
 {
   "Actor": {
     "types": ["character", "monster"],
-    "templates": {
-      "base": {
-        "health": {
-          "value": 0,
-          "max": 0
-        },
-        "fate": {
-          "value": 0,
-          "max": 0
-        },
-        "tags": [],
-        "biography": "",
-        "race": "",
-        "attributes": {
-          "str": {
-            "value": 0,
-            "mod": 0
-          },
-          "dex": {
-            "value": 0,
-            "mod": 0
-          },
-          "pow": {
-            "value": 0,
-            "mod": 0
-          },
-          "int": {
-            "value": 0,
-            "mod": 0
-          }
-        },
-        "battleStatus": {
-          "power": {
-            "attack": {
-              "mod": 0
-            },
-            "restoration": {
-              "mod": 0
-            },
-            "magic": {
-              "mod": 0
-            }
-          },
-          "defense": {
-            "phys": {
-              "mod": 0
-            },
-            "magic": {
-              "mod": 0
-            }
-          },
-          "speed": {
-            "mod": 0
-          },
-          "initiative": {
-            "mod": 0
-          }
-        },
-        "badStatus": {
-          "dazed": false,
-          "rigor": false,
-          "confused": false,
-          "staggered": false,
-          "afflicted": false,
-          "overconfident": false,
-          "decay": 0,
-          "pursuit": []
-        },
-        "otherStatus": {
-          "hateTop": false,
-          "swimming": false,
-          "flying": false,
-          "hidden": false,
-          "absent": false
-        },
-        "combatStatus": {
-          "regen": 0,
-          "cancel": [],
-          "barrier": 0
-        },
-        "lifeStatus": {
-          "fatigue": 0,
-          "weakness": []
-        }
-      }
+    "htmlFields": ["infos.description"],
+    "filePathFields": {
+      "img": ["IMAGE"]
     },
-    "character": {
-      "templates": ["base"],
-      "class": {
-        "img": "systems/lhtrpg/assets/ui/classes/Enchanter_Logo.png",
-        "name": "",
-        "subclass": ""
-      },
-      "infos": {
-        "crank": 1,
-        "hate": 0,
-        "level": 35
-      },
-      "social": {
-        "guild": ""
-      },
-      "inventory": {
-        "gold": 350
-      },
-      "checks": {
-        "athletics": {
-          "dice": 2,
-          "mod": 0
-        },
-        "endurance": {
-          "dice": 2,
-          "mod": 0
-        },
-        "disable": {
-          "dice": 2,
-          "mod": 0
-        },
-        "operation": {
-          "dice": 2,
-          "mod": 0
-        },
-        "perception": {
-          "dice": 2,
-          "mod": 0
-        },
-        "negotiation": {
-          "dice": 2,
-          "mod": 0
-        },
-        "knowledge": {
-          "dice": 2,
-          "mod": 0
-        },
-        "analysis": {
-          "dice": 2,
-          "mod": 0
-        },
-        "accuracy": {
-          "dice": 2,
-          "mod": 0
-        },
-        "evasion": {
-          "dice": 2,
-          "mod": 0
-        },
-        "resistance": {
-          "dice": 2,
-          "mod": 0
-        }
-      }
-    },
-    "monster": {
-      "templates": ["base"],
-      "rank": 1,
-      "identification": 0,
-      "hateMultiplier": 0,
-      "checks": {
-        "evasion": "",
-        "resistance": ""
-      },
-      "dropTable": ""
-    }
+    "character": {},
+    "monster": {}
   },
   "Item": {
     "types": [
@@ -174,132 +18,21 @@
       "magicStone",
       "bag",
       "gear",
-      "drop",
+      "consumable",
       "connection",
       "union"
     ],
-    "templates": {
-      "base": {
-        "description": "",
-        "tags": []
-      },
-      "actions": {
-        "timing": "",
-        "check": {
-          "value": "",
-          "label": "",
-          "dice": 0,
-          "bonus": 0,
-          "customFormula": ""
-        },
-        "range": "",
-        "target": "",
-        "damage": {
-          "type": {
-            "value": "",
-            "label": ""
-          },
-          "dice": 0,
-          "power": {
-            "value": ""
-          },
-          "ability": {
-            "value": "",
-            "multiply": 0
-          },
-          "sr": {
-            "dice": 0,
-            "ability": ""
-          }
-        },
-        "heal": {
-          "type": {
-            "value": "",
-            "label": ""
-          },
-          "dice": 0,
-          "bonus": 0,
-          "power": {
-            "value1": "",
-            "value2": ""
-          },
-          "ability": {
-            "value": "",
-
-            "multiply": 0
-          },
-          "sr": {
-            "dice": 0,
-            "multiply": 0,
-            "ability": ""
-          }
-        }
-      },
-      "itemBase": {
-        "rank": 1,
-        "price": 0,
-        "equipped": false
-      },
-      "defenses": {
-        "pdef": 0,
-        "mdef": 0
-      },
-      "attack": {
-        "attack": 0
-      },
-      "magic": {
-        "magic": 0
-      },
-      "init": {
-        "initiative": 0
-      }
-    },
-    "skill": {
-      "templates": ["base", "actions"],
-      "subtype": "Basic",
-      "skillRank": {
-        "value": 1,
-        "max": 5
-      },
-      "cost": "",
-      "limit": ""
-    },
-    "weapon": {
-      "templates": ["base", "itemBase", "attack", "magic", "init"],
-      "attack": 0,
-      "accuracy": 0,
-      "range": "",
-      "isMain": false,
-      "isTwoHanded": false
-    },
-    "armor": {
-      "templates": ["base", "itemBase", "defenses", "init"]
-    },
-    "shield": {
-      "templates": ["base", "defenses", "itemBase"]
-    },
-    "accessory": {
-      "templates": ["base", "itemBase", "attack", "magic", "defenses", "init"]
-    },
-    "magicStone": {
-      "templates": ["base", "itemBase", "magic"]
-    },
-    "bag": {
-      "templates": ["base", "itemBase"],
-      "bagSpace": 0,
-      "limit": ""
-    },
-    "gear": {
-      "templates": ["base", "itemBase", "actions"]
-    },
-    "drop": {
-      "templates": ["base", "itemBase"]
-    },
-    "connection": {
-      "templates": ["base"]
-    },
-    "union": {
-      "templates": ["base"]
-    }
+    "htmlFields": ["infos.description", "infos.effects"],
+    "skill": {},
+    "weapon": {},
+    "armor": {},
+    "shield": {},
+    "accessory": {},
+    "magicStone": {},
+    "bag": {},
+    "gear": {},
+    "consumable": {},
+    "connection": {},
+    "union": {}
   }
 }
