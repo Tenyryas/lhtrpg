@@ -50,6 +50,32 @@
         "Add": "Add"
       }
     },
+    "Character": {
+      "class": {
+        "guardian": "Guardian",
+        "samurai": "Samurai",
+        "monk": "Monk",
+        "cleric": "Cleric",
+        "druid": "Druid",
+        "kannagi": "Kannagi",
+        "assassin": "Assassin",
+        "swashbuckler": "Swashbuckler",
+        "bard": "Bard",
+        "sorcerer": "Sorcerer",
+        "summoner": "Summoner",
+        "enchanter": "Enchanter"
+      },
+      "race": {
+        "human": "Human",
+        "elf": "Elf",
+        "dwarf": "Dwarf",
+        "halfAlv": "Half-Alv",
+        "werecat": "Felinoid",
+        "wolfFang": "Wolf Fang",
+        "foxTail": "Fox Tail",
+        "ritual": "Race of Ritual"
+      }
+    },
     "Check": {
       "accuracy": "Accuracy",
       "analysis": "Analysis",

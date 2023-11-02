@@ -1,41 +1,55 @@
 import { CommonActorData } from "./CommonActorData.mjs";
 
-import {
-  makePositiveIntegerField,
-  makeImageField,
-  getCommonInfosField,
-} from "../common.mjs";
+import { makePositiveIntegerField, makeImageField } from "../common.mjs";
 
 const { fields } = foundry.data;
 
-export class CharacterData extends CommonActorData {
+export class MonsterActorData extends CommonActorData {
   static defineSchema() {
     return {
       ...super.defineSchema(),
       img: makeImageField("systems/lhtrpg/assets/ui/actors_icons/monster.svg"),
-      infos: new fields.SchemaField({
-        ...getCommonInfosField(),
-      }),
     };
   }
 
   static getAdditionalStatsField() {
     return {
+      health: new fields.SchemaField({
+        value: makePositiveIntegerField(),
+        base: makePositiveIntegerField(),
+      }),
+      fate: new fields.SchemaField({
+        value: makePositiveIntegerField(),
+        base: makePositiveIntegerField(),
+      }),
+      // Identification Difficulty: 0 = Auto
       identification: makePositiveIntegerField(),
       hateMultiplier: makePositiveIntegerField(),
     };
   }
 
-  prepareBaseData() {
-    super.prepareBaseData();
-
-    const { stats } = this;
-    const { attribute } = stats;
-    const { evasion, resistance } = attribute;
-
-    evasion.mod = 0;
-    resistance.mod = 0;
+  static makeField() {
+    return this.makeBaseField();
   }
 
-  prepareDerivedData() {}
+  static makeBaseStatsField() {
+    return new fields.SchemaField({
+      mod: makePositiveIntegerField(),
+    });
+  }
+
+  static makeAttributeField() {
+    return new fields.SchemaField({
+      dice: makePositiveIntegerField(),
+      mod: this.makeBaseField(),
+    });
+  }
+
+  calculateHpTotal(health) {
+    return health.base + health.skills + health.items;
+  }
+
+  calculateFateMax(fate) {
+    return fate.base + fate.skills + fate.items;
+  }
 }

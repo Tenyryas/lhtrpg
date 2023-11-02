@@ -1,50 +1,57 @@
-import { makePositiveIntegerField, makeBooleanField } from "../common.mjs";
+import {
+  makePositiveIntegerField,
+  makeBooleanField,
+  makeConditionField,
+  getCommonInfosField,
+} from "../common.mjs";
 
 const { fields } = foundry.data;
 
 export class CommonActorData extends foundry.abstract.TypeDataModel {
   static defineSchema() {
     return {
+      infos: new fields.SchemaField({
+        ...getCommonInfosField(),
+        ...this.getAdditionalInfosField(),
+      }),
       stats: new fields.SchemaField({
         health: new fields.SchemaField({
           value: makePositiveIntegerField(),
-          total: makePositiveIntegerField(),
         }),
         fate: new fields.SchemaField({
           value: makePositiveIntegerField(),
-          max: makePositiveIntegerField(),
         }),
         base: new fields.SchemaField({
-          str: makeBaseField(),
-          dex: makeBaseField(),
-          pow: makeBaseField(),
-          int: makeBaseField(),
+          str: this.makeBaseStatsField(),
+          dex: this.makeBaseStatsField(),
+          pow: this.makeBaseStatsField(),
+          int: this.makeBaseStatsField(),
         }),
         attribute: new fields.SchemaField({
-          athletics: makeDiceField(),
-          endurance: makeDiceField(),
-          disable: makeDiceField(),
-          operation: makeDiceField(),
-          perception: makeDiceField(),
-          negotiation: makeDiceField(),
-          knowledge: makeDiceField(),
-          analysis: makeDiceField(),
-          accuracy: makeDiceField(),
-          evasion: makeEvasionField(),
-          resistance: makeResistanceField(),
+          athletics: this.makeModField(),
+          endurance: this.makeModField(),
+          disable: this.makeModField(),
+          operation: this.makeModField(),
+          perception: this.makeModField(),
+          negotiation: this.makeModField(),
+          knowledge: this.makeModField(),
+          analysis: this.makeModField(),
+          accuracy: this.makeModField(),
+          evasion: this.makeAttributeField(),
+          resistance: this.makeAttributeField(),
         }),
         power: new fields.SchemaField({
-          attack: makeBaseField(),
-          magic: makeBaseField(),
-          recovery: makeBaseField(),
+          attack: new fields.SchemaField(),
+          magic: new fields.SchemaField(),
+          recovery: new fields.SchemaField(),
         }),
         defense: new fields.SchemaField({
-          physical: makeBaseField(),
-          magical: makeBaseField(),
+          physical: this.makeField(),
+          magical: this.makeField(),
         }),
-        speed: makeBaseField(2),
-        initiative: makeBaseField(),
-        ...getAdditionalStatsField(),
+        speed: makePositiveIntegerField(2),
+        initiative: this.makeField(),
+        ...this.getAdditionalStatsField(),
       }),
       status: new fields.SchemaField({
         bad: new fields.SchemaField({
@@ -77,20 +84,38 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
     };
   }
 
-  static getStatsField() {
+  static getAdditionalInfosField() {
     return {};
   }
 
-  static makeBaseField(initial = 0) {
+  static getAdditionalStatsField() {
+    return {};
+  }
+
+  static makeBaseStatsField() {
     return new fields.SchemaField({
-      base: makePositiveIntegerField(initial),
+      bonus: makePositiveIntegerField(),
     });
   }
 
-  static makeDiceField() {
+  static makeBaseField() {
     return new fields.SchemaField({
-      dice: makePositiveIntegerField(2),
+      base: makePositiveIntegerField(),
     });
+  }
+
+  static makeField() {
+    return new fields.SchemaField();
+  }
+
+  static makeModField() {
+    return new fields.SchemaField({
+      mod: new fields.SchemaField(),
+    });
+  }
+
+  static makeAttributeField() {
+    return this.makeModField();
   }
 
   static migrateData(source) {
@@ -99,44 +124,87 @@ export class CommonActorData extends foundry.abstract.TypeDataModel {
 
   prepareBaseData() {
     super.prepareBaseData();
-    const { base } = this.stats;
-    const { str, dex, pow, int } = base;
+    const { health, fate, attribute, power, defense, initiative } = this.stats;
 
-    for (const key in base) {
-      const attribute = base[key];
-      attribute.mod = Math.floor(attribute.base / 3) ?? 0;
+    for (const key in attribute) {
+      const attr = attribute[key];
+      attr.dice ??= 2;
+      this.prepareModData(attr.mod);
+    }
+    for (const key in power) {
+      this.prepareModData(power[key]);
+    }
+    for (const key in defense) {
+      this.prepareModData(defense[key]);
     }
 
-    athletics.mod = str.mod;
-    endurance.mod = str.mod;
+    this.prepareModData(initiative.mod);
 
-    disable.mod = dex.mod;
-    operation.mod = dex.mod;
+    health.skills = 0;
+    health.items = 0;
 
-    perception.mod = pow.mod;
-    negotiation.mod = pow.mod;
-
-    knowledge.mod = int.mod;
-    analysis.mod = int.mod;
+    fate.skills = 0;
+    fate.items = 0;
   }
 
   prepareDerivedData() {
     super.prepareDerivedData();
     const { stats, status } = this;
-    const { health } = stats;
+    const { health, attribute, defense, initiative } = stats;
     const { life } = status;
+
+    for (const key in attribute) {
+      const mod = attribute[key].mod;
+      mod.total = this.calculateModTotal(mod);
+    }
+    for (const key in power) {
+      const mod = power[key].mod;
+      mod.total = this.calculateModTotal(mod);
+    }
+    for (const key in defense) {
+      const mod = defense[key].mod;
+      mod.total = this.calculateModTotal(mod);
+    }
+
+    initiative.total = this.calculateModTotal(initiative);
 
     /**
      * - Fatigue reduces the afflicted character's Max HP by its Rating.
      * - Fatigue can reduce Max HP to 0
      */
+    health.total = this.calculateHpTotal(health);
     health.max = Math.max(health.total - life.fatigue, 0);
 
-    // Health value can't be bigger than the total max and less than 0
+    fate.max = this.calculateFateMax(fate);
+  }
+
+  prepareModData(mod) {
+    mod.skills = 0;
+    mod.items = 0;
+  }
+
+  calculateModTotal(mod) {
+    return mod.base + mod.skills + mod.items;
+  }
+
+  calculateHpTotal(health) {
+    throw new Error("Must be implemented by subclass!");
+  }
+
+  calculateFateMax(fate) {
+    throw new Error("Must be implemented by subclass!");
   }
 
   get isIncapacitated() {
     const { health } = this.stats;
-    return health.value <= 0 || health.max <= 0;
+    return health.value <= 0 || health?.max <= 0;
+  }
+
+  get isHateTop() {
+    return this.status.other.hateTop;
+  }
+
+  get isHateUnder() {
+    return !this.status.other.hateTop;
   }
 }
