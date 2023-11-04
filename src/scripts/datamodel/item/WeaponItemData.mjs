@@ -16,9 +16,16 @@ export class WeaponItemData extends StatsItemData {
 
   static getAdditionalInventoryField() {
     return {
-      equipped: makeBooleanField(),
+      ...super.getAdditionalInventoryField(),
       isMain: makeBooleanField(),
       isTwoHanded: makeBooleanField(),
     };
+  }
+
+  get equipmentSlot() {
+    if (this.inventory.isTwoHanded) {
+      return 2;
+    }
+    return 1;
   }
 }

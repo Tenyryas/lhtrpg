@@ -15,4 +15,8 @@ export class ConsumableItemData extends SkillItemData {
       }),
     };
   }
+
+  get space() {
+    return 1;
+  }
 }

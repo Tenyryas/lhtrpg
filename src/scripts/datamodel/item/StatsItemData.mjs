@@ -27,7 +27,7 @@ export class StatsItemData extends CommonItemData {
 
   static getAdditionalInventoryField() {
     return {
-      equipped: makeBooleanField(),
+      isEquipped: makeBooleanField(),
     };
   }
 
@@ -65,5 +65,16 @@ export class StatsItemData extends CommonItemData {
       source.stats.initiative = source.initiative ?? 0;
       delete source.initiative;
     }
+  }
+
+  get equipmentSlot() {
+    return 1;
+  }
+
+  get space() {
+    if (inventory.isEquipped) {
+      return 0;
+    }
+    return 1;
   }
 }

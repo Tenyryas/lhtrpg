@@ -14,7 +14,7 @@ export class LHTrpgItem extends Item {
         requireEquipped = false;
         break;
     }
-    return requireEquipped && !this.system.equipped;
+    return requireEquipped && !this.system.inventory.isEquipped;
   }
 
   /**

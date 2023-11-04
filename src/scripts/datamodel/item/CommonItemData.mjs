@@ -73,4 +73,8 @@ export class CommonItemData extends foundry.abstract.TypeDataModel {
   prepareDerivedData() {
     super.prepareDerivedData();
   }
+
+  get space() {
+    return 1;
+  }
 }

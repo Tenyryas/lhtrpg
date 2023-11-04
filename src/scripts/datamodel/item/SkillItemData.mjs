@@ -275,4 +275,8 @@ export class SkillItemData extends CommonItemData {
       delete source.infos.timing;
     }
   }
+
+  get space() {
+    return 0;
+  }
 }

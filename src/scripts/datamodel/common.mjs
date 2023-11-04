@@ -1,5 +1,23 @@
 const { fields } = foundry.data;
 
+export function prepareModelData(object) {
+  object.skills = 0;
+  object.items = 0;
+  object.status = 0;
+}
+
+export function calculateTotal(stat) {
+  const base = stat.base ?? 0;
+  const bonus = stat.bonus ?? 0;
+  const statClass = stat.class ?? 0;
+  const race = stat.race ?? 0;
+  const rank = stat.rank ?? 0;
+  const skills = stat.skills ?? 0;
+  const items = stat.items ?? 0;
+  const status = stat.status ?? 0;
+  stat.total = base + bonus + statClass + race + rank + skills + items + status;
+}
+
 export function makeIntegerField(initial) {
   return makeNumberField({
     initial,

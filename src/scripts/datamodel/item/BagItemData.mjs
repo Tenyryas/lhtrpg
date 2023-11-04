@@ -15,9 +15,16 @@ export class BagItemData extends CommonItemData {
 
   static getAdditionalInventoryField() {
     return {
-      equipped: makeBooleanField(),
+      isEquipped: makeBooleanField(),
       space: makePositiveIntegerField(),
       type: makeStringField(),
     };
+  }
+
+  get space() {
+    if (inventory.isEquipped) {
+      return 0;
+    }
+    return 1;
   }
 }

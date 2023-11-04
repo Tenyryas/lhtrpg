@@ -40,16 +40,8 @@ export class MonsterActorData extends CommonActorData {
 
   static makeAttributeField() {
     return new fields.SchemaField({
-      dice: makePositiveIntegerField(),
+      dice: this.makeBaseField(),
       mod: this.makeBaseField(),
     });
-  }
-
-  calculateHpTotal(health) {
-    return health.base + health.skills + health.items;
-  }
-
-  calculateFateMax(fate) {
-    return fate.base + fate.skills + fate.items;
   }
 }

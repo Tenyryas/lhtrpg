@@ -18,4 +18,8 @@ export class SocialItemData extends foundry.abstract.TypeDataModel {
   }
 
   static migrateToDataModel(source) {}
+
+  get space() {
+    return 0;
+  }
 }
